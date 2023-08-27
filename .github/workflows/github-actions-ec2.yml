@@ -1,4 +1,4 @@
-name: Push-to-EC2
+name: Deploy-to-EC2
 
 # Trigger deployment only on push to master branch
 on:
