@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# Next.js
+/frontend/.next/
+/frontend/out/
+
+# Express Backend
+/backend/node_modules/
+/backend/logs/
+/backend/.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
