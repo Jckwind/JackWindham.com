@@ -47,9 +47,11 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           sudo systemctl stop nginx
+          pm2 stop "website"
           cd frontend
           npm install
           npm run build
+          pm2 start npm --name "website" -- start
           sudo systemctl start nginx
     - name: Remove Github Actions IP from security group
       run: |
