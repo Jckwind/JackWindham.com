@@ -15,7 +15,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By {"  "} <code className="font-mono font-bold">your mom</code>
+            By {"  "} <code className="font-mono font-bold">Jack Windham</code>
           </a>
         </div>
       </div>
