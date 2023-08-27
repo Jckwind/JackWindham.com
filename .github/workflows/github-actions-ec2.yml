@@ -50,9 +50,6 @@ jobs:
           pm2 stop "website"
           cd frontend
           npm install
-          npm run build
-          pm2 start npm --name "website" -- start
-          sudo systemctl start nginx
     - name: Remove Github Actions IP from security group
       run: |
         aws ec2 revoke-security-group-ingress --group-id ${{ env.AWS_SG_ID }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
