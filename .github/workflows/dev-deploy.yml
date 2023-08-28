@@ -1,4 +1,4 @@
-name: Deploy-To-Dev-Environment
+name: Dev-Deploy
 
 # Trigger deployment only on push to master branch
 on:
@@ -7,8 +7,8 @@ on:
       - main
 
 jobs:
-  deploy:
-    name: Deploy to EC2 when pull request is created.
+  configure-security-group:
+    name: Configure SSH access
     runs-on: ubuntu-latest
 
     steps:
@@ -29,18 +29,13 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }}
-    
-    - name: Checkout new code
-      uses: actions/checkout@v2
 
-    - name: Deploy to EC2 (Dev)
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-        REMOTE_HOST: ${{ secrets.HOST_DNS }}
-        REMOTE_USER: ${{ secrets.USERNAME }}
-        TARGET: ${{ env.TARGET_DIRECTORY }}
+  stop-current-deployment:
+    needs: configure-security-group
+    name: Stop old web server.
+    runs-on: ubuntu-latest
 
+    steps:
     - name: Stop Nginx server (Dev)
       uses: appleboy/ssh-action@master
       with:
@@ -60,7 +55,24 @@ jobs:
           cd dev
           cd frontend
           pm2 stop "website"
-          sudo fuser -k 3011/tcp
+          if lsof -i :3011 -sTCP:LISTEN; then sudo fuser -k 3011/tcp; fi
+    
+  build:
+    needs: [configure-security-group, stop-current-deployment]
+    name: Deploy to EC2 and build.
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - name: Checkout new code
+      uses: actions/checkout@v2
+
+    - name: Deploy to EC2 (Dev)
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+        REMOTE_HOST: ${{ secrets.HOST_DNS }}
+        REMOTE_USER: ${{ secrets.USERNAME }}
+        TARGET: ${{ env.TARGET_DIRECTORY }}
   
     - name: Install Next.js frontend dependencies (Dev)
       uses: appleboy/ssh-action@master
@@ -84,6 +96,12 @@ jobs:
           cd frontend
           npm run build
 
+  deploy:
+    needs: [configure-security-group, stop-current-deployment, build]
+    name: Deploy to EC2 and build.
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Start Next.js frontend (Dev)
       uses: appleboy/ssh-action@master
       with:
@@ -104,6 +122,11 @@ jobs:
         script: |
           sudo systemctl start nginx
   
+  revoke-security-group-access:
+    name: Configure SSH access
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Remove Github Actions IP from security group
       run: |
         aws ec2 revoke-security-group-ingress --group-id ${{ env.AWS_SG_ID }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
