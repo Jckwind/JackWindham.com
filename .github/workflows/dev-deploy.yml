@@ -126,8 +126,10 @@ jobs:
           sudo systemctl start nginx
   
   revoke-security-group-access:
+    needs: [configure-security-group, stop-current-deployment, build, deploy]
     name: Configure SSH access
     runs-on: ubuntu-latest
+    if: always()
 
     steps:
     - name: Remove Github Actions IP from security group
@@ -137,4 +139,3 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }}
-      if: always()
