@@ -39,7 +39,7 @@ jobs:
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ secrets.TARGET_DIR }}
     
-    - name: Build and Start Next.js and Nginx
+    - name: Stop services
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST_DNS }}
@@ -48,11 +48,28 @@ jobs:
         script: |
           sudo systemctl stop nginx
           pm2 stop "website"
+  
+    - name: Build Frontend
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
           cd frontend
           npm install
           npm run build
+  
+    - name: Start services
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
           pm2 start npm --name "website" -- start
           sudo systemctl start nginx
+  
     - name: Remove Github Actions IP from security group
       run: |
         aws ec2 revoke-security-group-ingress --group-id ${{ env.AWS_SG_ID }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
