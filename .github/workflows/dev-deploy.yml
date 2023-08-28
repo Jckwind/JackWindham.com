@@ -5,9 +5,9 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches-ignore:
-      - main
+    types:
+      - opened
+      - synchronize
 
 jobs:
   configure-security-group:
