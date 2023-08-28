@@ -1,14 +1,14 @@
-name: Deploy-to-EC2
+name: Deploy-To-Dev-Environment
 
 # Trigger deployment only on push to master branch
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
   deploy:
-    name: Deploy to EC2 on master branch push
+    name: Deploy to EC2 when pull request is created.
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +20,7 @@ jobs:
       run: |
         echo "AWS_DEFAULT_REGION=us-east-1" >> $GITHUB_ENV
         echo "AWS_SG_ID=${{ secrets.AWS_SG_ID }}" >> $GITHUB_ENV
+        echo "TARGET_DIRECTORY=/home/ec2-user/dev" >> $GITHUB_ENV
         
     - name: Add Github Actions IP to Security group
       run: |
@@ -28,48 +29,79 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }}
-    - name: Checkout the files
+    
+    - name: Checkout new code
       uses: actions/checkout@v2
 
-    - name: Deploy to Server 1
+    - name: Deploy to EC2 (Dev)
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
         REMOTE_HOST: ${{ secrets.HOST_DNS }}
         REMOTE_USER: ${{ secrets.USERNAME }}
-        TARGET: ${{ secrets.TARGET_DIR }}
-    
-    - name: Stop services
+        TARGET: ${{ env.TARGET_DIRECTORY }}
+
+    - name: Stop Nginx server (Dev)
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd frontend
           sudo systemctl stop nginx
-          pm2 stop "website"
-  
-    - name: Build Frontend
+    
+    - name: Stop Next.js frontend (Dev)
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          cd dev
           cd frontend
-          npm install
-          npm run build
+          pm2 stop "website"
+          sudo fuser -k 3011/tcp
   
-    - name: Start services
+    - name: Install Next.js frontend dependencies (Dev)
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          cd dev
+          cd frontend
+          npm ci
+    
+    - name: Build Next.js frontend (Dev)
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd dev
+          cd frontend
+          npm run build
+
+    - name: Start Next.js frontend (Dev)
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd dev
           cd frontend
           pm2 start npm --name "website" -- start
+  
+    - name: Start Nginx server (Dev)
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
           sudo systemctl start nginx
   
     - name: Remove Github Actions IP from security group
