@@ -11,7 +11,7 @@ on:
 
 jobs:
   Dev-Deployment:
-    name: Configure SSH access
+    name: Update Website code
     runs-on: ubuntu-latest
 
     steps:
