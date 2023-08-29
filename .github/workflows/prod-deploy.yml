@@ -2,12 +2,9 @@ name: Prod-Deploy
 
 # Trigger deployment only on push to master branch
 on:
-  pull_request:
+  push:
     branches:
       - main
-    types:
-      - opened
-      - synchronize
 
 jobs:
   Prod-Deployment:
