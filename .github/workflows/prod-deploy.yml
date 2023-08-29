@@ -15,7 +15,7 @@ jobs:
     - name: Get Github action IP
       id: ip
       run: |
-        response=$(curl -s canhazip.com)
+        response=$(curl -s http://checkip.amazonaws.com/)
         echo "ip='$response'" >> "$GITHUB_OUTPUT"
 
     - name: Setting environment variables..
