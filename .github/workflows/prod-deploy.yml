@@ -1,4 +1,4 @@
-name: Dev-Deploy
+name: Prod-Deploy
 
 # Trigger deployment only on push to master branch
 on:
@@ -10,8 +10,8 @@ on:
       - synchronize
 
 jobs:
-  Dev-Deployment:
-    name: Update website code in the Dev env
+  Prod-Deployment:
+    name: Update website code in the Prod env
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
       run: |
         echo "AWS_DEFAULT_REGION=us-east-1" >> $GITHUB_ENV
         echo "AWS_SG_ID=${{ secrets.AWS_SG_ID }}" >> $GITHUB_ENV
-        echo "TARGET_DIRECTORY=/home/ec2-user/dev" >> $GITHUB_ENV
+        echo "TARGET_DIRECTORY=/home/ec2-user/prod" >> $GITHUB_ENV
         
     - name: Add Github Actions IP to Security group
       run: |
@@ -55,7 +55,7 @@ jobs:
         script: |
           cd dev
           cd frontend
-          pm2 stop "website-dev"
+          pm2 stop "website"
           if lsof -i :3011 -sTCP:LISTEN; then sudo fuser -k 3011/tcp; fi
     
     - name: Checkout new code
@@ -100,7 +100,7 @@ jobs:
         script: |
           cd dev
           cd frontend
-          pm2 start npm --name "website-dev" -- start -- --port 3011
+          pm2 start npm --name "website" -- start
   
     - name: Start Nginx server (Dev)
       uses: appleboy/ssh-action@master
