@@ -15,6 +15,7 @@ env:
   WEBSITE_URL: https://dev.jackwindham.com
   WEBSITE_URL_HTTP: http://dev.jackwindham.com
   AWS_DEFAULT_REGION: us-east-1
+  PORT: 3011
 
 jobs:
   Dev-Deployment:
@@ -62,12 +63,13 @@ jobs:
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
             if pm2 describe "website-dev" > /dev/null; then
-              pm2 stop "website-dev"
+              pm2 delete "website-dev"
+              pm2 save
             else
               echo "PM2 process 'website-dev' not found, skipping."
             fi
-            if lsof -i :3011 -sTCP:LISTEN; then
-              sudo fuser -k 3011/tcp
+            if lsof -i :${{ env.PORT }} -sTCP:LISTEN; then
+              sudo fuser -k ${{ env.PORT }}/tcp
             fi
           else
             echo "Directory dev/frontend not found, skipping."
@@ -130,7 +132,8 @@ jobs:
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
             if ! pm2 describe "website-dev" > /dev/null; then
-              pm2 start npm --name "website-dev" -- start -- --port 3011
+              pm2 start npm --name "website-dev" -- start -- --port ${{ env.PORT }}
+              pm2 save
             else
               echo "PM2 process 'website-dev' already running, skipping start command."
             fi
