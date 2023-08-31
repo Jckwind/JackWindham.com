@@ -147,7 +147,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           set -e
-          if nginx -t; then
+          if sudo nginx -t; then
             sudo nginx -s reload
           else
             echo "Nginx configuration test failed, skipping reload."
