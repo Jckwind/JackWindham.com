@@ -10,6 +10,12 @@ on:
       - opened
       - synchronize
 
+env:
+  TARGET_DIRECTORY: /home/ec2-user/dev
+  WEBSITE_URL: https://dev.jackwindham.com
+  WEBSITE_URL_HTTP: http://dev.jackwindham.com
+  AWS_DEFAULT_REGION: us-east-1
+
 jobs:
   Dev-Deployment:
     name: Update website code in the Dev env
@@ -29,7 +35,6 @@ jobs:
     - name: Setting environment variables..
       run: |
         echo "AWS_SG_ID=${{ secrets.AWS_SG_ID }}" >> $GITHUB_ENV
-        echo "TARGET_DIRECTORY=/home/ec2-user/dev" >> $GITHUB_ENV
     
     # Temporarily add GitHub Actions runner IP to the AWS security group
     - name: Add Github Actions IP to Security group
@@ -43,7 +48,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_DEFAULT_REGION: us-east-1
+        AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }}
     
     # Logic for stopping the Next.js frontend
     - name: Stop Next.js frontend (Dev)
@@ -165,8 +170,8 @@ jobs:
     # Perform health check on the deployed service URLs to ensure they are accessible.
     - name: Check the deployed service (Dev)
       uses: jtalk/url-health-check-action@v3
-      if: success()  # or any other condition you find suitable
+      if: success()
       with:
-        url: https://dev.jackwindham.com|http://dev.jackwindham.com
+        url: ${{ env.WEBSITE_URL }}|${{ env.WEBSITE_URL_HTTP }}
         max-attempts: 3
         retry-delay: 5s
