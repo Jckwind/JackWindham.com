@@ -9,6 +9,10 @@ on:
     types:
       - closed
 
+concurrency:
+  group: jackwindham.com
+  cancel-in-progress: true
+
 env:
   TARGET_DIRECTORY: /home/ec2-user/prod
   WEBSITE_URL: https://jackwindham.com
