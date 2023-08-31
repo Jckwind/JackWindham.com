@@ -1,6 +1,7 @@
+# Dev-Deploy: A GitHub Actions workflow for Dev Environment
 name: Dev-Deploy
 
-# Trigger deployment only on push to master branch
+# Trigger deployment only on push to main branch
 on:
   pull_request:
     branches:
@@ -15,113 +16,158 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+  
+    # Fetch GitHub action IP for temporary whitelisting
     - name: Get Github action IP
       id: ip
       run: |
+        set -e
         response=$(curl -s http://checkip.amazonaws.com/)
-        echo "ip='$response'" >> "$GITHUB_OUTPUT"
+        echo "ip=$response" >> "$GITHUB_ENV"
 
+    # Set global environment variables
     - name: Setting environment variables..
       run: |
-        echo "AWS_DEFAULT_REGION=us-east-1" >> $GITHUB_ENV
         echo "AWS_SG_ID=${{ secrets.AWS_SG_ID }}" >> $GITHUB_ENV
         echo "TARGET_DIRECTORY=/home/ec2-user/dev" >> $GITHUB_ENV
-        
+    
+    # Temporarily add GitHub Actions runner IP to the AWS security group
     - name: Add Github Actions IP to Security group
+      if: env.ip != ''
       run: |
         aws ec2 authorize-security-group-ingress \
             --group-id ${{ env.AWS_SG_ID }} \
             --protocol tcp \
             --port 22 \
-            --cidr ${{ steps.ip.outputs.ip }}/32 \
+            --cidr ${{ env.ip }}/32 \
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }}
-
-    - name: Stop Nginx server (Dev)
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          sudo systemctl stop nginx
+        AWS_DEFAULT_REGION: us-east-1
     
+    # Logic for stopping the Next.js frontend
     - name: Stop Next.js frontend (Dev)
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd dev
-          cd frontend
-          pm2 stop "website-dev"
-          if lsof -i :3011 -sTCP:LISTEN; then sudo fuser -k 3011/tcp; fi
-    
+          set -e
+          if [ -d "dev/frontend" ]; then
+            cd dev/frontend
+            if pm2 describe "website-dev" > /dev/null; then
+              pm2 stop "website-dev"
+            else
+              echo "PM2 process 'website-dev' not found, skipping."
+            fi
+            if lsof -i :3011 -sTCP:LISTEN; then
+              sudo fuser -k 3011/tcp
+            fi
+          else
+            echo "Directory dev/frontend not found, skipping."
+          fi
+
+    # Checkout the latest code from the repository
     - name: Checkout new code
       uses: actions/checkout@v2
 
+    # Deploy the new code to the Dev environment on EC2
     - name: Deploy to EC2 (Dev)
-      uses: easingthemes/ssh-deploy@main
+      uses: easingthemes/ssh-deploy@v4.1.8
       env:
         SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
         REMOTE_HOST: ${{ secrets.HOST_DNS }}
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ env.TARGET_DIRECTORY }}
-  
+
+    # Install dependencies for the Next.js frontend in the Dev environment
     - name: Install Next.js frontend dependencies (Dev)
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd dev
-          cd frontend
-          npm ci
-    
+          set -e
+          if [ -d "dev/frontend" ]; then
+            cd dev/frontend
+            npm ci
+          else
+            echo "Directory dev/frontend not found, skipping dependency installation."
+          fi
+
+    # Build the Next.js frontend in the Dev environment
     - name: Build Next.js frontend (Dev)
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd dev
-          cd frontend
-          npm run build
+          set -e
+          if [ -d "dev/frontend" ]; then
+            cd dev/frontend
+            npm run build
+          else
+            echo "Directory dev/frontend not found, skipping build process."
+          fi
 
+    # Start the Next.js frontend in the Dev environment
     - name: Start Next.js frontend (Dev)
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd dev
-          cd frontend
-          pm2 start npm --name "website-dev" -- start -- --port 3011
-  
-    - name: Start Nginx server (Dev)
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          sudo systemctl start nginx
+          set -e
+          if [ -d "dev/frontend" ]; then
+            cd dev/frontend
+            if ! pm2 describe "website-dev" > /dev/null; then
+              pm2 start npm --name "website-dev" -- start -- --port 3011
+            else
+              echo "PM2 process 'website-dev' already running, skipping start command."
+            fi
+          else
+            echo "Directory dev/frontend not found, skipping start process."
+          fi
 
+    # Reload the Nginx configuration in the Dev environment
+    - name: Reload Nginx Configuration (Dev)
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+      script: |
+        set -e
+        if nginx -t; then
+          sudo nginx -s reload
+        else
+          echo "Nginx configuration test failed, skipping reload."
+        fi
+    
+    # Revoke the temporary IP authorization from the AWS security group
     - name: Remove Github Actions IP from security group
+      if: always() && env.ip != ''
       run: |
         aws ec2 revoke-security-group-ingress \
             --group-id ${{ env.AWS_SG_ID }} \
             --protocol tcp \
             --port 22 \
-            --cidr ${{ steps.ip.outputs.ip }}/32 \
+            --cidr ${{ env.ip }}/32 \
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }}
-      if: always()
+  
+    # Perform health check on the deployed service URLs to ensure they are accessible.
+    - name: Check the deployed service (Dev)
+      uses: jtalk/url-health-check-action@v3
+      if: success()  # or any other condition you find suitable
+      timeout-min: 5 # set a timeout to prevent indefinite waiting
+      with:
+        url: https://dev.jackwindham.com|http://dev.jackwindham.com
+        max-attempts: 3
+        retry-delay: 5s
