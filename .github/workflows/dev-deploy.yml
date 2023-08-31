@@ -140,13 +140,13 @@ jobs:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
-      script: |
-        set -e
-        if nginx -t; then
-          sudo nginx -s reload
-        else
-          echo "Nginx configuration test failed, skipping reload."
-        fi
+        script: |
+          set -e
+          if nginx -t; then
+            sudo nginx -s reload
+          else
+            echo "Nginx configuration test failed, skipping reload."
+          fi
     
     # Revoke the temporary IP authorization from the AWS security group
     - name: Remove Github Actions IP from security group
@@ -166,7 +166,6 @@ jobs:
     - name: Check the deployed service (Dev)
       uses: jtalk/url-health-check-action@v3
       if: success()  # or any other condition you find suitable
-      timeout-min: 5 # set a timeout to prevent indefinite waiting
       with:
         url: https://dev.jackwindham.com|http://dev.jackwindham.com
         max-attempts: 3
