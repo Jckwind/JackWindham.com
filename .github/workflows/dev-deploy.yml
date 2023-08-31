@@ -1,7 +1,7 @@
 # Dev-Deploy: A GitHub Actions workflow for Dev Environment
 name: Dev-Deploy
 
-# Trigger deployment only on push to main branch
+# Trigger deployment when pull requests targeting 'main' are opened or updated 
 on:
   pull_request:
     branches:
@@ -23,7 +23,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-  
     # Fetch GitHub action IP for temporary whitelisting
     - name: Get Github action IP
       id: ip
