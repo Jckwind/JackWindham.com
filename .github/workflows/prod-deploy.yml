@@ -61,7 +61,7 @@ jobs:
           set -e
           if [ -d "prod/frontend" ]; then
             cd prod/frontend
-            if pm2 describe "website" > /prod/null; then
+            if pm2 describe "website" > /dev/null; then
               pm2 delete "website"
               pm2 save
             else
@@ -130,7 +130,7 @@ jobs:
           set -e
           if [ -d "prod/frontend" ]; then
             cd prod/frontend
-            if ! pm2 describe "website" > /prod/null; then
+            if ! pm2 describe "website" > /dev/null; then
               pm2 start npm --name "website" -- start -- --port ${{ env.PORT }}
               pm2 save
             else
