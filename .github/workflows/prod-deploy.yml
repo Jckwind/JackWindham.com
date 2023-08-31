@@ -1,11 +1,13 @@
 # Prod-Deploy: A GitHub Actions workflow for Prod Environment
 name: Prod-Deploy
 
-# Trigger deployment only on push to main branch
+# Trigger deployment only on merge from pull request to main branch
 on:
-  push:
+  pull_request:
     branches:
       - main
+    types:
+      - closed
 
 env:
   TARGET_DIRECTORY: /home/ec2-user/prod
@@ -16,6 +18,7 @@ env:
 
 jobs:
   Prod-Deployment:
+    if: github.event.pull_request.merged == true
     name: Update website code in the Prod env
     runs-on: ubuntu-latest
 
