@@ -19,6 +19,7 @@ const Star = ({ x, y, size, duration }: StarProps) => (
       height: `${size}em`,
       borderRadius: '50%',
       background: '#efd5bc',
+      filter: 'blur(0.5px)',
       animation: `twinkle ${duration}s infinite`,
     }}
   >
