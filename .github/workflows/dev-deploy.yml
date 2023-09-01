@@ -118,6 +118,9 @@ jobs:
           set -e
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
+            if [ -d ".next" ]; then
+              rm -rf .next
+            fi
             npm run build
           else
             echo "Directory dev/frontend not found, skipping build process."
