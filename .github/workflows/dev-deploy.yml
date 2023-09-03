@@ -98,6 +98,7 @@ jobs:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
+        timeout: 1m
         script: |
           set -e
           if [ -d "dev/frontend" ]; then
@@ -114,6 +115,7 @@ jobs:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
+        timeout: 1m
         script: |
           set -e
           if [ -d "dev/frontend" ]; then
