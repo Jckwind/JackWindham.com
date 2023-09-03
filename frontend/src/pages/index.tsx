@@ -9,9 +9,6 @@ export default function Home() {
       <Head>
         <meta name='viewport' content='initial-scale=1, viewport-fit=cover'></meta>
       </Head>
-      <main>
-        <div className='h-screen w-screen custom-gradient'></div>
-      </main>
     </>
   )
   
