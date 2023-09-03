@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #96B6C5;
+    --secondary-color: #ADC4CE;
+    --background-color: #F1F0E8;
+    --secondary-background-color: #EEE0C9;
+    --gradient-direction: to bottom;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #C69749;
+        --secondary-color: #735F32;
+        --background-color: #000000;
+        --secondary-background-color: #282A3A;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    :root {
+        --gradient-direction: to bottom;
+    }
+}
+    
+@media only screen and (orientation: landscape) {
+    :root {
+        --gradient-direction: to bottom right;
+    }
+}
+
+.custom-gradient {
+    background: linear-gradient(var(--gradient-direction), var(--background-color), var(--secondary-background-color));
+}
