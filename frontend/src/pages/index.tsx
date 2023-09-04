@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name='viewport' content='initial-scale=1, viewport-fit=cover'></meta>
-        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"></meta>
-        <meta name="theme-color" content="#F1F0E8" media="(prefers-color-scheme: light)"></meta>
+        <meta name='viewport' content='initial-scale=1, viewport-fit=cover' />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F1F0E8" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
       </Head>
     </>
   )
