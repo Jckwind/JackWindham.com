@@ -32,6 +32,4 @@ html, body {
     padding: 0;
     background: linear-gradient(var(--gradient-direction), var(--background-color), var(--secondary-background-color));
     background-attachment: fixed;
-    /* height: 100vh;
-    width: 100vw; */
 }
