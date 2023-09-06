@@ -1,6 +1,7 @@
-import '../app/globals.css';
-import './css/index.css'
+import React, { useEffect, useState } from 'react';
+import VaraText from '@/component/VaraText';
 import Head from 'next/head';
+import './css/index.css'
 
 export default function Home() {
 
@@ -11,6 +12,9 @@ export default function Home() {
         <meta name="theme-color" key="light" media="(prefers-color-scheme: light)" content="#F2ECBE" />
         <meta name="theme-color" key="dark" media="(prefers-color-scheme: dark)" content="#000000" />
       </Head>
+      <div className="textHolder">
+        <VaraText text="Jack Windham" fontSize={75}/>
+      </div>
     </>
   )
   

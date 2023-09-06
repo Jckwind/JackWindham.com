@@ -33,3 +33,15 @@ html, body {
     background: linear-gradient(var(--gradient-direction), var(--background-color), var(--secondary-background-color));
     background-attachment: fixed;
 }
+
+.textHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#vara-container svg {
+    overflow: visible;
+}
+  
