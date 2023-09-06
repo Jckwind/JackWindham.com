@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="theme-color" key="dark" media="(prefers-color-scheme: dark)" content="#000000" />
       </Head>
       <div className="textHolder">
-        <VaraText text="Jack Windham" fontSize={75}/>
+        <VaraText text="Jack" fontSize={75}/>
       </div>
     </>
   )
