@@ -8,7 +8,8 @@ export default function Home() {
     <>
       <Head>
         <meta name='viewport' content='initial-scale=1, viewport-fit=cover' />
-        <meta name="theme-color" content="var(--background-color)" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F1F0E8" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
       </Head>
     </>
   )
