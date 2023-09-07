@@ -2,6 +2,7 @@ import VaraText from '@/component/VaraText';
 import Head from 'next/head';
 import './css/index.css'
 
+
 export default function Home() {
 
   return (
