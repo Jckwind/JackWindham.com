@@ -42,7 +42,7 @@ html, body {
 }
 
 #vara-container svg {
-    filter: url('#noiseFilter1');
+    /* filter: url('#noiseFilter1'); */
     overflow: visible;
 }
   
