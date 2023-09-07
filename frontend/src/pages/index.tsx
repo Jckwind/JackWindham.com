@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import VaraText from '@/component/VaraText';
 import Head from 'next/head';
 import './css/index.css'
