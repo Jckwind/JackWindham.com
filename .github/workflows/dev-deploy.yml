@@ -91,6 +91,26 @@ jobs:
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ env.TARGET_DIRECTORY }}
 
+    # Check node and npm version on target server
+    - name: Check Nodejs and NPM version
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          echo "node version is: $(node -v)"
+          echo "npm version is: $(npm -v)"
+          if [ -d "dev/frontend" ]; then
+            cd dev/frontend
+            echo "node version is: $(node -v)"
+            echo "npm version is: $(npm -v)"
+          else
+            echo "Directory dev/frontend not found, skipping versioning check."
+          fi
+
+
+
     # Install dependencies for the Next.js frontend in the Dev environment
     - name: Install Next.js frontend dependencies (Dev)
       uses: appleboy/ssh-action@v1.0.0
