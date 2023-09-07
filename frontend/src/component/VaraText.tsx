@@ -12,14 +12,15 @@ const VaraText: React.FC<VaraTextProps> = ({ text, fontSize = 32 }) => {
     useEffect(() => {
         new Vara(
             `#${containerId}`,
-            '/test-font.json',
+            '/handwriting.json',
             [
                 {
                 text,
                 fontSize,
                 strokeWidth: 1,
-                letterSpacing: -15,
+                letterSpacing: -14,
                 delay:500,
+                duration:4000,
                 textAlign:"center",
                 }
             ]
