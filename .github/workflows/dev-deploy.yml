@@ -100,6 +100,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           echo "node version is: $(node -v)"
+          echo "node location is: $(which node)"
           echo "npm version is: $(npm -v)"
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
