@@ -20,7 +20,7 @@ const VaraText: React.FC<VaraTextProps> = ({ text, fontSize = 32 }) => {
                 strokeWidth: 1,
                 letterSpacing: -14,
                 delay:500,
-                duration:4000,
+                duration:2000,
                 textAlign:"center",
                 }
             ]
