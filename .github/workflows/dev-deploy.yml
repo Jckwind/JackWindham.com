@@ -83,11 +83,6 @@ jobs:
     - name: Checkout new code
       uses: actions/checkout@v2
 
-    - name: Setup node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.17.0
-
     # Deploy the new code to the Dev environment on EC2
     - name: Deploy to EC2 (Dev)
       uses: easingthemes/ssh-deploy@v4.1.8
@@ -118,80 +113,78 @@ jobs:
             echo "Directory dev/frontend not found, skipping versioning check."
           fi
 
+    # # Install dependencies for the Next.js frontend in the Dev environment
+    # - name: Install Next.js frontend dependencies (Dev)
+    #   uses: appleboy/ssh-action@v1.0.0
+    #   with:
+    #     host: ${{ secrets.HOST_DNS }}
+    #     username: ${{ secrets.USERNAME }}
+    #     key: ${{ secrets.EC2_SSH_KEY }}
+    #     timeout: 1m
+    #     script: |
+    #       set -e
+    #       if [ -d "dev/frontend" ]; then
+    #         cd dev/frontend
+    #         npm ci
+    #       else
+    #         echo "Directory dev/frontend not found, skipping dependency installation."
+    #       fi
 
+    # # Build the Next.js frontend in the Dev environment
+    # - name: Build Next.js frontend (Dev)
+    #   uses: appleboy/ssh-action@v1.0.0
+    #   with:
+    #     host: ${{ secrets.HOST_DNS }}
+    #     username: ${{ secrets.USERNAME }}
+    #     key: ${{ secrets.EC2_SSH_KEY }}
+    #     timeout: 1m
+    #     script: |
+    #       set -e
+    #       if [ -d "dev/frontend" ]; then
+    #         cd dev/frontend
+    #         if [ -d ".next" ]; then
+    #           rm -rf .next
+    #         fi
+    #         npm run build
+    #       else
+    #         echo "Directory dev/frontend not found, skipping build process."
+    #       fi
 
-    # Install dependencies for the Next.js frontend in the Dev environment
-    - name: Install Next.js frontend dependencies (Dev)
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        timeout: 1m
-        script: |
-          set -e
-          if [ -d "dev/frontend" ]; then
-            cd dev/frontend
-            npm ci
-          else
-            echo "Directory dev/frontend not found, skipping dependency installation."
-          fi
+    # # Start the Next.js frontend in the Dev environment
+    # - name: Start Next.js frontend (Dev)
+    #   uses: appleboy/ssh-action@v1.0.0
+    #   with:
+    #     host: ${{ secrets.HOST_DNS }}
+    #     username: ${{ secrets.USERNAME }}
+    #     key: ${{ secrets.EC2_SSH_KEY }}
+    #     script: |
+    #       set -e
+    #       if [ -d "dev/frontend" ]; then
+    #         cd dev/frontend
+    #         if ! pm2 describe "website-dev" > /dev/null; then
+    #           pm2 start npm --name "website-dev" -- start -- --port ${{ env.PORT }}
+    #           pm2 save
+    #         else
+    #           echo "PM2 process 'website-dev' already running, skipping start command."
+    #         fi
+    #       else
+    #         echo "Directory dev/frontend not found, skipping start process."
+    #       fi
 
-    # Build the Next.js frontend in the Dev environment
-    - name: Build Next.js frontend (Dev)
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        timeout: 1m
-        script: |
-          set -e
-          if [ -d "dev/frontend" ]; then
-            cd dev/frontend
-            if [ -d ".next" ]; then
-              rm -rf .next
-            fi
-            npm run build
-          else
-            echo "Directory dev/frontend not found, skipping build process."
-          fi
-
-    # Start the Next.js frontend in the Dev environment
-    - name: Start Next.js frontend (Dev)
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          set -e
-          if [ -d "dev/frontend" ]; then
-            cd dev/frontend
-            if ! pm2 describe "website-dev" > /dev/null; then
-              pm2 start npm --name "website-dev" -- start -- --port ${{ env.PORT }}
-              pm2 save
-            else
-              echo "PM2 process 'website-dev' already running, skipping start command."
-            fi
-          else
-            echo "Directory dev/frontend not found, skipping start process."
-          fi
-
-    # Reload the Nginx configuration in the Dev environment
-    - name: Reload Nginx Configuration (Dev)
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.HOST_DNS }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          set -e
-          if sudo nginx -t; then
-            sudo nginx -s reload
-          else
-            echo "Nginx configuration test failed, skipping reload."
-          fi
+    # # Reload the Nginx configuration in the Dev environment
+    # - name: Reload Nginx Configuration (Dev)
+    #   uses: appleboy/ssh-action@v1.0.0
+    #   with:
+    #     host: ${{ secrets.HOST_DNS }}
+    #     username: ${{ secrets.USERNAME }}
+    #     key: ${{ secrets.EC2_SSH_KEY }}
+    #     script: |
+    #       set -e
+    #       if sudo nginx -t; then
+    #         sudo nginx -s reload
+    #       else
+    #         echo "Nginx configuration test failed, skipping reload."
+    #       fi
     
     # Revoke the temporary IP authorization from the AWS security group
     - name: Remove Github Actions IP from security group
