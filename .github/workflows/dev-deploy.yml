@@ -58,7 +58,6 @@ jobs:
     - name: Stop Next.js frontend (Dev)
       uses: appleboy/ssh-action@v1.0.0
       with:
-        command_timeout: 1m
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
@@ -104,14 +103,8 @@ jobs:
           echo "node version is: $(node -v)"
           echo "node location is: $(which -a node)"
           echo "path is: $PATH"
+          echo "shell is: $SHELL"
           echo "npm version is: $(npm -v)"
-          if [ -d "dev/frontend" ]; then
-            cd dev/frontend
-            echo "node version is: $(node -v)"
-            echo "npm version is: $(npm -v)"
-          else
-            echo "Directory dev/frontend not found, skipping versioning check."
-          fi
 
     # # Install dependencies for the Next.js frontend in the Dev environment
     # - name: Install Next.js frontend dependencies (Dev)
