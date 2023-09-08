@@ -102,7 +102,7 @@ jobs:
         timeout: 1m
         script: |
           echo "node version is: $(node -v)"
-          echo "node location is: $(which node)"
+          echo "node location is: $(which -a node)"
           echo "path is: $PATH"
           echo "npm version is: $(npm -v)"
           if [ -d "dev/frontend" ]; then
