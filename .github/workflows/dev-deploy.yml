@@ -58,7 +58,7 @@ jobs:
     - name: Stop Next.js frontend (Dev)
       uses: appleboy/ssh-action@v1.0.0
       with:
-        debug: true
+        command_timeout: 1m
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
