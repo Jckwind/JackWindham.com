@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2669.9053 1668.6908" enable-background="new 0 0 2669.9053 1668.6908" xml:space="preserve">
+<g>
+	<g>
+		<path fill="#FF0000" d="M2614.9526,274.1353c0-132.4324-107.3574-239.79-239.79-239.79H294.7426
+			c-132.4324,0-239.7901,107.3576-239.7901,239.79v327.2101h2559.71v804.9664c0.1885-3.8958,0.29-7.8141,0.29-11.7565V274.1353z"/>
+		<path fill="#FF0000" d="M294.7426,1634.3453h2080.4199c88.584,0,165.9395-48.0404,207.4595-119.4835H87.2832
+			C128.8032,1586.3049,206.1589,1634.3453,294.7426,1634.3453z"/>
+		<path fill="#FFFFFF" d="M54.9526,601.3454v793.2099c0,43.8486,11.7786,84.9424,32.3306,120.3065h2495.3389
+			c18.7041-32.1846,30.1367-69.1156,32.0405-108.55V601.3454H54.9526z"/>
+	</g>
+	<text transform="matrix(1 0 0 1 775.6766 333.2833)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="330">HELLO</tspan><tspan x="118.9355" y="192" fill="#FFFFFF" font-family="'Arial-BoldMT'" font-size="160">My Name Is</tspan></text>
+</g>
+</svg>
