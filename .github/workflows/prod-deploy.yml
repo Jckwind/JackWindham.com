@@ -100,10 +100,13 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         timeout: 1m
         script: |
+          source ~/.zshrc
           set -e
           if [ -d "prod/frontend" ]; then
             cd prod/frontend
-            npm ci
+            rm -rf node_modules
+            rm -f package-lock.json
+            npm install
           else
             echo "Directory prod/frontend not found, skipping dependency installation."
           fi
@@ -117,6 +120,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         timeout: 1m
         script: |
+          source ~/.zshrc
           set -e
           if [ -d "prod/frontend" ]; then
             cd prod/frontend
@@ -133,6 +137,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          source ~/.zshrc
           set -e
           if [ -d "prod/frontend" ]; then
             cd prod/frontend
