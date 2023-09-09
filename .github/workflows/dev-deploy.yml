@@ -116,6 +116,9 @@ jobs:
           set -e
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
+            rm -rf node_modules
+            rm -f package-lock.json
+            npm cache clean --force
             npm ci
           else
             echo "Directory dev/frontend not found, skipping dependency installation."
