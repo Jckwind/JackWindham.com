@@ -27,6 +27,7 @@ const VaraText: React.FC<VaraTextProps> = ({ text, fontSize = 32, onVaraInit }) 
                     duration:1200,
                     textAlign:"center",
                     delay: 1000,
+                    color: "hsl(var(--bc))",
                     }
                 ]
             );
