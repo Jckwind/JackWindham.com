@@ -11,26 +11,28 @@ type VaraTextProps = {
 const VaraText: React.FC<VaraTextProps> = ({ text, fontSize = 32, onVaraInit }) => {
     const containerId = "vara-container";
     const varaRef = useRef<InstanceType<typeof Vara> | null>(null);
-
+    
     useEffect(() => {
-        varaRef.current = new Vara(
-            `#${containerId}`,
-            '/handwriting.json',
-            [
-                {
-                text,
-                fontSize,
-                id: "jack",
-                strokeWidth: 1.5,
-                letterSpacing: -2,
-                duration:1200,
-                textAlign:"center",
-                delay: 1000,
-                }
-            ]
-        );
-        if (onVaraInit) {
-            onVaraInit(varaRef.current);
+        if (!varaRef.current) {
+            varaRef.current = new Vara(
+                `#${containerId}`,
+                '/handwriting.json',
+                [
+                    {
+                    text,
+                    fontSize,
+                    id: "jack",
+                    strokeWidth: 1.5,
+                    letterSpacing: -2,
+                    duration:1200,
+                    textAlign:"center",
+                    delay: 1000,
+                    }
+                ]
+            );
+            if (onVaraInit) {
+                onVaraInit(varaRef.current);
+            }
         }
       }, [text, fontSize, onVaraInit]);
     
