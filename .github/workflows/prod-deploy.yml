@@ -123,7 +123,7 @@ jobs:
         timeout: 1m
         script: |
           source ~/.zshrc
-          set -e
+          set +e
           if [ -d "prod/frontend" ]; then
             cd prod/frontend
             npm run build
