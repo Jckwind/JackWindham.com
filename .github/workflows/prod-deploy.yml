@@ -108,7 +108,7 @@ jobs:
             rm -f package-lock.json
             rm install.log
             touch install.log
-            npm install --verbose >> "install.log" 2>&1
+            npm install --no-optional --verbose >> "install.log" 2>&1
           else
             echo "Directory prod/frontend not found, skipping dependency installation."
           fi
