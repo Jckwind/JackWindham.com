@@ -19,7 +19,7 @@ env:
   WEBSITE_URL: https://dev.jackwindham.com
   WEBSITE_URL_HTTP: http://dev.jackwindham.com
   AWS_DEFAULT_REGION: us-east-1
-  PORT: 3011
+  DEV-PORT: 3011
 
 jobs:
   Dev-Deployment:
@@ -71,8 +71,8 @@ jobs:
             else
               echo "PM2 process 'website-dev' not found, skipping."
             fi
-            if lsof -i :${{ env.PORT }} -sTCP:LISTEN; then
-              sudo fuser -k ${{ env.PORT }}/tcp
+            if lsof -i :${{ env.DEV-PORT }} -sTCP:LISTEN; then
+              sudo fuser -k ${{ env.DEV-PORT }}/tcp
             fi
           else
             echo "Directory dev/frontend not found, skipping."
@@ -91,8 +91,8 @@ jobs:
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ env.TARGET_DIRECTORY }}
 
-    # Install dependencies for the Next.js frontend in the Dev environment
-    - name: Install Next.js frontend dependencies (Dev)
+    # Check node and npm version on target server
+    - name: Check Nodejs and NPM version
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.HOST_DNS }}
@@ -100,10 +100,26 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         timeout: 1m
         script: |
-          set -e
+          source ~/.zshrc
+          echo "node version is: $(node -v)"
+          echo "npm version is: $(npm -v)"
+
+    # Install dependencies for the Next.js frontend in the Dev environment
+    - name: Install Next.js frontend dependencies (Dev)
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          source ~/.zshrc
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
-            npm ci
+            rm -rf node_modules
+            rm -f package-lock.json
+            rm install.log
+            touch install.log
+            npm install --verbose >> "install.log" 2>&1
           else
             echo "Directory dev/frontend not found, skipping dependency installation."
           fi
@@ -117,6 +133,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         timeout: 1m
         script: |
+          source ~/.zshrc
           set -e
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
@@ -136,11 +153,12 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          source ~/.zshrc
           set -e
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
             if ! pm2 describe "website-dev" > /dev/null; then
-              pm2 start npm --name "website-dev" -- start -- --port ${{ env.PORT }}
+              pm2 start npm --name "website-dev" -- start -- --port ${{ env.DEV-PORT }}
               pm2 save
             else
               echo "PM2 process 'website-dev' already running, skipping start command."

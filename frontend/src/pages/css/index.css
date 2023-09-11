@@ -4,6 +4,13 @@
     --background-color: #F2ECBE;
     --secondary-background-color: #E2C799;
     --gradient-direction: to bottom;
+    --text-holder-height: 80vh;
+    --welcome-label-font-size: 50px;
+    --welcome-label-padding: 0%;
+    --welcome-label-width: 50%;
+    --text-holder-flex-direction: row;
+    --text-holder-justify-content: space-between;
+    --text-holder-padding: 15%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +25,24 @@
 @media only screen and (orientation: portrait) {
     :root {
         --gradient-direction: to bottom;
+        --welcome-label-font-size: 30px;
+        --welcome-label-padding: 5%;
+        --welcome-label-width: 80%;
+        --text-holder-height: 60vh;
+        --text-holder-flex-direction: column;
+        --text-holder-justify-content: center;
+        --text-holder-padding: 0;
     }
 }
-    
+
 @media only screen and (orientation: landscape) {
     :root {
         --gradient-direction: to bottom right;
     }
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background: linear-gradient(var(--gradient-direction), var(--background-color), var(--secondary-background-color));
@@ -35,13 +50,40 @@ html, body {
 }
 
 .textHolder {
+    padding: var(--text-holder-padding);
     display: flex;
-    justify-content: center;
+    flex-direction: var(--text-holder-flex-direction);
+    justify-content: var(--text-holder-justify-content);
     align-items: center;
-    height: 100vh;
+    height: var(--text-holder-height);
+    gap: 2%;
+}
+
+#vara-container {
+    margin-top: 25%;
 }
 
 #vara-container svg {
     overflow: visible;
+    position: relative;
+    z-index: 2;
 }
-  
+
+.welcome-label {
+    font-size: var(--welcome-label-font-size);
+    text-align: center;
+    display: inline-block;
+    padding-left: var(--welcome-label-padding);
+    padding-right: var(--welcome-label-padding);
+    width: var(--welcome-label-width);
+}
+
+.stickerHolder {
+    position: relative;
+}
+
+.welcome-sticker {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
