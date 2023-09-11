@@ -140,7 +140,9 @@ jobs:
             if [ -d ".next" ]; then
               rm -rf .next
             fi
-            npm run build
+            rm build.log
+            touch build.log
+            npm run build --verbose >> "build.log" 2>&1
           else
             echo "Directory dev/frontend not found, skipping build process."
           fi

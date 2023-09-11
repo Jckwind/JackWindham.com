@@ -127,6 +127,9 @@ jobs:
           if [ -d "prod/frontend" ]; then
             cd prod/frontend
             npm run build
+            rm build.log
+            touch build.log
+            npm run build --verbose >> "build.log" 2>&1
           else
             echo "Directory prod/frontend not found, skipping build process."
           fi
