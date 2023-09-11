@@ -18,9 +18,11 @@ export default function Home() {
 
   let varaInstance: InstanceType<typeof Vara>;
 
-  const onVaraInit = (instance: any) => {
-    varaInstance = instance;
-  };
+
+  const onVaraInit = (instance: any) => { varaInstance = instance; };
+  
+  const ITALIC_CLASS_NAME = 'italic-text';
+  const CURSOR_CLASS_NAME = 'show-cursor';
 
   return (
     <>
@@ -31,23 +33,37 @@ export default function Home() {
       </Head>
       <div className="textHolder">
         <TypeAnimation
-          className={`${laila.className} welcome-label`}
+          className={`${laila.className} ${ITALIC_CLASS_NAME} welcome-label min-h-[2rem] md:min-h-[4rem] lg:min-h-[5rem] text-2xl md:text-4xl`}
           preRenderFirstString={true}
           cursor={false}
           sequence={[
+            "Who are you?",
+            2800,
+            "",
+            (el) => {
+              if (el)
+                el.classList.remove(ITALIC_CLASS_NAME)
+            },
+            (el) => {
+              if (el)
+                el.classList.add(CURSOR_CLASS_NAME)
+            },
+            'I do the hard thing.',
             2000,
-            'Do the hard thing.',
-            4000,
-            'Proud perfectionist.',
-            4000,
-            "Do work you're proud of.",
+            "I am a proud perfectionist.",
             2000,
+            "I do work I'm proud of.",
+            2000,
+            "Who are you?",
+            (el) => {
+              if (el)
+                el.classList.remove(CURSOR_CLASS_NAME)
+            },
           ]}
           speed={50}
-          repeat={Infinity}
         />
-        <div className="stickerHolder">
-          <Image src="mynameis.svg" alt="My Name Is" width={500} height={300} className='welcome-sticker' />
+        <div className="stickerHolder w-3/4 md:w-1/4">
+          <Image src="mynameis.svg" alt="My Name Is" width={500} height={300} className='welcome-sticker w-full' />
           <VaraText text="Jack" fontSize={60} onVaraInit={onVaraInit} />
         </div>
       </div>
