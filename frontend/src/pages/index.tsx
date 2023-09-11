@@ -1,6 +1,6 @@
 import { Laila } from 'next/font/google'
 import VaraText from '@/components/VaraText';
-import Typewriter from 'typewriter-effect';
+import { TypeAnimation } from 'react-type-animation'
 import Vara from 'vara'
 import Head from 'next/head';
 import Image from 'next/image';
@@ -30,24 +30,22 @@ export default function Home() {
         <meta name="theme-color" key="dark" media="(prefers-color-scheme: dark)" content="#000000" />
       </Head>
       <div className="textHolder">
-        <h1 className={`${laila.className} welcome-label`}>Nouns. Adjectives. Things about me. Wow</h1>
-
-        {/* <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .pauseFor(1500)
-              .typeString('Welcome! My name is ')
-              .callFunction(() => {
-                varaInstance.draw("jack");
-              })
-              .start();
-          }}
-          options={{
-            cursor: "",
-            wrapperClassName: `${laila.className} welcome-label`,
-            delay: 80,
-          }}
-        /> */}
+        <TypeAnimation
+          className={`${laila.className} welcome-label`}
+          preRenderFirstString={true}
+          cursor={false}
+          sequence={[
+            2000,
+            'Do the hard thing.',
+            4000,
+            'Proud perfectionist.',
+            4000,
+            "Do work you're proud of.",
+            2000,
+          ]}
+          speed={50}
+          repeat={Infinity}
+        />
         <div className="stickerHolder">
           <Image src="mynameis.svg" alt="My Name Is" width={500} height={300} className='welcome-sticker' />
           <VaraText text="Jack" fontSize={60} onVaraInit={onVaraInit} />
