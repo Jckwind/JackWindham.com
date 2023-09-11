@@ -134,7 +134,7 @@ jobs:
         timeout: 1m
         script: |
           source ~/.zshrc
-          set -e
+          set +e
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
             if [ -d ".next" ]; then
