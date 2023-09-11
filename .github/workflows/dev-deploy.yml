@@ -118,7 +118,7 @@ jobs:
             cd dev/frontend
             rm -rf node_modules
             rm -f package-lock.json
-            npm install
+            npm install --no-audit 
           else
             echo "Directory dev/frontend not found, skipping dependency installation."
           fi
