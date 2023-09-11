@@ -106,7 +106,9 @@ jobs:
             cd prod/frontend
             rm -rf node_modules
             rm -f package-lock.json
-            npm install --no-audit 
+            rm install.log
+            touch install.log
+            npm install --verbose >> "install.log" 2>&1
           else
             echo "Directory prod/frontend not found, skipping dependency installation."
           fi

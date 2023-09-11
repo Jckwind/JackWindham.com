@@ -113,12 +113,13 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           source ~/.zshrc
-          set +e
           if [ -d "dev/frontend" ]; then
             cd dev/frontend
             rm -rf node_modules
             rm -f package-lock.json
-            npm install --verbose >> "~/install.log" 2>&1
+            rm install.log
+            touch install.log
+            npm install --verbose >> "install.log" 2>&1
           else
             echo "Directory dev/frontend not found, skipping dependency installation."
           fi
