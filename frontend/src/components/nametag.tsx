@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Vara from 'vara';
 import "./css/nametag.css";
 
+
 const Nametag: React.FC = () => {
 
     let varaInstance: InstanceType<typeof Vara>;
