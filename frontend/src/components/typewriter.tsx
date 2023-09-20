@@ -15,7 +15,7 @@ const Typewriter: React.FC = () => {
 
     return (
         <TypeAnimation
-        className={`${laila.className} tagline-label absolute bottom-1 left-1 mold-a`}
+        className={`${laila.className} tagline-label absolute bottom-1 md:bottom-6 left-1 md:left-2 mold-a`}
         cursor={false}
         sequence={[
           4000,
