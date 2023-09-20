@@ -3,15 +3,6 @@
     --secondary-color: #C08261;
     --background-color: #F2ECBE;
     --secondary-background-color: #E2C799;
-    --gradient-direction: to bottom;
-    --text-holder-height: 80vh;
-    --welcome-label-font-size: 50px;
-    --welcome-label-padding: 0%;
-    --welcome-label-width: 50%;
-    --text-holder-flex-direction: row;
-    --text-holder-justify-content: space-between;
-    --text-holder-padding: 15%;
-    --text-holder-gap: 2%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,23 +14,41 @@
     }
 }
 
-@media only screen and (orientation: portrait) {
-    :root {
-        --gradient-direction: to bottom;
-        --welcome-label-font-size: 40px;
-        --welcome-label-padding: 2%;
-        --welcome-label-width: 90%;
-        --text-holder-height: 60vh;
-        --text-holder-flex-direction: column;
-        --text-holder-justify-content: center;
-        --text-holder-padding: 0;
-        --text-holder-gap: 15%;
+/* Web */
+@media only screen and (min-device-width: 1024px) {
+    
+}
+
+/* iPhone */
+@media only screen and (max-device-width: 767px) {
+
+    /* iPhone Portrait */
+    @media (orientation: portrait) {
+        
+
+    }
+
+    /* iPhone Landscape */
+    @media (orientation: landscape) {
+        
     }
 }
 
-@media only screen and (orientation: landscape) {
-    :root {
-        --gradient-direction: to bottom right;
+/* iPad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+
+    /* iPad Portrait */
+    @media (orientation: portrait) {
+        /* :root {
+            iPad Portrait specific variables here
+        } */
+    }
+
+    /* iPad Landscape */
+    @media (orientation: landscape) {
+        /* :root {
+            iPad Landscape specific variables here
+        } */
     }
 }
 
@@ -47,65 +56,14 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(var(--gradient-direction), var(--background-color), var(--secondary-background-color));
+    background: linear-gradient(to bottom, var(--background-color), var(--secondary-background-color));
     background-attachment: fixed;
 }
 
-.textHolder {
-    padding: var(--text-holder-padding);
+.nametagHolder {
     display: flex;
-    flex-direction: var(--text-holder-flex-direction);
-    justify-content: var(--text-holder-justify-content);
+    height: 100vh;
+    justify-content: flex-end;
     align-items: center;
-    height: var(--text-holder-height);
-    gap: var(--text-holder-gap);
-}
-
-#vara-container {
-    margin-top: 25%;
-}
-
-#vara-container svg {
-    overflow: visible;
-    position: relative;
-    z-index: 2;
-}
-
-.stickerHolder {
-    position: relative;
-}
-
-.welcome-sticker {
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-}
-
-.welcome-label {
-    text-align: center;
-    display: inline-block;
-    padding-left: var(--welcome-label-padding);
-    padding-right: var(--welcome-label-padding);
-    width: var(--welcome-label-width);
-}
-
-.italic-text {
-    font-style: italic !important;
-}
-
-.show-cursor::after {
-    content: '|';
-    animation: cursor-blink 1s infinite;
-}
-
-@keyframes cursor-blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
+    padding: 15%;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMagnifyingGlass,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import "@/app/globals.css";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Jack Windham</a>
+        <a className="btn btn-ghost normal-case text-2xl bold">Jack Windham</a>
       </div>
       <div className="hidden md:flex flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
       <div className="md:hidden flex flex-none">
         <button className="btn btn-circle btn-ghost" id="menu-toggle">
-          <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
           <i className="fas fa-bars"></i>
         </button>
         <ul className="menu hidden" id="menu-content">
