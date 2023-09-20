@@ -1,13 +1,13 @@
-import { Laila } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 import { TypeAnimation } from 'react-type-animation'
 import "./css/typewriter.css";
 
-const laila = Laila({
-    subsets: ['latin'],
-    weight: '600',
-    display: 'swap',
-    variable: '--laila-font',
-  })
+const rubik = Rubik({
+    weight: "variable",
+    style: ["italic", "normal"],
+    display: "swap",
+    subsets: ["latin"],
+})
 
 const Typewriter: React.FC = () => {
 
@@ -15,29 +15,29 @@ const Typewriter: React.FC = () => {
 
     return (
         <TypeAnimation
-        className={`${laila.className} tagline-label absolute bottom-1 md:bottom-6 left-1 md:left-2 mold-a`}
-        cursor={false}
-        sequence={[
-          4000,
-          (el) => {
-            if (el)
-              el.classList.add(CURSOR_CLASS_NAME)
-          },
-          "Obsessive problem solver.",
-          2000,
-          "Dedicated to optimization.",
-          2000,
-          "Driven by results.",
-          2000,
-          "",
-          (el) => {
-            if (el)
-              el.classList.remove(CURSOR_CLASS_NAME)
-          },
-        ]}
-        speed={50}
-        repeat={Infinity}
-      />
+            className={`${rubik.className} tagline-label absolute bottom-1 md:bottom-6 left-1 md:left-2 mold-a`}
+            cursor={false}
+            sequence={[
+                4000,
+                (el) => {
+                    if (el)
+                        el.classList.add(CURSOR_CLASS_NAME)
+                },
+                "Obsessive problem solver.",
+                2000,
+                "Dedicated to optimization.",
+                2000,
+                "Driven by results.",
+                2000,
+                "",
+                (el) => {
+                    if (el)
+                        el.classList.remove(CURSOR_CLASS_NAME)
+                },
+            ]}
+            speed={50}
+            repeat={Infinity}
+        />
     );
 };
 

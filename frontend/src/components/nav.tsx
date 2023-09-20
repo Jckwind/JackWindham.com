@@ -31,13 +31,13 @@ const Navbar = () => {
           <i className="fas fa-bars"></i>
         </button>
         <ul className="menu hidden" id="menu-content">
-          <li className="menu-button">
+          <li>
             <Link href="/">Home</Link>
           </li>
-          <li className="menu-button">
+          <li>
             <Link href="/contact">Contact</Link>
           </li>
-          <li className="menu-button">
+          <li>
             <Link href="/about">About</Link>
           </li>
         </ul>
