@@ -11,7 +11,7 @@ const Nametag: React.FC = () => {
 
     return (
         <div className="sticker-holder flex justify-center">
-            <Image src="mynameis.svg" alt="My Name Is" width={500} height={300} className='welcome-sticker'/>
+            <Image src="mynameis.svg" alt="MyNameIsJack" width={500} height={300} className='welcome-sticker'/>
             <VaraText text="Jack" fontSize={40} onVaraInit={onVaraInit} />
         </div>
     );
