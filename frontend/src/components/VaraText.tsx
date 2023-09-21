@@ -3,15 +3,15 @@ import React, { useEffect, useRef } from 'react';
 import Vara from 'vara';
 
 type VaraTextProps = {
-  text: string;
-  fontSize?: number;
-  onVaraInit?: (varaInstance: any) => void;
+    text: string;
+    fontSize?: number;
+    onVaraInit?: (varaInstance: any) => void;
 };
 
 const VaraText: React.FC<VaraTextProps> = ({ text, fontSize = 32, onVaraInit }) => {
     const containerId = "vara-container";
     const varaRef = useRef<InstanceType<typeof Vara> | null>(null);
-    
+
     useEffect(() => {
         if (!varaRef.current) {
             varaRef.current = new Vara(
@@ -19,15 +19,15 @@ const VaraText: React.FC<VaraTextProps> = ({ text, fontSize = 32, onVaraInit }) 
                 '/handwriting.json',
                 [
                     {
-                    text,
-                    fontSize,
-                    id: "jack",
-                    strokeWidth: 1.5,
-                    letterSpacing: -2,
-                    duration:1200,
-                    textAlign:"center",
-                    delay: 1000,
-                    color: "hsl(var(--bc))",
+                        text,
+                        fontSize,
+                        id: "jack",
+                        strokeWidth: 1.5,
+                        letterSpacing: -2,
+                        duration: 1300,
+                        textAlign: "center",
+                        delay: 800,
+                        color: "#252937",
                     }
                 ]
             );
@@ -35,8 +35,8 @@ const VaraText: React.FC<VaraTextProps> = ({ text, fontSize = 32, onVaraInit }) 
                 onVaraInit(varaRef.current);
             }
         }
-      }, [text, fontSize, onVaraInit]);
-    
+    }, [text, fontSize, onVaraInit]);
+
     return <div id={containerId}></div>;
 };
 
