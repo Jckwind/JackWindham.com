@@ -6,41 +6,28 @@
 /* iPhone */
 @media only screen and (max-device-width: 767px) {
     :root {
-        --tagline-font-size: 7vw;
+        --tagline-font-size: 40px;
     }
 }
 
 /* iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
     :root {
-        --tagline-font-size: 40px;
-    }
-}
-
-.show-cursor::after {
-    content: '|';
-    animation: cursor-blink 1s infinite;
-}
-
-@keyframes cursor-blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
+        --tagline-font-size: 50px;
     }
 }
 
 .tagline-label {
     font-style: italic;
     text-align: left;
-    display: inline-block;  
     font-size: var(--tagline-font-size);
-    line-height: 2.25rem;
+    line-height: 3rem;
     font-weight: 500;
     color: #f3f5f2ff;
-    text-shadow: 2px 1px 1px #000000;
+    text-shadow: 3px 0px 0px #000000;
+}
+
+span.highlight {
+    font-weight: 600;
+    color: #DAA520;
 }

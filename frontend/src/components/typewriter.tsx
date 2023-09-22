@@ -9,34 +9,28 @@ const rubik = Rubik({
     subsets: ["latin"],
 })
 
-const Typewriter: React.FC = () => {
+type TypewriterProps = {
+    text: string;
+    toHighlight: string;
+    wait?: number;
+};
+
+const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0 }) => {
 
     const CURSOR_CLASS_NAME = 'show-cursor';
 
+    const formattedText = text.replace(".", "\n");
+
     return (
         <TypeAnimation
-            className={`${rubik.className} tagline-label absolute bottom-1 md:bottom-6 left-2 md:left-3 mold-a`}
+            className={`${rubik.className} tagline-label mold-a`}
+            highlight={[toHighlight]}
             cursor={false}
             sequence={[
-                4000,
-                (el) => {
-                    if (el)
-                        el.classList.add(CURSOR_CLASS_NAME)
-                },
-                "Obsessive problem solver.",
-                2000,
-                "Dedicated to optimization.",
-                2000,
-                "Driven by results.",
-                2000,
-                "",
-                (el) => {
-                    if (el)
-                        el.classList.remove(CURSOR_CLASS_NAME)
-                },
+                wait,
+                formattedText
             ]}
             speed={50}
-            repeat={Infinity}
         />
     );
 };
