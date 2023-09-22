@@ -2,6 +2,8 @@
 @media only screen and (min-device-width: 1024px) {
     :root {
         --nametag-padding: 15%;
+        --container-padding-top: 10%;
+        --typewriter-height: 85px;
     }
 }
 
@@ -10,6 +12,8 @@
 
     :root {
         --nametag-padding: 15%;
+        --container-padding-top: 35%;
+        --typewriter-height: 65px;
     }
 
 }
@@ -19,6 +23,8 @@
 
     :root {
         --nametag-padding: 15%;
+        --container-padding-top: 25%;
+        --typewriter-height: 75px;
     }
 
 }
@@ -29,4 +35,18 @@
     justify-content: flex-end;
     align-items: center;
     padding: var(--nametag-padding);
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7%;
+    padding: 8%;
+    padding-top: var(--container-padding-top);
+    width: 100%;
+    height: 100vh;
+}
+
+.typewriter-text {
+    height: var(--typewriter-height);
 }
