@@ -15,9 +15,9 @@ export default function Home() {
         <meta name="theme-color" key="dark" media="(prefers-color-scheme: dark)" content="#222831" />
       </Head>
       <Typewriter></Typewriter>
-      <div className="nametagHolder">
+      {/* <div className="nametagHolder">
         <Nametag></Nametag>
-      </div>
+      </div> */}
     </>
   )
 

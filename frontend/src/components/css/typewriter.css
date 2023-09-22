@@ -44,3 +44,7 @@
     color: #f3f5f2ff;
     text-shadow: 2px 1px 1px #000000;
 }
+
+span.highlight {
+    color: #DAA520;
+}

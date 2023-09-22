@@ -16,10 +16,11 @@ const Typewriter: React.FC = () => {
     return (
         <TypeAnimation
             className={`${rubik.className} tagline-label absolute bottom-1 md:bottom-6 left-2 md:left-3 mold-a`}
+            highlight={["problem solver", "optimization", "results"]}
             cursor={false}
             sequence={[
                 4000,
-                (el) => {
+                (el: HTMLElement) => {
                     if (el)
                         el.classList.add(CURSOR_CLASS_NAME)
                 },
@@ -29,8 +30,8 @@ const Typewriter: React.FC = () => {
                 2000,
                 "Driven by results.",
                 2000,
-                "",
-                (el) => {
+                " ",
+                (el: HTMLElement) => {
                     if (el)
                         el.classList.remove(CURSOR_CLASS_NAME)
                 },
