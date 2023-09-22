@@ -19,7 +19,6 @@ const Typewriter: React.FC = () => {
             highlight={["problem solver", "optimization", "results"]}
             cursor={false}
             sequence={[
-                4000,
                 (el: HTMLElement) => {
                     if (el)
                         el.classList.add(CURSOR_CLASS_NAME)
@@ -35,6 +34,7 @@ const Typewriter: React.FC = () => {
                     if (el)
                         el.classList.remove(CURSOR_CLASS_NAME)
                 },
+                2000
             ]}
             speed={50}
             repeat={Infinity}
