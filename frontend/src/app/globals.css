@@ -6,7 +6,7 @@
     --primary-color: #9A3B3B;
     --secondary-color: #C08261;
     --background-color: #F2ECBE;
-    --secondary-background-color: #E2C799;
+    --secondary-background-color: #222831;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -39,8 +39,9 @@
 
 .center-container {
     display: flex;
-    flex-direction: column;
-    gap: 7%;
+    flex-direction: row;
+    justify-content: space-between;
+    /* gap: 7%; */
     padding: 8%;
     padding-top: var(--container-padding-top);
     width: 100%;
@@ -49,4 +50,18 @@
 
 .typewriter-text {
     height: var(--typewriter-height);
+}
+
+.typewriter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7%;
+    width: 50%;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }

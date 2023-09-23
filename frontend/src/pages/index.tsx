@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Nametag from '@/components/nametag';
+import Image from 'next/image';
 import Typewriter from '@/components/typewriter';
 import './css/index.css'
 
@@ -15,21 +16,25 @@ export default function Home() {
         <meta name="theme-color" key="dark" media="(prefers-color-scheme: dark)" content="#222831" />
       </Head>
       <div className="center-container">
-        <div className="typewriter-text">
-          <Typewriter text="Obsessed with.problem solving" toHighlight='problem solving'></Typewriter>
+        <div className="typewriter-container">
+          <div className="typewriter-text">
+            <Typewriter text="Obsessed with.problem solving" toHighlight='problem solving'></Typewriter>
+          </div>
+          <div className="typewriter-text">
+            <Typewriter text='Dedicated to.optimization' toHighlight='optimization' wait={2000}></Typewriter>
+          </div>
+          <div className="typewriter-text">
+            <Typewriter text='Driven by.results' toHighlight='results' wait={4000}></Typewriter>
+          </div>
+          <br />
+          <div className="typewriter-text">
+            <Typewriter text='Jack Windham' toHighlight='Jack Windham' wait={6000}></Typewriter>
+          </div>
         </div>
-        <div className="typewriter-text">
-          <Typewriter text='Dedicated to.optimization' toHighlight='optimization' wait={2000}></Typewriter>
-        </div>
-        <div className="typewriter-text">
-          <Typewriter text='Driven by.results' toHighlight='results' wait={4000}></Typewriter>
-        </div>
-        <br />
-        <div className="typewriter-text">
-          <Typewriter text='Jack Windham' toHighlight='Jack Windham' wait={6000}></Typewriter>
+        <div className="image-container">
+          <Image src="/bust.png" alt="hmmmm" width={500} height={300} className='bust-sticker' />
         </div>
       </div>
-
     </>
   )
 
