@@ -9,4 +9,5 @@
     --secondary-background-color: #12151a;
     --highlight-color: #DAA520;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
