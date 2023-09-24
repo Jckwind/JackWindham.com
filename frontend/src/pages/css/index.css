@@ -1,9 +1,22 @@
 /* Web */
 @media only screen and (min-device-width: 1024px) {
     :root {
-        --nametag-padding: 15%;
         --container-padding-top: 10%;
         --typewriter-height: 85px;
+    }
+
+    .typewriter-container {
+        display: flex;
+        flex-direction: column;
+        gap: 7%;
+        width: 50%;
+    }
+    
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
     }
 }
 
@@ -11,9 +24,25 @@
 @media only screen and (max-device-width: 767px) {
 
     :root {
-        --nametag-padding: 15%;
         --container-padding-top: 35%;
         --typewriter-height: 65px;
+    }
+
+    .typewriter-container {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 7%;
+        width: 100%;
+    }
+    
+    .image-container {
+        position: absolute;
+        opacity: 0.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
 }
@@ -22,19 +51,27 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
 
     :root {
-        --nametag-padding: 15%;
         --container-padding-top: 25%;
         --typewriter-height: 75px;
     }
 
-}
+    .typewriter-container {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 7%;
+        width: 100%;
+    }
+    
+    .image-container {
+        position: absolute;
+        opacity: 0.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
-.nametagHolder {
-    display: flex;
-    height: 100vh;
-    justify-content: flex-end;
-    align-items: center;
-    padding: var(--nametag-padding);
 }
 
 .center-container {
@@ -50,18 +87,4 @@
 
 .typewriter-text {
     height: var(--typewriter-height);
-}
-
-.typewriter-container {
-    display: flex;
-    flex-direction: column;
-    gap: 7%;
-    width: 50%;
-}
-
-.image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
 }

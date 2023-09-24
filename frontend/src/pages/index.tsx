@@ -18,17 +18,17 @@ export default function Home() {
       <div className="center-container">
         <div className="typewriter-container">
           <div className="typewriter-text">
-            <Typewriter text="Obsessed with.problem solving" toHighlight='problem solving'></Typewriter>
+            <Typewriter text="Obsessed with.problem solving" toHighlight='problem solving' wait={1000}></Typewriter>
           </div>
           <div className="typewriter-text">
-            <Typewriter text='Dedicated to.optimization' toHighlight='optimization' wait={2000}></Typewriter>
+            <Typewriter text='Dedicated to.optimization' toHighlight='optimization' wait={3000}></Typewriter>
           </div>
           <div className="typewriter-text">
-            <Typewriter text='Driven by.results' toHighlight='results' wait={4000}></Typewriter>
+            <Typewriter text='Driven by.results' toHighlight='results' wait={5000}></Typewriter>
           </div>
           <br />
           <div className="typewriter-text">
-            <Typewriter text='Jack Windham' toHighlight='Jack Windham' wait={6000}></Typewriter>
+            <Typewriter text='Jack Windham' toHighlight='Jack Windham' wait={7000}></Typewriter>
           </div>
         </div>
         <div className="image-container">

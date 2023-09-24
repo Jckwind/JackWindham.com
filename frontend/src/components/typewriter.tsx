@@ -13,17 +13,16 @@ type TypewriterProps = {
     text: string;
     toHighlight: string;
     wait?: number;
+    classname?: string;
 };
 
-const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0 }) => {
-
-    const CURSOR_CLASS_NAME = 'show-cursor';
+const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0, classname = "tagline-label" }) => {
 
     const formattedText = text.replace(".", "\n");
 
     return (
         <TypeAnimation
-            className={`${rubik.className} tagline-label mold-a`}
+            className={`${rubik.className} ${classname} mold-a`}
             highlight={[toHighlight]}
             cursor={false}
             sequence={[

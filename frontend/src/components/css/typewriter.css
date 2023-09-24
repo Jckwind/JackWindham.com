@@ -13,7 +13,7 @@
 /* iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
     :root {
-        --tagline-font-size: 50px;
+        --tagline-font-size: 55px;
     }
 }
 
