@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name='viewport' content='initial-scale=1, viewport-fit=cover' />
         <meta name="theme-color" content="#222831" />
       </Head>
       <div className="center-container">
