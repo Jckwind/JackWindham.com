@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { routes } from '@/assets/routes';
+import { routes } from '@/config/routes';
 
 
 const HoriztonalMenu = () => {

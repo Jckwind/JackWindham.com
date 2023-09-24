@@ -1,7 +1,7 @@
 import { Rubik } from 'next/font/google'
 import React from "react";
 import Link from "next/link";
-import { routes } from '@/assets/routes';
+import { routes } from '@/config/routes';
 import '@/components/css/slide_out_menu.css'
 
 const rubik = Rubik({
