@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="flex-1">
-          <a className={`btn btn-ghost normal-case text-2xl`}>Jack Windham</a>
+          <a className={`main-button text-2xl`}>Jack Windham</a>
         </div>
         <HoriztonalMenu></HoriztonalMenu>
         <MenuButton toggleMenu={toggleMenu}></MenuButton>

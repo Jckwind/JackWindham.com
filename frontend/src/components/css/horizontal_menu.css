@@ -1,7 +1,7 @@
 .menu-horizontal li {
     text-align: left;
     font-weight: 600;
-    color: #f3f5f2ff 0.9;
+    color: var(--text-color);
 }
 
 .menu {

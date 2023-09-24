@@ -8,6 +8,7 @@
     --background-color: #222831;
     --secondary-background-color: #12151a;
     --highlight-color: #DAA520;
+    --text-color: #f3f5f2;
     background-color: var(--background-color);
 }
 
