@@ -7,22 +7,5 @@
     --secondary-color: #C08261;
     --background-color: #222831;
     --secondary-background-color: #222831;
+    background-color: var(--background-color);
 }
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #C69749;
-        --secondary-color: #735F32;
-        --background-color: #000000;
-        --secondary-background-color: #222831;
-    }
-} */
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--background-color)
-  }
-  
