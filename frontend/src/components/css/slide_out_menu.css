@@ -9,7 +9,7 @@
     height: 100vh;
     flex-direction: column;
     align-items: flex-start;
-    background: var(--secondary-background-color);
+    background: linear-gradient(to bottom, var(--background-color) 30%, var(--secondary-background-color));
 }
 
 .menu-slide.active {
@@ -26,9 +26,9 @@
 
 .slide-out-menu li {
     text-align: left;
-    font-weight: 450;
-    font-size: 45px;
-    line-height: 55px;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3rem;
     color: #f3f5f2ff 0.9;
     padding: 5px;
 }

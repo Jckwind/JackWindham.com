@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import '@/components/css/nav.css'
 
 import SlideOutMenu from "@/components/slide_out_menu";
@@ -20,14 +19,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
-      <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-2xl bold main-button">Jack Windham</a>
+    <>
+      <div className="navbar">
+        <div className="flex-1">
+          <a className={`btn btn-ghost normal-case text-2xl`}>Jack Windham</a>
+        </div>
+        <HoriztonalMenu></HoriztonalMenu>
+        <MenuButton toggleMenu={toggleMenu}></MenuButton>
       </div>
-      <HoriztonalMenu></HoriztonalMenu>
-      <MenuButton toggleMenu={toggleMenu}></MenuButton>
       <SlideOutMenu menuVisible={menuVisible}></SlideOutMenu>
-    </div>
+    </>
   );
 };
 

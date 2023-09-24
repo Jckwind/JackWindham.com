@@ -1,3 +1,11 @@
-.btn {
+/* .btn {
     z-index: 1000;
+} */
+
+.navbar {
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 20px 30px var(--background-color);
 }
