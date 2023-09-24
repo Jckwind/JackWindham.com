@@ -17,6 +17,7 @@
         align-items: center;
         justify-content: center;
         width: 50%;
+        background: radial-gradient(circle at center, black 0, rgb(0, 0, 0, 0) 45%);
     }
 }
 
@@ -43,6 +44,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        background: radial-gradient(circle at center, black 0, rgb(0, 0, 0, 0) 45%);
     }
 
 }
@@ -70,6 +72,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        background: radial-gradient(circle at center, black 0, rgb(0, 0, 0, 0) 45%);
     }
 
 }
@@ -78,7 +81,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* gap: 7%; */
     padding: 8%;
     padding-top: var(--container-padding-top);
     width: 100%;

@@ -1,6 +1,6 @@
 import { Rubik } from 'next/font/google'
 import { TypeAnimation } from 'react-type-animation'
-import "./css/typewriter.css";
+import "@/components/css/typewriter.css";
 
 const rubik = Rubik({
     weight: "variable",
@@ -29,7 +29,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0, cl
                 wait,
                 formattedText
             ]}
-            speed={50}
+            speed={70}
         />
     );
 };
