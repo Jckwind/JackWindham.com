@@ -12,6 +12,11 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
+    if (!menuVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   };
 
   return (

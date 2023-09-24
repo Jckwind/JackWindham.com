@@ -24,10 +24,10 @@
     line-height: 3rem;
     font-weight: 500;
     color: #f3f5f2ff;
-    text-shadow: 3px 0px 0px #000000;
+    text-shadow: 3px 0px 0px black;
 }
 
 span.highlight {
     font-weight: 600;
-    color: #DAA520;
+    color: var(--highlight-color);
 }

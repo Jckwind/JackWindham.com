@@ -29,7 +29,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0, cl
                 wait,
                 formattedText
             ]}
-            speed={70}
+            speed={60}
         />
     );
 };
