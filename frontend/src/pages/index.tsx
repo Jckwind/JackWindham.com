@@ -27,7 +27,7 @@ export default function Home() {
           </div>
         </div>
         <div className="image-container">
-          <Image src="/bust.png" alt="hmmmm" width={500} height={300} className='bust-sticker' />
+          <Image src="/self.png" alt="hmmmm" width={500} height={300} className='bust-sticker' />
         </div>
       </div>
     </>
