@@ -1,19 +1,19 @@
 @media only screen and (min-device-width: 1024px) {
     :root {
-        --tagline-font-size: 60px;
+        --tagline-font-size: clamp(40px, 6vh, 60px);
     }
 }
 /* iPhone */
 @media only screen and (max-device-width: 767px) {
     :root {
-        --tagline-font-size: 40px;
+        --tagline-font-size: clamp(40px, 10vw, 60px);
     }
 }
 
 /* iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
     :root {
-        --tagline-font-size: 55px;
+        --tagline-font-size: clamp(40px, 6vh, 60px);
     }
 }
 

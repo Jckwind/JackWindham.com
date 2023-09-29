@@ -1,6 +1,8 @@
 .main-button {
     font-weight: 600;
     color: var(--text-color);
+    color: #f3f5f2ff;
+    opacity: 85%;
     padding-left: 1rem;
 }
 

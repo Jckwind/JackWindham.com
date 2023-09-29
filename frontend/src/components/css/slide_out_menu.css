@@ -29,6 +29,7 @@
     font-weight: 600;
     font-size: 2.5rem;
     line-height: 3rem;
-    color: #f3f5f2ff 0.9;
+    color: #f3f5f2ff;
+    opacity: 75%;
     padding: 5px;
 }

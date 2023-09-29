@@ -17,7 +17,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ toggleMenu }) => {
     };
 
     return (
-        <button className={`md:hidden btn btn-circle btn-ghost ${isActive ? "active" : ""}`}
+        <button className={`md:hidden menu-button ${isActive ? "active" : ""}`}
             id="menu-toggle"
             onClick={handleClick}>
             <FontAwesomeIcon icon={isActive ? faXmark : faBars}></FontAwesomeIcon>
