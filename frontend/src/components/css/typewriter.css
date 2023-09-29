@@ -1,19 +1,19 @@
 @media only screen and (min-device-width: 1024px) {
     :root {
-        --tagline-font-size: 60px;
+        --tagline-font-size: clamp(40px, 6vh, 60px);
     }
 }
 /* iPhone */
 @media only screen and (max-device-width: 767px) {
     :root {
-        --tagline-font-size: 40px;
+        --tagline-font-size: clamp(40px, 10vw, 60px);
     }
 }
 
 /* iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
     :root {
-        --tagline-font-size: 50px;
+        --tagline-font-size: clamp(40px, 6vh, 60px);
     }
 }
 
@@ -24,10 +24,10 @@
     line-height: 3rem;
     font-weight: 500;
     color: #f3f5f2ff;
-    text-shadow: 3px 0px 0px #000000;
+    text-shadow: 3px 0px 0px black;
 }
 
 span.highlight {
     font-weight: 600;
-    color: #DAA520;
+    color: var(--highlight-color);
 }

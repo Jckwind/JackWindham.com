@@ -1,0 +1,35 @@
+.menu-slide {
+    transition: transform .5s ease-in-out;
+    transform: translateY(-100vh);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(to bottom, var(--background-color) 30%, var(--secondary-background-color));
+}
+
+.menu-slide.active {
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-out-menu {
+    list-style: none;
+    padding: 25px;
+    margin-top: 4rem;
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+.slide-out-menu li {
+    text-align: left;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: #f3f5f2ff;
+    opacity: 75%;
+    padding: 5px;
+}

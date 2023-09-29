@@ -1,36 +1,29 @@
-import { Rubik } from 'next/font/google'
 import { TypeAnimation } from 'react-type-animation'
-import "./css/typewriter.css";
-
-const rubik = Rubik({
-    weight: "variable",
-    style: ["italic", "normal"],
-    display: "swap",
-    subsets: ["latin"],
-})
+import "@/components/css/typewriter.css";
 
 type TypewriterProps = {
     text: string;
     toHighlight: string;
     wait?: number;
+    classname?: string;
 };
 
-const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0 }) => {
+const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0, classname = "tagline-label" }) => {
 
-    const CURSOR_CLASS_NAME = 'show-cursor';
+    const formattedText = text.replace(".", "\n");
 
     const formattedText = text.replace(".", "\n");
 
     return (
         <TypeAnimation
-            className={`${rubik.className} tagline-label mold-a`}
+            className={`${classname} mold-a`}
             highlight={[toHighlight]}
             cursor={false}
             sequence={[
                 wait,
                 formattedText
             ]}
-            speed={50}
+            speed={60}
         />
     );
 };

@@ -1,0 +1,27 @@
+.menu-button {
+    color: #f3f5f2ff;
+    opacity: 75%;
+    display: inline-flex;
+    flex-shrink: 0;
+    cursor: pointer;
+    user-select: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-color: transparent;
+    text-align: center;
+    height: 3rem/* 48px */;
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    min-height: 3rem/* 48px */;
+    font-size: 0.875rem/* 14px */;
+    line-height: 1em;
+    gap: 0.5rem/* 8px */;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-button.active {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(90deg);
+}

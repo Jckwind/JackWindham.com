@@ -5,24 +5,22 @@
 :root {
     --primary-color: #9A3B3B;
     --secondary-color: #C08261;
-    --background-color: #F2ECBE;
-    --secondary-background-color: #E2C799;
+    --background-color: #222831;
+    --secondary-background-color: #12151a;
+    --highlight-color: #DAA520;
+    --text-color: #f3f5f2;
+    background-color: var(--background-color);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #C69749;
-        --secondary-color: #735F32;
-        --background-color: #000000;
-        --secondary-background-color: #222831;
-    }
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
+html {
+    position: fixed;
     height: 100%;
-    width: 100%;
-    background-color: var(--secondary-background-color)
-  }
-  
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
