@@ -12,8 +12,6 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, toHighlight, wait = 0, cl
 
     const formattedText = text.replace(".", "\n");
 
-    const formattedText = text.replace(".", "\n");
-
     return (
         <TypeAnimation
             className={`${classname} mold-a`}
