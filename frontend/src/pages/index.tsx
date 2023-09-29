@@ -30,6 +30,7 @@ export default function Home() {
           <Image src="/self.png" alt="hmmmm" width={500} height={300} className='bust-sticker' />
         </div>
       </div>
+
     </>
   )
 
