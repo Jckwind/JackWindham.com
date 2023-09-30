@@ -12,28 +12,24 @@ export default function Home() {
       </Head>
       <div className="center-container">
         <div className="typewriter-container">
-          <div className="typewriter-text">
-            <Typewriter text="Obsessed with.problem solving" toHighlight='problem solving' wait={1000}></Typewriter>
-          </div>
-          <div className="typewriter-text">
-            <Typewriter text='Dedicated to.optimization' toHighlight='optimization' wait={3000}></Typewriter>
-          </div>
-          <div className="typewriter-text">
-            <Typewriter text='Driven by.results' toHighlight='results' wait={4500}></Typewriter>
-          </div>
-          <br />
-          <div className="typewriter-text">
-            <Typewriter text='Jack Windham' toHighlight='Jack Windham' wait={6000}></Typewriter>
-          </div>
-        </div>
-        <div className="image-container">
-          <Image src="/self.png" alt="hmmmm" width={500} height={300} className='bust-sticker' />
+          <TypewriterText text="Obsessed with.problem solving" highlight="problem solving" delay={1000} />
+          <TypewriterText text="Dedicated to.optimization" highlight="optimization" delay={3000} />
+          <TypewriterText text="Driven by.results" highlight="results" delay={4500} />
+          <TypewriterText text="Jack Windham" highlight="Jack Windham" delay={6000} />
         </div>
       </div>
 
     </>
   )
 
+}
+
+function TypewriterText({ text, highlight, delay }: { text: string; highlight: string; delay: number }) {
+  return (
+    <div className="typewriter-text">
+      <Typewriter text={text} toHighlight={highlight} wait={delay} />
+    </div>
+  );
 }
 
 
