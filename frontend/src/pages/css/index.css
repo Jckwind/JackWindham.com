@@ -1,7 +1,7 @@
 /* Web */
 @media only screen and (min-device-width: 1024px) {
     :root {
-        --container-padding-top: 10%;
+        --container-padding-top: 3rem;
     }
 
     .typewriter-container {
@@ -10,13 +10,17 @@
         gap: 5%;
     }
 
+    .center-container {
+        background-image: url("/background.svg");
+    }
+
 }
 
 /* iPhone */
 @media only screen and (max-device-width: 767px) {
 
     :root {
-        --container-padding-top: 6rem;
+        --container-padding-top: 2rem;
     }
 
     .typewriter-container {
@@ -25,13 +29,17 @@
         width: 100%;
     }
 
+    .center-container {
+        background-image: url("/mobile-background.svg");
+    }
+
 }
 
 /* iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
 
     :root {
-        --container-padding-top: 110px;
+        --container-padding-top: 3rem;
     }
 
     .typewriter-container {
@@ -40,10 +48,14 @@
         width: 100%;
     }
 
+    .center-container {
+        background-image: url("/background.svg");
+    }
+
 }
 
 .typewriter-container {
-    height: 75%;
+    height: 60%;
     display: flex;
     flex-direction: column;
 }
@@ -52,9 +64,9 @@
     align-items: center;
     display: flex;
     padding: 8%;
+    padding-top: var(--container-padding-top);
     width: 100%;
     height: 100vh;
-    background-image: url("/background.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
