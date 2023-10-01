@@ -15,7 +15,7 @@ export default function Home() {
           <TypewriterText text="Obsessed with.problem solving" highlight="problem solving" delay={1000} />
           <TypewriterText text="Dedicated to.optimization" highlight="optimization" delay={3000} />
           <TypewriterText text="Driven by.results" highlight="results" delay={4500} />
-          <TypewriterText text="Jack Windham" highlight="Jack Windham" delay={6000} />
+          <TypewriterText text=".Jack Windham" highlight="Jack Windham" delay={6000} />
         </div>
       </div>
 
