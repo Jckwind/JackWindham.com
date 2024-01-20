@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import '@/components/css/nav.css';
 
@@ -6,6 +7,17 @@ import MenuButton from '@/components/menu_button';
 import HoriztonalMenu from '@/components/horizontal_menu';
 
 const Navbar = () => {
+=======
+import React, { useState } from "react";
+import '@/components/css/nav.css'
+
+import SlideOutMenu from "@/components/slide_out_menu";
+import MenuButton from "@/components/menu_button";
+import HoriztonalMenu from "@/components/horizontal_menu";
+
+const Navbar = () => {
+
+>>>>>>> main
   const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = () => {

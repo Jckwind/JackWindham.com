@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <Head>
         <meta name="theme-color" content="#222831" />
+        <meta name="theme-color" content="#222831" />
       </Head>
       <div className="center-container">
         <div className="typewriter-container">
