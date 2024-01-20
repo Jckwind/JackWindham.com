@@ -1,43 +1,23 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Typewriter from '@/components/typewriter';
-import './css/index.css';
 
 export default function Home() {
   return (
     <>
       <Head>
         <meta name="theme-color" content="#222831" />
-        <meta name="theme-color" content="#222831" />
       </Head>
-      <div className="center-container">
-        <div className="typewriter-container">
-          <TypewriterText
-            text="Obsessed with.problem solving"
-            highlight="problem solving"
-            delay={1000}
-          />
-          <TypewriterText text="Dedicated to.optimization" highlight="optimization" delay={3000} />
-          <TypewriterText text="Driven by.results" highlight="results" delay={4500} />
-          <TypewriterText text=".Jack Windham" highlight="Jack Windham" delay={6000} />
-        </div>
+      <div className="flex min-h-full flex-col pt-16 pb-12">
+        <main className="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8">
+          <div className="py-16">
+            <div className="text-center">
+              <p className="text-base font-semibold text-primary">This website is actively being worked on :&#41;</p>
+              <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 text-balance">
+                Jack Wind
+              </h1>
+            </div>
+          </div>
+        </main>
       </div>
     </>
-  );
-}
-
-function TypewriterText({
-  text,
-  highlight,
-  delay,
-}: {
-  text: string;
-  highlight: string;
-  delay: number;
-}) {
-  return (
-    <div className="typewriter-text">
-      <Typewriter text={text} toHighlight={highlight} wait={delay} />
-    </div>
   );
 }
