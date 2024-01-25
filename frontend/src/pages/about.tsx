@@ -4,13 +4,13 @@ import { Metadata } from 'next';
 import { Section } from '@/components/ui/section';
 import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { RESUME_DATA } from '@/data/resume_data';
+import { Me } from '@/data/info';
 import { ProjectCard } from '@/components/project-card';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
+  title: `${Me.name} | ${Me.about}`,
+  description: Me.summary,
 };
 
 export default function About() {
@@ -19,36 +19,36 @@ export default function About() {
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white dark:bg-zinc-900 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+            <h1 className="text-2xl font-bold">{Me.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
+              {Me.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={RESUME_DATA.locationLink}
+                href={Me.locationLink}
                 target="_blank"
               >
                 <GlobeIcon className="size-3" />
-                {RESUME_DATA.location}
+                {Me.location}
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-              {RESUME_DATA.contact.email ? (
+              {Me.contact.email ? (
                 <Button className="size-8" variant="outline" size="icon" asChild>
-                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                  <a href={`mailto:${Me.contact.email}`}>
                     <MailIcon className="size-4" />
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
+              {Me.contact.tel ? (
                 <Button className="size-8" variant="outline" size="icon" asChild>
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                  <a href={`tel:${Me.contact.tel}`}>
                     <PhoneIcon className="size-4" />
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.social.map((social) => (
+              {Me.contact.social.map((social) => (
                 <Button key={social.name} className="size-8" variant="outline" size="icon" asChild>
                   <a href={social.url}>
                     <social.icon className="size-4" />
@@ -57,14 +57,14 @@ export default function About() {
               ))}
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
-              {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                  <span className="underline">{RESUME_DATA.contact.email}</span>
+              {Me.contact.email ? (
+                <a href={`mailto:${Me.contact.email}`}>
+                  <span className="underline">{Me.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
+              {Me.contact.tel ? (
+                <a href={`tel:${Me.contact.tel}`}>
+                  <span className="underline">{Me.contact.tel}</span>
                 </a>
               ) : null}
             </div>
@@ -72,8 +72,8 @@ export default function About() {
           <div className="relative w-[7rem] h-[7rem] lg:w-[10rem] lg:h-[10rem]">
             <Image
               fill
-              src={RESUME_DATA.avatarUrl}
-              alt={RESUME_DATA.name}
+              src={Me.avatarURL}
+              alt={Me.name}
               sizes="(min-width: 1024px) 10rem, 7rem"
               className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
@@ -82,12 +82,12 @@ export default function About() {
         <Section>
           <h2 className="text-xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
+            {Me.summary}
           </p>
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
+          {Me.work.map((work) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
@@ -119,7 +119,7 @@ export default function About() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
+          {Me.education.map((education) => {
             return (
               <Card key={education.school}>
                 <CardHeader>
@@ -138,7 +138,7 @@ export default function About() {
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
+            {Me.skills.programmingLanguages.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
             })}
           </div>
@@ -147,14 +147,14 @@ export default function About() {
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
+            {Me.projects.map((project) => {
               return (
                 <ProjectCard
                   key={project.title}
                   title={project.title}
                   description={project.description}
                   tags={project.techStack}
-                  link={'link' in project ? project.link.href : undefined}
+                  link={'link' in project ? project.link : undefined}
                 />
               );
             })}

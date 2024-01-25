@@ -1,12 +1,9 @@
-"use client";
-
 import * as React from "react";
 import Link from 'next/link';
 import Image from 'next/image';
-
-import { RESUME_DATA } from "@/data/resume_data";
-
 import clsx from 'clsx';
+
+import { Me } from "@/data/info";
 
 type Props = {
   src?: string;
@@ -14,7 +11,7 @@ type Props = {
   large?: boolean;
 } & React.HTMLAttributes<HTMLAnchorElement>;
 
-export const Avatar = ({ src = RESUME_DATA.avatarUrl, alt = RESUME_DATA.name, large = false, className, ...props }: Props) => {
+export const Avatar = ({ src = Me.avatarURL, alt = Me.name, large = false, className, ...props }: Props) => {
   return (
     <Link href="/" aria-label="Home" className={clsx(className, 'pointer-events-auto')} {...props}>
       <Image
