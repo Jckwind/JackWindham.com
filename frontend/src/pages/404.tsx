@@ -10,7 +10,7 @@ export default function NotFound404() {
             <div className="text-center">
               <p className="text-base font-semibold text-primary">404</p>
               <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 text-balance">
-                We couldn't find what you're looking for
+                 Page not found
               </h1>
               <p className="mt-2 text-base text-gray-500">
                 Anyway, here&apos;s my favorite picture of you and me

@@ -19,12 +19,12 @@ export const Footer = () => {
                 ))}
               </div>
               <div>
-                <p className="text-sm text-zinc-400 dark:text-zinc-500">
+                <p className="text-sm lg:text-center text-zinc-400 dark:text-zinc-500">
                   &copy; {new Date().getFullYear()} Jack Windham. All rights reserved.
                 </p>
                 <a
                   href="https://jarocki.me/"
-                  className="text-sm underline underline-offset-2 text-zinc-400 dark:text-zinc-500"
+                  className="text-sm lg:text-center underline underline-offset-2 text-zinc-400 dark:text-zinc-500"
                 >
                   This website was inspired by Bartosz Jarocki and his website
                 </a>
