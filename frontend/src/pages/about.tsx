@@ -135,14 +135,14 @@ export default function About() {
             );
           })}
         </Section>
-        <Section>
+        {/* <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {Me.skills.programmingLanguages.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
             })}
           </div>
-        </Section>
+        </Section> */}
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
@@ -152,7 +152,7 @@ export default function About() {
                 <ProjectCard
                   key={project.title}
                   title={project.title}
-                  description={project.description}
+                  description={project.short_description}
                   tags={project.techStack}
                   link={'link' in project ? project.link : undefined}
                 />

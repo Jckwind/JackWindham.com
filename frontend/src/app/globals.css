@@ -18,62 +18,62 @@
 
         @media (prefers-color-scheme: light) {
             --background: #222831;
-            --foreground: 224 71.4% 4.1%;
+            --foreground: #030712;
     
-            --card: 0 0% 100%;
-            --card-foreground: 224 71.4% 4.1%;
+            --card: #ffffff;
+            --card-foreground: #030712;
     
-            --popover: 0 0% 100%;
-            --popover-foreground: 224 71.4% 4.1%;
+            --popover: #ffffff;
+            --popover-foreground: #030712;
     
-            --primary: 220.9 39.3% 11%;
-            --primary-foreground: 210 20% 98%;
+            --primary: #111827;
+            --primary-foreground: #f9fafb;
     
-            --secondary: 220 14.3% 95.9%;
-            --secondary-foreground: 220.9 39.3% 11%;
+            --secondary: #f3f4f6;
+            --secondary-foreground: #111827;
     
-            --muted: 220 14.3% 95.9%;
-            --muted-foreground: 220 8.9% 46.1%;
+            --muted:  #f3f4f6;
+            --muted-foreground: #6b7280;
     
-            --accent: 220 14.3% 95.9%;
-            --accent-foreground: 220.9 39.3% 11%;
+            --accent: #f3f4f6;
+            --accent-foreground: #111827;
     
-            --destructive: 0 84.2% 60.2%;
-            --destructive-foreground: 210 20% 98%;
+            --destructive: #ef4444;
+            --destructive-foreground: #f9fafb;
     
-            --border: 220 13% 91%;
-            --input: 220 13% 91%;
-            --ring: 224 71.4% 4.1%;
-        }
+            --border: #e5e7eb;
+            --input: #e5e7eb;
+            --ring: #030712;
+        };
 
         @media (prefers-color-scheme: dark) {
             --background: #222831;
-            --foreground: red;
+            --foreground: #030712;
     
-            --card: green;
-            --card-foreground: 'bg-zinc-700';
+            --card: #ffffff;
+            --card-foreground: #030712;
     
-            --popover: 224 71.4% 4.1%;
-            --popover-foreground: 210 20% 98%;
+            --popover: #ffffff;
+            --popover-foreground: #030712;
     
-            --primary: gold;
-            --primary-foreground: gold;
+            --primary: #111827;
+            --primary-foreground: #f9fafb;
     
-            --secondary: 215 27.9% 16.9%;
-            --secondary-foreground: 210 20% 98%;
+            --secondary: #f3f4f6;
+            --secondary-foreground: #111827;
     
-            --muted: 215 27.9% 16.9%;
-            --muted-foreground: 217.9 10.6% 64.9%;
+            --muted:  #f3f4f6;
+            --muted-foreground: #6b7280;
     
-            --accent: 215 27.9% 16.9%;
-            --accent-foreground: 210 20% 98%;
+            --accent: #f3f4f6;
+            --accent-foreground: #111827;
     
-            --destructive: 0 62.8% 30.6%;
-            --destructive-foreground: 210 20% 98%;
+            --destructive: #ef4444;
+            --destructive-foreground: #f9fafb;
     
-            --border: 215 27.9% 16.9%;
-            --input: 215 27.9% 16.9%;
-            --ring: 216 12.2% 83.9%;
+            --border: #e5e7eb;
+            --input: #e5e7eb;
+            --ring: #030712;
         }
     }
 
