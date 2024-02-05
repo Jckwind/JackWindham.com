@@ -140,7 +140,7 @@ export default function Resume() {
           {Object.entries(Me.skills).map(([category, skills]) => {
             return (
               <>
-                <h3 className="font-semibold leading-none text-base">{category}</h3>
+                <h3 className="font-semibold leading-none text-base text-muted-foreground">{category}</h3>
                 <div className="flex flex-wrap gap-1">
                   {
                     skills.map((skill) => { 
