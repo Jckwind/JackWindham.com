@@ -30,7 +30,7 @@
             "title": "Senior Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": ["Hybrid"],
+            "badges": [],
             "start": "February 2024",
             "end": "Present",
             "description": "Supported the Dining & Entertainment platform as a core engineer; developing, maintaining and supporting cloud infrastructure on a daily basis. Supported and enhanced Capital One’s primary web platform, directly engineering and deploying consumer-facing changes. Interacted with third party partners on key design decisions. Developed an internal pipeline for more granular user analytics. Technologies: AWS, Jenkins, Go, Javascript."
@@ -40,7 +40,7 @@
             "title": "Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": ["Hybrid"],
+            "badges": [],
             "start": "August 2022",
             "end": "January 2023",
             "description": "Supported the Dining & Entertainment platform as a core engineer; developing, maintaining and supporting cloud infrastructure on a daily basis. Supported and enhanced Capital One’s primary web platform, directly engineering and deploying consumer-facing changes. Interacted with third party partners on key design decisions. Developed an internal pipeline for more granular user analytics. Technologies: AWS, Jenkins, Go, Javascript."
