@@ -6,7 +6,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Me } from '@/data/info';
 import { ProjectCard } from '@/components/project-card';
-import Image from 'next/image';
+import { Avatar, AvatarContainer } from '@/components/ui/avatar';
 
 export const metadata: Metadata = {
   title: `${Me.name} | ${Me.about}`,
@@ -69,15 +69,9 @@ export default function Resume() {
               ) : null}
             </div>
           </div>
-          <div className="relative w-[7rem] h-[7rem] lg:w-[10rem] lg:h-[10rem]">
-            <Image
-              fill
-              src={Me.avatarURL}
-              alt={Me.name}
-              sizes="(min-width: 1024px) 10rem, 7rem"
-              className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
-            />
-          </div>
+          <AvatarContainer large className='mr-1'>
+            <Avatar large />
+          </AvatarContainer>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -94,10 +88,10 @@ export default function Resume() {
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       <a className="hover:underline" href={work.link}>
-                        {work.company}
+                        {work.role} @ {work.company}
                       </a>
 
-                      <span className="inline-flex gap-x-1">
+                      <span className="inline-flex gap-x-1 ml-1">
                         {work.badges.map((badge) => (
                           <Badge variant="secondary" className="align-middle text-xs" key={badge}>
                             {badge}
@@ -105,12 +99,15 @@ export default function Resume() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-muted-foreground hidden md:block">
                       {work.start} - {work.end}
                     </div>
                   </div>
 
                   <h4 className="font-mono text-sm leading-none">{work.title}</h4>
+                  <div className="text-sm tabular-nums text-muted-foreground md:hidden">
+                    {work.start} - {work.end}
+                  </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">{work.description}</CardContent>
               </Card>
@@ -125,11 +122,14 @@ export default function Resume() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">{education.school}</h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-muted-foreground hidden md:block">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
+                <div className="text-sm tabular-nums text-muted-foreground md:hidden">
+                  {education.start} - {education.end}
+                </div>
                 <CardContent className="mt-2">{education.degree}</CardContent>
               </Card>
             );
@@ -137,11 +137,20 @@ export default function Resume() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
-            {Me.skills.technical.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
-            })}
-          </div>
+          {Object.entries(Me.skills).map(([category, skills]) => {
+            return (
+              <>
+                <h3 className="font-semibold leading-none text-base">{category}</h3>
+                <div className="flex flex-wrap gap-1">
+                  {
+                    skills.map((skill) => { 
+                    return <Badge key={skill}>{skill}</Badge>;
+                  })
+                  }
+                </div>
+              </>
+            )
+          })}
         </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
@@ -164,3 +173,4 @@ export default function Resume() {
     </main>
   );
 }
+

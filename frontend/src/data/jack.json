@@ -131,7 +131,7 @@
         }
     ],
     "skills": {
-        "technical": [
+        "Technical": [
             "Python",
             "Swift",
             "NodeJS",
@@ -141,7 +141,7 @@
             "Backend/Systems Architecture Design",
             "RESTful API Development and Management"
         ],
-        "frameworks": [
+        "Frameworks": [
             "React+NextJS",
             "Angular"
         ],

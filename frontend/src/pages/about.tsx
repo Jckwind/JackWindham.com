@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button';
 import { Me } from '@/data/info';
 import { ProjectCard } from '@/components/project-card';
 import { Avatar, AvatarContainer } from '@/components/ui/avatar';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: `${Me.name} | ${Me.about}`,
