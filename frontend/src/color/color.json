@@ -1,63 +1,59 @@
 {
     "background": {
-        "light": "#594011",
+        "light": "#CEC7B5",
         "dark": "#1E1E26"
     },
     "secondary-background": {
-        "light": "#BFA288",
+        "light": "#ECE5D8",
         "dark": "#131318"
     },
-    "tertiary-background": {
-        "light": "#ffffff",
-        "dark": "#000000"
-    },
     "foreground": {
-        "light": "#030712",
+        "light": "#4A4849",
         "dark": ""
     },
     "card": {
-        "light": "#BFA288",
+        "light": "#ECE5D8",
         "dark": "#131318"
     },
     "card-foreground": {
-        "light": "#030712",
+        "light": "#4A4849",
         "dark": ""
     },
     "popover": {
-        "light": "#ffffff",
-        "dark": ""
+        "light": "#F3F1E4",
+        "dark": "000000"
     },
     "popover-foreground": {
-        "light": "#030712",
-        "dark": ""
+        "light": "#4A4849",
+        "dark": "#FFD700"
     },
     "primary": {
-        "light": "#ffffff",
-        "dark": ""
+        "light": "#CEC7B5",
+        "dark": "#f9fafb"
     },
     "primary-foreground": {
-        "light": "#f9fafb",
+        "light": "#4A4849",
         "dark": "#000000"
     },
     "secondary": {
-        "light": "#f3f4f6",
-        "dark": ""
+        "light": "#CEC7B5",
+        "dark": "#f3f4f6"
     },
     "secondary-foreground": {
-        "light": "#111827",
-        "dark": ""
+        "light": "#4A4849",
+        "dark": "#000000"
     },
     "muted": {
-        "light": "#f3f4f6",
+        "light": "#716e6f",
         "dark": ""
     },
     "muted-foreground": {
-        "light": "#6b7280",
+        "light": "#716e6f",
         "dark": ""
     },
     "accent": {
-        "light": "#FFD700",
-        "dark": ""
+        "light": "#000000",
+        "dark": "#FFD700"
     },
     "accent-foreground": {
         "light": "#FFD700",
@@ -72,15 +68,15 @@
         "dark": ""
     },
     "border": {
-        "light": "#1E1E26",
-        "dark": ""
+        "light": "#716e6f",
+        "dark": "#1E1E26"
     },
     "input": {
         "light": "#e5e7eb",
         "dark": ""
     },
     "ring": {
-        "light": "#1E1E26",
-        "dark": ""
+        "light": "#716e6f",
+        "dark": "#1E1E26"
     }
 }

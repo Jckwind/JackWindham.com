@@ -11,7 +11,7 @@ export default function Document() {
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="theme-color" content="#3F3F46" />
       </Head>
-      <body className="flex h-full flex-col bg-background dark:bg-background text-zinc-700 dark:text-zinc-300">
+      <body className="flex h-full flex-col bg-background">
         <Main />
         <NextScript />
       </body>

@@ -25,8 +25,7 @@ const config: Config = {
         ring: "rgb(var(--ring) / <alpha-value>)",
         background: {
           DEFAULT: "rgb(var(--background) / <alpha-value>)",
-          secondary: "rgb(var(--secondary-background) / <alpha-value>)",
-          tertiary: "rgb(var(--tertiary-background) / <alpha-value>)"
+          secondary: "rgb(var(--secondary-background) / <alpha-value>)"
         },
         foreground: "rgb(var(--foreground) / <alpha-value>)",
         primary: {

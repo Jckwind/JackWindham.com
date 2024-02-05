@@ -40,7 +40,7 @@ export const AvatarContainer = ({ large = false, className, ...props }: Containe
       className={clsx(
         className,
         large ? 'h-[7rem] w-[7rem] lg:h-[10rem] lg:w-[10rem] p-1 ring-[0.25rem]' : 'h-10 w-10 p-0.5 ring-[0.125rem]',
-        'rounded-full text-center bg-border/50 ring-border/10 backdrop-blur',
+        'rounded-full text-center bg-border/50 ring-border/10 backdrop-blur shadow-lg shadow-popover-foreground/15',
       )}
       {...props}
     />

@@ -18,68 +18,62 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
  <tr>
     <th>Background</th>
     <th>Secondary-background</th>
-    <th>Tertiary-background</th>
     <th>Foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #594011; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #BFA288; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #030712; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Card</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #CEC7B5; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #ECE5D8; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #ECE5D8; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Card-foreground</th>
     <th>Popover</th>
     <th>Popover-foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #BFA288; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #030712; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #030712; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Primary</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F1E4; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #CEC7B5; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Primary-foreground</th>
     <th>Secondary</th>
     <th>Secondary-foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F4F6; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #111827; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Muted</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #CEC7B5; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Muted-foreground</th>
     <th>Accent</th>
     <th>Accent-foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F4F6; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #6B7280; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFD700; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFD700; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Destructive</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFD700; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #EF4444; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Destructive-foreground</th>
     <th>Border</th>
     <th>Input</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #EF4444; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #1E1E26; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #E5E7EB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Ring</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #1E1E26; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #E5E7EB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
 </table>
 
@@ -89,67 +83,61 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
  <tr>
     <th>Background</th>
     <th>Secondary-background</th>
-    <th>Tertiary-background</th>
     <th>Foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #594011; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #BFA288; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #030712; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Card</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #CEC7B5; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #ECE5D8; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #ECE5D8; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Card-foreground</th>
     <th>Popover</th>
     <th>Popover-foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #BFA288; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #030712; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #030712; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Primary</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F1E4; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #CEC7B5; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Primary-foreground</th>
     <th>Secondary</th>
     <th>Secondary-foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F4F6; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #111827; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Muted</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #CEC7B5; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Muted-foreground</th>
     <th>Accent</th>
     <th>Accent-foreground</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F4F6; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #6B7280; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFD700; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFD700; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Destructive</th>
+ </tr>
+ <tr>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFD700; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #EF4444; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+ </tr>
+ <tr>
     <th>Destructive-foreground</th>
     <th>Border</th>
     <th>Input</th>
- </tr>
- <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #EF4444; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #1E1E26; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #E5E7EB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
- </tr>
- <tr>
     <th>Ring</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #1E1E26; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #E5E7EB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #716E6F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
 </table>

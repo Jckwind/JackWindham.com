@@ -14,7 +14,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export const NavLink = ({ href, children }: React.PropsWithChildren<{ href: string }>) => {
   return (
-    <Link href={href} className="transition hover:text-primary">
+    <Link href={href} className="transition hover:text-accent">
       {children}
     </Link>
   );
@@ -28,8 +28,8 @@ const NavItem = ({ href, children }: React.PropsWithChildren<{ href: string }>) 
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition hover:text-accent',
-          isActive ? 'text-foreground' : '',
+          'relative block px-3 py-2 transition',
+          isActive ? 'text-popover-foreground' : 'hover:text-accent',
         )}
       >
         {children}
@@ -53,7 +53,7 @@ export const DesktopNavigation = (
 ) => {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-background-tertiary/90 px-3 text-sm font-medium text-muted-foreground shadow-lg shadow-primary-foreground/5 ring-1 ring-ring/5 backdrop-blur">
+      <ul className="flex rounded-full bg-popover/90 px-3 text-sm font-medium text-muted-foreground shadow-lg shadow-popover-foreground/15 ring-1 ring-ring/5 backdrop-blur">
         {routes.map((item) => {
           if (item.isExternal == false) {
             return (
@@ -82,11 +82,11 @@ export const DesktopNavigation = (
 export const MobileNavigation = (props: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center rounded-full bg-popover/90 px-4 py-2 text-sm font-medium text-popover-foreground shadow-lg shadow-popover-foreground/15 ring-1 ring-border/10 backdrop-blur">
         Menu
         <FontAwesomeIcon
           icon={faBars}
-          className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400"
+          className="ml-3 h-auto w-2"
         ></FontAwesomeIcon>
       </Popover.Button>
       <Transition.Root>
@@ -112,19 +112,19 @@ export const MobileNavigation = (props: React.HTMLAttributes<HTMLDivElement>) =>
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-popover p-8 ring-1 ring-border/10 text-popover-foreground"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
                 <FontAwesomeIcon
                   icon={faXmark}
-                  className="h-6 w-6 text-zinc-500 dark:text-zinc-400"
+                  className="h-6 w-6 text-popover-foreground/50"
                 ></FontAwesomeIcon>
               </Popover.Button>
               <h2 className="text-sm font-medium">Navigation</h2>
             </div>
             <nav className="mt-6">
-              <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+              <ul className="-my-2 divide-y divide-border/10 text-base">
                 {routes.map((item) => (
                   <MobileNavItem key={item.path} href={item.path}>
                     {item.name}
