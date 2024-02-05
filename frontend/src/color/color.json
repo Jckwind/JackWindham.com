@@ -1,0 +1,86 @@
+{
+    "background": {
+        "light": "#594011",
+        "dark": "#1E1E26"
+    },
+    "secondary-background": {
+        "light": "#BFA288",
+        "dark": "#131318"
+    },
+    "tertiary-background": {
+        "light": "#ffffff",
+        "dark": "#000000"
+    },
+    "foreground": {
+        "light": "#030712",
+        "dark": ""
+    },
+    "card": {
+        "light": "#BFA288",
+        "dark": "#131318"
+    },
+    "card-foreground": {
+        "light": "#030712",
+        "dark": ""
+    },
+    "popover": {
+        "light": "#ffffff",
+        "dark": ""
+    },
+    "popover-foreground": {
+        "light": "#030712",
+        "dark": ""
+    },
+    "primary": {
+        "light": "#ffffff",
+        "dark": ""
+    },
+    "primary-foreground": {
+        "light": "#f9fafb",
+        "dark": "#000000"
+    },
+    "secondary": {
+        "light": "#f3f4f6",
+        "dark": ""
+    },
+    "secondary-foreground": {
+        "light": "#111827",
+        "dark": ""
+    },
+    "muted": {
+        "light": "#f3f4f6",
+        "dark": ""
+    },
+    "muted-foreground": {
+        "light": "#6b7280",
+        "dark": ""
+    },
+    "accent": {
+        "light": "#FFD700",
+        "dark": ""
+    },
+    "accent-foreground": {
+        "light": "#FFD700",
+        "dark": ""
+    },
+    "destructive": {
+        "light": "#ef4444",
+        "dark": ""
+    },
+    "destructive-foreground": {
+        "light": "#f9fafb",
+        "dark": ""
+    },
+    "border": {
+        "light": "#1E1E26",
+        "dark": ""
+    },
+    "input": {
+        "light": "#e5e7eb",
+        "dark": ""
+    },
+    "ring": {
+        "light": "#1E1E26",
+        "dark": ""
+    }
+}

@@ -6,7 +6,6 @@ import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Me } from '@/data/info';
 import { ProjectCard } from '@/components/project-card';
-import { Avatar, AvatarContainer } from '@/components/ui/avatar';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
   description: Me.summary,
 };
 
-export default function About() {
+export default function Resume() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
@@ -70,9 +69,15 @@ export default function About() {
               ) : null}
             </div>
           </div>
-          <AvatarContainer large className='mr-1'>
-            <Avatar large/>
-          </AvatarContainer>
+          <div className="relative w-[7rem] h-[7rem] lg:w-[10rem] lg:h-[10rem]">
+            <Image
+              fill
+              src={Me.avatarURL}
+              alt={Me.name}
+              sizes="(min-width: 1024px) 10rem, 7rem"
+              className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+            />
+          </div>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -100,7 +105,7 @@ export default function About() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-muted-foreground">
+                    <div className="text-sm tabular-nums text-gray-500">
                       {work.start} - {work.end}
                     </div>
                   </div>
@@ -130,14 +135,14 @@ export default function About() {
             );
           })}
         </Section>
-        {/* <Section>
+        <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
-            {Me.skills.programmingLanguages.map((skill) => {
+            {Me.skills.technical.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
             })}
           </div>
-        </Section> */}
+        </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>

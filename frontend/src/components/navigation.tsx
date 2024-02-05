@@ -28,8 +28,8 @@ const NavItem = ({ href, children }: React.PropsWithChildren<{ href: string }>) 
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition',
-          isActive ? 'text-primary' : 'hover:text-primary',
+          'relative block px-3 py-2 transition hover:text-accent',
+          isActive ? 'text-foreground' : '',
         )}
       >
         {children}
@@ -53,7 +53,7 @@ export const DesktopNavigation = (
 ) => {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex rounded-full bg-background-tertiary/90 px-3 text-sm font-medium text-muted-foreground shadow-lg shadow-primary-foreground/5 ring-1 ring-ring/5 backdrop-blur">
         {routes.map((item) => {
           if (item.isExternal == false) {
             return (
@@ -66,7 +66,7 @@ export const DesktopNavigation = (
           return (
             <a
               key={item.path}
-              className="transition hover:text-primary px-3 py-2"
+              className="transition hover:text-accent px-3 py-2"
               href={item.path}
               target="_blank"
             >
