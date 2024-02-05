@@ -125,7 +125,7 @@ def update_markdown_with_colors(palette: Palette, markdown_file_path):
         md_file.write('\n## Dark Mode\n\n')
         md_file.write("<table>\n")
         # Assuming 'arr' is your input array
-        dark_colors_rows = [colors_light[i:i + COLUMN_COUNT] for i in range(0, len(colors_dark), COLUMN_COUNT)]
+        dark_colors_rows = [colors_dark[i:i + COLUMN_COUNT] for i in range(0, len(colors_dark), COLUMN_COUNT)]
 
         for rows in dark_colors_rows:
             md_file.write(' <tr>\n')

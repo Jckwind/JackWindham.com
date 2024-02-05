@@ -93,10 +93,10 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
     <th>Card</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #BB9E78; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #EAC696; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #272829; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #EAC696; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #1E1E26; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #131318; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #131318; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>
     <th>Card-foreground</th>
@@ -105,10 +105,10 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
     <th>Primary</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #65451F; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: 000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #FFF6E0; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>
     <th>Primary-foreground</th>
@@ -117,10 +117,10 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
     <th>Muted</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFF6E0; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #FFF6E0; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #61677A; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F4F6; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>
     <th>Muted-foreground</th>
@@ -129,10 +129,10 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
     <th>Destructive</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #765827; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #98E4FF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #B6FFFA; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #EF4444; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>
     <th>Destructive-foreground</th>
@@ -141,9 +141,9 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
     <th>Ring</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #765827; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #E5E7EB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #1E1E26; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #98E4FF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>

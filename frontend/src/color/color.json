@@ -25,7 +25,7 @@
     },
     "popover-foreground": {
         "light": "#FFF6E0",
-        "dark": "#FFD700"
+        "dark": "#FFF6E0"
     },
     "primary": {
         "light": "#4A4849",
@@ -53,11 +53,11 @@
     },
     "accent": {
         "light": "#98E4FF",
-        "dark": "#FFD700"
+        "dark": "#98E4FF"
     },
     "accent-foreground": {
         "light": "#B6FFFA",
-        "dark": ""
+        "dark": "#B6FFFA"
     },
     "destructive": {
         "light": "#ef4444",
@@ -77,10 +77,10 @@
     },
     "ring": {
         "light": "#98E4FF",
-        "dark": "#1E1E26"
+        "dark": "#98E4FF"
     },
     "shadow": {
         "light": "#B6FFFA",
-        "dark": ""
+        "dark": "#B6FFFA"
     }
 }
