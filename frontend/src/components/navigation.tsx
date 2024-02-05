@@ -29,7 +29,7 @@ const NavItem = ({ href, children }: React.PropsWithChildren<{ href: string }>) 
         href={href}
         className={clsx(
           'relative block px-3 py-2 transition',
-          isActive ? 'text-popover-foreground' : 'hover:text-accent',
+          isActive ? 'text-accent' : 'hover:text-accent',
         )}
       >
         {children}
@@ -53,7 +53,7 @@ export const DesktopNavigation = (
 ) => {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-popover/90 px-3 text-sm font-medium text-muted-foreground shadow-lg shadow-popover-foreground/15 ring-1 ring-ring/5 backdrop-blur">
+      <ul className="flex rounded-full bg-popover/90 px-3 text-sm font-medium text-popover-foreground shadow-[0_0_3px_3px] shadow-shadow/50 ring-1 ring-ring/5">
         {routes.map((item) => {
           if (item.isExternal == false) {
             return (
@@ -82,7 +82,7 @@ export const DesktopNavigation = (
 export const MobileNavigation = (props: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-popover/90 px-4 py-2 text-sm font-medium text-popover-foreground shadow-lg shadow-popover-foreground/15 ring-1 ring-border/10 backdrop-blur">
+      <Popover.Button className="group flex items-center rounded-full bg-popover/90 px-4 py-2 text-sm font-medium text-popover-foreground shadow-lg shadow-shadow/15 ring-1 ring-ring/10 backdrop-blur">
         Menu
         <FontAwesomeIcon
           icon={faBars}
@@ -112,7 +112,7 @@ export const MobileNavigation = (props: React.HTMLAttributes<HTMLDivElement>) =>
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-popover p-8 ring-1 ring-border/10 text-popover-foreground"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-popover p-8 ring-1 ring-ring/10 text-popover-foreground"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
