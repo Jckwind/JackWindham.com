@@ -89,10 +89,10 @@ export default function About() {
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       <a className="hover:underline" href={work.link}>
-                        {work.company}
+                        {work.role} @ {work.company}
                       </a>
 
-                      <span className="inline-flex gap-x-1">
+                      <span className="inline-flex gap-x-1 ml-1">
                         {work.badges.map((badge) => (
                           <Badge variant="secondary" className="align-middle text-xs" key={badge}>
                             {badge}
@@ -100,12 +100,15 @@ export default function About() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-muted-foreground">
+                    <div className="text-sm tabular-nums text-muted-foreground hidden md:block">
                       {work.start} - {work.end}
                     </div>
                   </div>
-
+                  
                   <h4 className="font-mono text-sm leading-none">{work.title}</h4>
+                  <div className="text-sm tabular-nums text-muted-foreground md:hidden">
+                    {work.start} - {work.end}
+                  </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">{work.description}</CardContent>
               </Card>
@@ -120,11 +123,14 @@ export default function About() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">{education.school}</h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-muted-foreground hidden md:block">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
+                <div className="text-sm tabular-nums text-muted-foreground md:hidden">
+                  {education.start} - {education.end}
+                </div>
                 <CardContent className="mt-2">{education.degree}</CardContent>
               </Card>
             );

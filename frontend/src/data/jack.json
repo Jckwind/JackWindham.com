@@ -26,8 +26,9 @@
     ],
     "work": [
         {
-            "company": "Capital One Senior Associate",
-            "title": "Software Engineer",
+            "company": "Capital One",
+            "title": "Senior Associate",
+            "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
             "badges": ["Hybrid"],
             "start": "February 2024",
@@ -35,8 +36,9 @@
             "description": "Supported the Dining & Entertainment platform as a core engineer; developing, maintaining and supporting cloud infrastructure on a daily basis. Supported and enhanced Capital One’s primary web platform, directly engineering and deploying consumer-facing changes. Interacted with third party partners on key design decisions. Developed an internal pipeline for more granular user analytics. Technologies: AWS, Jenkins, Go, Javascript."
         },
         {
-            "company": "Capital One Associate",
-            "title": "Software Engineer",
+            "company": "Capital One",
+            "title": "Associate",
+            "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
             "badges": ["Hybrid"],
             "start": "August 2022",
@@ -44,8 +46,9 @@
             "description": "Supported the Dining & Entertainment platform as a core engineer; developing, maintaining and supporting cloud infrastructure on a daily basis. Supported and enhanced Capital One’s primary web platform, directly engineering and deploying consumer-facing changes. Interacted with third party partners on key design decisions. Developed an internal pipeline for more granular user analytics. Technologies: AWS, Jenkins, Go, Javascript."
         },
         {
-            "company": "Capital One Internship",
-            "title": "Software Engineer Intern",
+            "company": "Capital One",
+            "title": "Intern",
+            "role": "Software Engineer",
             "badges": ["Remote"],
             "link": "https://www.capitalone.com/",
             "start": "June 2021",
@@ -54,7 +57,8 @@
         },
         {
             "company": "Verisign",
-            "title": "Software Engineer Intern",
+            "title": "Intern",
+            "role": "Software Engineer",
             "link": "https://www.verisign.com/",
             "badges": ["Remote"],
             "start": "May 2020",
