@@ -3,7 +3,7 @@
     "initials": "JW",
     "location": "Arlington, Virginia, United States",
     "locationLink": "https://www.google.com/maps/place/Arlington,+VA",
-    "about": "Young man with a passion for solving hard problems and improving the lives of others",
+    "about": "Human fueled by restless curiosity. Code is my medium of self-expression, and I'm always making something.",
     "summary": "My name is Jack Thomas Windham, but I often go by Jack Wind when introducing and referring to myself. I’m named after my mothers father, Jack Newell, and my fathers father, Thomas Windham. My greatest strengths are my persistence and curiosity.",
     "avatarUrl": "https://avatars.githubusercontent.com/u/32938999?v=4",
     "personalWebsiteUrl": "https://jackwindham.com",
@@ -70,7 +70,7 @@
         {
             "title": "Cordia",
             "description": "In the spring of 2018, I began developing Cordia, a social media platform for music, which was inspired by a music-sharing group chat with friends. This project progressed in part due to my hands-on approach to learning, starting from naming the platform and designing the logo to addressing technical challenges like switching from a NoSQL to a SQL database. As a college student, I optimized costs by using AWS and Google Cloud's free tiers for backend and user management. Released in October 2019, Cordia allowed users to share music recommendations and connect over shared tastes, integrating with Spotify and Apple Music APIs. Soon after its release, Cordia was recognized in an entrepreneurship competition and development continued. Unfortunately, shifting priorities and the Covid pandemic led to the cessation of active development and promotion and in 2022, I discontinued Cordia's operation. In late 2023, I began working on its revival with an expanded vision, but this redesign is slow-going, as I have to balance this endeavor with other commitments.",
-            "short_description": "Cordia, a social media platform for music developed in 2018 with integrations to Spotify and Apple Music, gained early recognition in 2019. It was sunset in 2021 due to shifting priorities and the pandemic, with a revival effort starting in late 2023.",
+            "short_description": "Cordia began as a passion project sparked by music-sharing with friends. This award-winning social network integrated Spotify and Apple Music for a polished user experience. While building Cordia, I fell in love with the full spectrum of product development; in love with making experiences people enjoy.",
             "link": "https://www.cordia.app",
             "techStack": [
                 "Side Project",
@@ -84,7 +84,7 @@
         {
             "title": "Wind Model",
             "description": "In the summer of 2022, I became obsessed with machine learning. I developed a new personal research project, the Wind Model. Written in Python, the model utilized historical sentiment data and financial data for the binary classification of equity price behavior (predicting whether a stock's price would go up or down). The sentiment data was supplied via the public Twitter API, and the financial data via the public Yahoo Finance API and a private Nasdaq API. The model showed some success, performing exceedingly well in *calm* market conditions but struggling in volatile markets. It was powered by a Hierarchical Navigable Small Worlds (HNSW) algorithm for high-dimensional space analysis and used a genetic optimization algorithm for feature selection. This genetic algorithm was designed to find the optimal feature set for predicting price behavior. The model was retrained nightly, using the previous 30 trading days to optimize the genetic algorithm and identify the current *mood* of the market, or which feature set was most influential in determining price movement. The project was eventually sunsetted due to personal reasons and the high training costs, approximately $600 a month. I have not revisited this project since, not for lack of potential, but rather because my focus is on other projects. I do not plan to open-source the code.",
-            "short_description": "The Wind Model, a Python-based machine learning model that used sentiment and financial data for binary stock price prediction, achieved mixed success with advanced algorithms and nightly retraining, but was ultimately shelved due to high costs and shifting focus.",
+            "short_description": "The Wind Model tackled the complexities of stock prediction with an adaptive approach, combining technical indicators, real-time market data, and a self-optimizing genetic algorithm for dynamic feature selection.",
             "techStack": [
                 "Side Project",
                 "AWS",
@@ -94,7 +94,7 @@
         {
             "title": "Flip Flop",
             "description": "Flip Flop was a reflex-challenging, infinite scrolling mobile app that I built to teach myself how to code. The game mechanics were simple yet addictive. It was written in Swift, the programming language used to make iOS apps, and the game’s elements were designed using Photoshop and Illustrator. Monetization was achieved through in-app ads and purchases, including character skins and bonus levels. Flip Flop was a significant project for me, blending coding, design, and entrepreneurial skills. The app released in 2017, and received periodic updates to enhance the user experience and showcase my evolving coding skills. However, as I shifted focus to new projects, Flip Flop was gradually retired. This pivotal project laid the foundation for my future work.",
-            "short_description": "Flip Flop, my first mobile app, combined coding, design, and entrepreneurship with addictive gameplay, developed in Swift and monetized through ads and purchases; launched in 2017, it marked a key step in my journey, evolving until its retirement due to shifting focus.",
+            "short_description": "Flip Flop was my first project. While simple, this game revealed the power of self-driven learning and sparked my passion for coding and bringing ideas into reality.",
             "techStack": [
                 "Side Project",
                 "Swift"
@@ -104,7 +104,7 @@
         {
             "title": "Tragedy Relief Index",
             "description": "The Tragedy Relief Index was a small, simple app developed between my Flip Flop and Cordia projects. It featured a simple interface displaying global tragedies and natural disasters, offering users links to assist those impacted. The app, available on the App Store for a few years, was not very popular and was eventually shut down the platform following the closure of its data-providing API.",
-            "short_description": "The Tragedy Relief Index, a modest app developed between Flip Flop and Cordia, provided a simple interface for global tragedy awareness and aid links; available briefly on the App Store, it was discontinued following the closure of its essential data-providing API.",
+            "short_description": "The Tragedy Relief Index was an app focused on connecting users with humanitarian aid resources in response to global disasters. Utilizing a live-updating API, this project highlighted the challenges of external dependency in software solutions. Despite its short lifespan, it reflected my early commitment to using technology for positive impact.",
             "techStack": [
                 "Side Project",
                 "Swift"
@@ -114,7 +114,7 @@
         {
             "title": "Happy Memories",
             "description": "This was a small, simple app I had made my dad as a gift. Everyday, he would get a notification at a random time, saying that it was time to view his happy memory for the day. Opening the app would show a different picture of the family, along with the description of the family’s happy memory for that day. Simple, but heartwarming. He told me for years after how much he looks forward to seeing his happy memory for the day",
-            "short_description": "A gift for my dad, this app delivered daily notifications for viewing a new family memory, each day revealing a different photo and its story; simple yet deeply meaningful, it became a daily anticipation my dad enjoyed for years.",
+            "short_description": "Happy Memories was a personalized gift for my father. It is an app designed around viewing cherished family moments, each day revealing a different photo and its story. Its simplicity made it meaningful, and showed the positive impact technology makes possible.",
             "techStack": [
                 "Side Project",
                 "Swift"
