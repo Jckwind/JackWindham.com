@@ -6,7 +6,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Me } from '@/data/info';
 import { ProjectCard } from '@/components/project-card';
-import { Avatar, AvatarContainer } from '@/components/ui/avatar';
+import { ImageContainer } from '@/components/ui/image';
 
 export const metadata: Metadata = {
   title: `${Me.name} | ${Me.about}`,
@@ -69,9 +69,8 @@ export default function Resume() {
               ) : null}
             </div>
           </div>
-          <AvatarContainer large className='mr-1'>
-            <Avatar large />
-          </AvatarContainer>
+          <ImageContainer large className='mr-1'>
+          </ImageContainer>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>

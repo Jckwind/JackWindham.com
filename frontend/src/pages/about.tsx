@@ -6,7 +6,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Me } from '@/data/info';
 import { ProjectCard } from '@/components/project-card';
-import { Avatar, AvatarContainer } from '@/components/ui/avatar';
+import { ImageContainer } from '@/components/ui/image';
 
 export const metadata: Metadata = {
   title: `${Me.name} | ${Me.about}`,
@@ -20,7 +20,7 @@ export default function About() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{Me.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground pr-10">
               {Me.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
@@ -69,9 +69,8 @@ export default function About() {
               ) : null}
             </div>
           </div>
-          <AvatarContainer large className='mr-1'>
-            <Avatar large/>
-          </AvatarContainer>
+          <ImageContainer large className='mr-1'>
+          </ImageContainer>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
