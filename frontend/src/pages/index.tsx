@@ -55,7 +55,7 @@ export default function Home() {
               ) : null}
             </div>
           </div>
-          <ImageContainer large src="/SmilingEarth.jpg" className='mr-1'>
+          <ImageContainer large src="/SmilingEarth.JPG" className='mr-1'>
           </ImageContainer>
         </div>
       </section>
