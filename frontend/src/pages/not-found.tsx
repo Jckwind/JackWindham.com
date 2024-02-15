@@ -17,8 +17,8 @@ export default function NotFound() {
                                 Here&apos;s my favorite picture of you and me :)
                             </p>
                             <div className="mt-6 flex justify-center">
-                            <ImageContainer large src="/Earth.jpg" className='mr-1'>
-                            </ImageContainer>
+                                <ImageContainer large src="/Earth.jpg" className='mr-1'>
+                                </ImageContainer>
                             </div>
                             <div className="mt-6">
                                 <Link href="/" className="text-base font-medium hover:text-accent hover:underline underline-offset-2">
