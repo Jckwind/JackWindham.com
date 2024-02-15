@@ -17,63 +17,67 @@
         --radius: 0.5rem;
 
         @media (prefers-color-scheme: light) {
-            --background: #222831;
-            --foreground: 224 71.4% 4.1%;
+            --background: 187 158 120;
+            --secondary-background: 234 198 150;
+            --foreground: 39 40 41;
     
-            --card: 0 0% 100%;
-            --card-foreground: 224 71.4% 4.1%;
+            --card: 234 198 150;
+            --card-foreground: 101 69 31;
     
-            --popover: 0 0% 100%;
-            --popover-foreground: 224 71.4% 4.1%;
+            --popover: 74 72 73;
+            --popover-foreground: 255 246 224;
     
-            --primary: 220.9 39.3% 11%;
-            --primary-foreground: 210 20% 98%;
+            --primary: 74 72 73;
+            --primary-foreground: 255 246 224;
     
-            --secondary: 220 14.3% 95.9%;
-            --secondary-foreground: 220.9 39.3% 11%;
+            --secondary: 74 72 73;
+            --secondary-foreground: 255 246 224;
     
-            --muted: 220 14.3% 95.9%;
-            --muted-foreground: 220 8.9% 46.1%;
+            --muted: 97 103 122;
+            --muted-foreground: 118 88 39;
     
-            --accent: 220 14.3% 95.9%;
-            --accent-foreground: 220.9 39.3% 11%;
+            --accent: 152 228 255;
+            --accent-foreground: 182 255 250;
     
-            --destructive: 0 84.2% 60.2%;
-            --destructive-foreground: 210 20% 98%;
+            --destructive: 239 68 68;
+            --destructive-foreground: 249 250 251;
     
-            --border: 220 13% 91%;
-            --input: 220 13% 91%;
-            --ring: 224 71.4% 4.1%;
-        }
+            --border: 118 88 39;
+            --input: 229 231 235;
+            --ring: 152 228 255;
+            --shadow: 182 255 250;
+        };
 
         @media (prefers-color-scheme: dark) {
-            --background: #222831;
-            --foreground: red;
+            --background: 30 30 38;
+            --secondary-background: 19 19 24;
+            --foreground: 255 255 255;
     
-            --card: green;
-            --card-foreground: 'bg-zinc-700';
+            --card: 19 19 24;
+            --card-foreground: 255 255 255;
     
-            --popover: 224 71.4% 4.1%;
-            --popover-foreground: 210 20% 98%;
+            --popover: 0 0 0;
+            --popover-foreground: 255 246 224;
     
-            --primary: gold;
-            --primary-foreground: gold;
+            --primary: 249 250 251;
+            --primary-foreground: 0 0 0;
     
-            --secondary: 215 27.9% 16.9%;
-            --secondary-foreground: 210 20% 98%;
+            --secondary: 243 244 246;
+            --secondary-foreground: 0 0 0;
     
-            --muted: 215 27.9% 16.9%;
-            --muted-foreground: 217.9 10.6% 64.9%;
+            --muted: 255 255 255;
+            --muted-foreground: 255 255 255;
     
-            --accent: 215 27.9% 16.9%;
-            --accent-foreground: 210 20% 98%;
+            --accent: 152 228 255;
+            --accent-foreground: 182 255 250;
     
-            --destructive: 0 62.8% 30.6%;
-            --destructive-foreground: 210 20% 98%;
+            --destructive: 255 255 255;
+            --destructive-foreground: 255 255 255;
     
-            --border: 215 27.9% 16.9%;
-            --input: 215 27.9% 16.9%;
-            --ring: 216 12.2% 83.9%;
+            --border: 30 30 38;
+            --input: 255 255 255;
+            --ring: 152 228 255;
+            --shadow: 182 255 250;
         }
     }
 

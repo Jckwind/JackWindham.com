@@ -9,9 +9,10 @@ export default function Document() {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="theme-color" content="#3F3F46" />
+        <meta name="theme-color" content="#EAC696" media="(prefers-color-scheme: light)"/>
+        <meta name="theme-color" content="#131318" media="(prefers-color-scheme: dark)"/>
       </Head>
-      <body className="flex h-full flex-col bg-zinc-50 dark:bg-black text-zinc-700 dark:text-zinc-300">
+      <body className="flex h-full flex-col bg-background">
         <Main />
         <NextScript />
       </body>

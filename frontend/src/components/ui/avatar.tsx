@@ -13,16 +13,16 @@ type Props = {
 
 export const Avatar = ({ src = Me.avatarURL, alt = Me.name, large = false, className, ...props }: Props) => {
   return (
-    <Link href="/" aria-label="Home" className={clsx(className, 'pointer-events-auto')} {...props}>
+    <Link href="/" aria-label="Home" className={'pointer-events-auto'} {...props}>
       <Image
         src={src}
         alt={alt}
         width={500}
         height={500}
-        sizes={large ? '4rem' : '2.25rem'}
+        sizes={large ? '10rem' : '2.25rem'}
         className={clsx(
-          'rounded-full object-cover bg-zinc-100 dark:bg-zinc-800',
-          large ? 'h-16 w-16' : 'h-9 w-9',
+          className,
+          'rounded-full object-cover mr-10',
         )}
         priority
       />
@@ -30,12 +30,17 @@ export const Avatar = ({ src = Me.avatarURL, alt = Me.name, large = false, class
   );
 };
 
-export const AvatarContainer = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+type Container_Props = {
+  large?: boolean;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+export const AvatarContainer = ({ large = false, className, ...props }: Container_Props) => {
   return (
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
+        large ? 'h-[7rem] w-[7rem] lg:h-[10rem] lg:w-[10rem] p-1 shadow-[0_0_3px_3px]' : 'h-10 w-10 p-0.5 shadow-[0_0_2px_2px]',
+        'rounded-full text-center bg-popover shadow-shadow/50',
       )}
       {...props}
     />
