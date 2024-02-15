@@ -175,31 +175,6 @@
         ],
         "Certifications": [
             "AWS Certified Developer Associate"
-        "certifications": [
-            "AWS Certified Developer Associate"
-        ],
-        "programmingLanguages": [
-            "Swift",
-            "Javascript",
-            "Java",
-            "Jenkins",
-            "HTML & CSS",
-            "SQL",
-            "Python",
-            "REST"
-        ],
-        "cloudServices": [
-            "AWS",
-            "Google Cloud"
-        ],
-        "otherSkills": [
-            "Scrum",
-            "Agile",
-            "Jira",
-            "Git",
-            "CI/CD",
-            "App and Website Design",
-            "Backend & Systems Architecture"
         ]
     }
 }
