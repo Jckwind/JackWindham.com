@@ -18,15 +18,15 @@ export const Footer = () => {
                   </NavLink>
                 ))}
               </div>
-              <div>
-                <p className="text-sm lg:text-center text-muted-foreground">
+              <div className='flex flex-col'>
+                <p className="text-sm text-center text-muted-foreground">
                   &copy; {new Date().getFullYear()} Jack Windham. All rights reserved.
                 </p>
                 <a
                   href="https://jarocki.me/"
-                  className="text-sm lg:text-center underline underline-offset-2 text-muted-foreground"
+                  className="text-sm text-center underline underline-offset-2 text-muted-foreground/50"
                 >
-                  This website was inspired by Bartosz Jarocki and his website
+                  This site is inspired by Bartosz Jarocki&#39;s work.
                 </a>
               </div>
             </div>

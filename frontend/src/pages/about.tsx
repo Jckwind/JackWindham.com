@@ -69,7 +69,7 @@ export default function About() {
               ) : null}
             </div>
           </div>
-          <ImageContainer large className='mr-1'>
+          <ImageContainer large className='mr-1' src="/me_sailboat.jpg">
           </ImageContainer>
         </div>
         <Section>

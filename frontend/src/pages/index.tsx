@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react';
+import { Section } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
 import { Me } from '@/data/info';
 import { ImageContainer } from '@/components/ui/image';
@@ -58,6 +59,12 @@ export default function Home() {
           <ImageContainer large src="/SmilingEarth.JPG" className='mr-1'>
           </ImageContainer>
         </div>
+        <Section>
+          <h2 className="text-xl font-bold">Currently</h2>
+          <p className="text-pretty font-mono text-sm text-muted-foreground">
+            {Me.currently}
+          </p>
+        </Section>
       </section>
     </main>
   );

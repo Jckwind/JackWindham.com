@@ -69,7 +69,7 @@ export default function Resume() {
               ) : null}
             </div>
           </div>
-          <ImageContainer large className='mr-1'>
+          <ImageContainer large className='mr-1' src="/me_stairs.jpg">
           </ImageContainer>
         </div>
         <Section>
