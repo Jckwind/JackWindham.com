@@ -8,6 +8,7 @@ export const Me = {
     locationLink: data.locationLink,
     about: data.about,
     summary: data.summary,
+    currently: data.currently,
     avatarURL: data.avatarUrl,
     personalWebsiteUrl: data.personalWebsiteUrl,
     contact: {
