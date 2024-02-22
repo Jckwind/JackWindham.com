@@ -3,7 +3,7 @@
     "initials": "JW",
     "location": "Arlington, Virginia",
     "locationLink": "https://www.google.com/maps/place/Arlington,+VA",
-    "about": "I am fueled by a restless curiosity. Creating is self-expression, and I create the future I want to see.",
+    "about": "I am fueled by a relentless curiosity. Creating is self-expression, and I create the future I want to see.",
     "summary": "My name is Jack Thomas Windham, but I often go by Jack Wind when introducing and referring to myself. I’m named after my mothers father, Jack Newell, and my fathers father, Thomas Windham. My greatest strengths are my persistence and curiosity.",
     "currently": "I'm quite the busy man right now. I'm teaching myself the field of Artifical Intelligence, making this website, training for a half marathon, and working a full time job. Check out the About or Resume pages for more info!",
     "avatarUrl": "https://avatars.githubusercontent.com/u/32938999?v=4",
@@ -34,7 +34,7 @@
             "badges": [],
             "start": "February 2024",
             "end": "Present",
-            "description": ""
+            "description": "Worked on Capital One's server-side rendering solution, specifically for the iOS platform. I took ownership of critical initiatives; such as improving the architecture and performance of the platform. Led the modernization of the codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. I was a core contributor in the design and development of the iOS platform's API, and my work enables teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results."
         },
         {
             "company": "Capital One",
@@ -44,7 +44,7 @@
             "badges": [],
             "start": "August 2022",
             "end": "January 2023",
-            "description": "As a core engineer on Capital One's Dining & Entertainment (D&E) platform, I spearheaded initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I implemented a robust availability solution, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform."
+            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I implemented a robust availability solution, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform."
         },
         {
             "company": "Capital One",
