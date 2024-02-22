@@ -31,17 +31,17 @@
             "title": "Senior Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": [],
+            "badges": ["Hybrid"],
             "start": "February 2024",
             "end": "Present",
-            "description": "I took ownership of critical initiatives within Capital One, such as improving the architecture and performance of the iOS server-side platform. I led the modernization of the codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results."
+            "description": "As an engineer working on Capital One's core platform, I took ownership of critical initiatives within the iOS team, such as improving the architecture and performance of the server-rendered platform. I led the modernization of the iOS codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable iOS feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results."
         },
         {
             "company": "Capital One",
             "title": "Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": [],
+            "badges": ["Hybrid"],
             "start": "August 2022",
             "end": "January 2023",
             "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I implemented a robust availability solution, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform."

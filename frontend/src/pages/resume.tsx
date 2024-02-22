@@ -19,7 +19,7 @@ export default function Resume() {
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{Me.name}</h1>
+            <h1 className="text-4xl font-bold">{Me.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground pr-10">
               {Me.about}
             </p>
