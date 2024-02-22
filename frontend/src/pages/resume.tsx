@@ -73,13 +73,13 @@ export default function Resume() {
           </ImageContainer>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-2xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
             {Me.summary}
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="text-2xl font-bold">Work</h2>
           {Me.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -113,6 +113,39 @@ export default function Resume() {
             );
           })}
         </Section>
+        <Section className="print-force-new-page scroll-mb-16">
+          <h2 className="text-2xl font-bold">Projects</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+            {Me.projects.map((project) => {
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  description={project.short_description}
+                  tags={project.techStack}
+                  link={'link' in project ? project.link : undefined}
+                />
+              );
+            })}
+          </div>
+        </Section>
+        <Section>
+          <h2 className="text-2xl font-bold">Skills</h2>
+          {Object.entries(Me.skills).map(([category, skills]) => {
+            return (
+              <>
+                <h3 className="font-semibold leading-none text-base text-muted-foreground">{category}</h3>
+                <div className="flex flex-wrap gap-1">
+                  {
+                    skills.map((skill) => { 
+                    return <Badge key={skill}>{skill}</Badge>;
+                  })
+                  }
+                </div>
+              </>
+            )
+          })}
+        </Section>
         <Section>
           <h2 className="text-xl font-bold">Education</h2>
           {Me.education.map((education) => {
@@ -133,40 +166,6 @@ export default function Resume() {
               </Card>
             );
           })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
-          {Object.entries(Me.skills).map(([category, skills]) => {
-            return (
-              <>
-                <h3 className="font-semibold leading-none text-base text-muted-foreground">{category}</h3>
-                <div className="flex flex-wrap gap-1">
-                  {
-                    skills.map((skill) => { 
-                    return <Badge key={skill}>{skill}</Badge>;
-                  })
-                  }
-                </div>
-              </>
-            )
-          })}
-        </Section>
-
-        <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {Me.projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.short_description}
-                  tags={project.techStack}
-                  link={'link' in project ? project.link : undefined}
-                />
-              );
-            })}
-          </div>
         </Section>
       </section>
     </main>

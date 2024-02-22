@@ -44,7 +44,7 @@
             "badges": ["Hybrid"],
             "start": "August 2022",
             "end": "January 2023",
-            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I implemented a robust availability solution, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform."
+            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I built a robust availability architecture, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform."
         },
         {
             "company": "Capital One",
@@ -54,7 +54,7 @@
             "link": "https://www.capitalone.com/",
             "start": "June 2021",
             "end": "August 2021",
-            "description": "Developed a serverless application to improve security group compliance. Generated differencing reports & risk assessments for upgrading resources to new security requirements. Developed CI/CD pipelines for our team. Technologies: AWS Lambda, S3, IAM, EC2, Python, Github, Jenkins, Bogie, Pytest."
+            "description": "To improve enterprise-wide safety and security at Capital One, I built a serverless application to analyze cloud infrastructure for non-compliant security configurations. This tool generated detailed reports and risk assessments, automatically upgrading resources to the latest security requirements where possible. Component owners were notified of any resources requiring manual intervention. I was a core contributor to every aspect of this project, from the design, development and implementation. Technologies: AWS Lambda, S3, IAM, EC2, Python, Github, Jenkins, Bogie, Pytest."
         },
         {
             "company": "Verisign",
@@ -64,7 +64,7 @@
             "badges": ["Remote"],
             "start": "May 2020",
             "end": "August 2020",
-            "description": "Developed an in-house mobile app that allows employees to view the monitoring dashboard. Worked with user sessions, existing REST APIs and frameworks, git tracking. Technologies: Ionic Angular, Cordova, Typescript."
+            "description": "To streamline access to critical operational data across the organization, I built a cross-platform application for viewing internal dashboards and important status information. This work included navigating access policies, integrating with existing infrastructure and data sources, and overseeing all phases of platform development."
         }
     ],
     "projects": [
