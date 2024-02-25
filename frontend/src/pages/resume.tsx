@@ -109,6 +109,15 @@ export default function Resume() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">{work.description}</CardContent>
+                <CardContent className="mt-2 flex flex-wrap gap-1">
+                  {
+                    work.tech_stack.map((badge) => (
+                      <Badge className="align-middle text-xs" key={badge}>
+                        {badge}
+                      </Badge>
+                    ))
+                  }
+                </CardContent>
               </Card>
             );
           })}
@@ -137,9 +146,9 @@ export default function Resume() {
                 <h3 className="font-semibold leading-none text-base text-muted-foreground">{category}</h3>
                 <div className="flex flex-wrap gap-1">
                   {
-                    skills.map((skill) => { 
-                    return <Badge key={skill}>{skill}</Badge>;
-                  })
+                    skills.map((skill) => {
+                      return <Badge key={skill}>{skill}</Badge>;
+                    })
                   }
                 </div>
               </>
@@ -162,7 +171,8 @@ export default function Resume() {
                 <div className="text-sm tabular-nums text-muted-foreground md:hidden">
                   {education.start} - {education.end}
                 </div>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2 text-muted-foreground">{education.degree}</CardContent>
+                <CardContent className="mt-2">{education.description}</CardContent>
               </Card>
             );
           })}

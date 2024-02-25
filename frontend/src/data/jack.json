@@ -21,6 +21,7 @@
         {
             "school": "Virginia Polytechnic Institute and State University",
             "degree": "Bachelor's Degree in Computer Science",
+            "description": "Graduated with a focus on full-stack development. Explored diverse interests: multiple entrepreneurial projects, leadership roles in multiple organizations, and a capstone project on brain modeling. I was also known to tutor peers in math and software development in my free time.",
             "start": "2018",
             "end": "2022"
         }
@@ -34,7 +35,8 @@
             "badges": ["Hybrid"],
             "start": "February 2024",
             "end": "Present",
-            "description": "As an engineer working on Capital One's core platform, I took ownership of critical initiatives within the iOS team, such as improving the architecture and performance of the server-rendered platform. I led the modernization of the iOS codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable iOS feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results."
+            "description": "As an engineer working on Capital One's core platform, I took ownership of critical initiatives within the iOS team, such as improving the architecture and performance of the server-rendered platform. I led the modernization of the iOS codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable iOS feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results.",
+            "tech_stack": ["Swift"]
         },
         {
             "company": "Capital One",
@@ -44,7 +46,8 @@
             "badges": ["Hybrid"],
             "start": "August 2022",
             "end": "January 2023",
-            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I built a robust availability architecture, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform."
+            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I built a robust availability architecture, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform.",
+            "tech_stack": ["Go", "Javascript", "AWS", "Jenkins"]
         },
         {
             "company": "Capital One",
@@ -54,7 +57,8 @@
             "link": "https://www.capitalone.com/",
             "start": "June 2021",
             "end": "August 2021",
-            "description": "To improve enterprise-wide safety and security at Capital One, I built a serverless application to analyze cloud infrastructure for non-compliant security configurations. This tool generated detailed reports and risk assessments, automatically upgrading resources to the latest security requirements where possible. Component owners were notified of any resources requiring manual intervention. I was a core contributor to every aspect of this project, from the design, development and implementation. Technologies: AWS Lambda, S3, IAM, EC2, Python, Github, Jenkins, Bogie, Pytest."
+            "description": "To improve enterprise-wide safety and security at Capital One, I built a serverless application to analyze cloud infrastructure for non-compliant security configurations. This tool generated detailed reports and risk assessments, automatically upgrading resources to the latest security requirements where possible. Component owners were notified of any resources requiring manual intervention. I was a core contributor to every aspect of this project, from the design, development and implementation. Technologies: AWS Lambda, S3, IAM, EC2, Python, Github, Jenkins, Bogie, Pytest.",
+            "tech_stack": ["Python", "AWS", "Jenkins"]
         },
         {
             "company": "Verisign",
@@ -64,7 +68,8 @@
             "badges": ["Remote"],
             "start": "May 2020",
             "end": "August 2020",
-            "description": "To streamline access to critical operational data across the organization, I built a cross-platform application for viewing internal dashboards and important status information. This work included navigating access policies, integrating with existing infrastructure and data sources, and overseeing all phases of platform development."
+            "description": "To streamline access to critical operational data across the organization, I built a cross-platform application for viewing internal dashboards and important status information. This work included navigating access policies, integrating with existing infrastructure and data sources, and overseeing all phases of platform development.",
+            "tech_stack": ["Typescript", "Angular", "Restful API"]
         }
     ],
     "projects": [
@@ -99,7 +104,6 @@
             "techStack": [
                 "Side Project",
                 "Swift"
-                
             ]
         },
         {
@@ -109,7 +113,6 @@
             "techStack": [
                 "Side Project",
                 "Swift"
-                
             ]
         },
         {
