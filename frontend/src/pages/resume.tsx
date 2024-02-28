@@ -21,7 +21,7 @@ export default function Resume() {
           <div className="flex-1 space-y-1.5">
             <h1 className="text-4xl font-bold">{Me.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground pr-10">
-              {Me.about}
+              {Me.resume_tagline}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a

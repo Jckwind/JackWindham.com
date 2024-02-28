@@ -3,8 +3,9 @@
     "initials": "JW",
     "location": "Arlington, Virginia",
     "locationLink": "https://www.google.com/maps/place/Arlington,+VA",
-    "about": "I am fueled by a relentless curiosity. Creating is self-expression, and I create the future I want to see.",
-    "summary": "My name is Jack Thomas Windham, but I often go by Jack Wind when introducing and referring to myself. I’m named after my mothers father, Jack Newell, and my fathers father, Thomas Windham. My greatest strengths are my persistence and curiosity.",
+    "about": "I build award-winning apps, engineer complex systems, and explore cutting-edge research.",
+    "resume_tagline": "I build award-winning apps, engineer complex systems, and explore cutting-edge research.",
+    "summary": "I'm a problem-solver at my core; driven by ambition, relentless curiosity, and an obsession for perfection. I see the big picture and break ambitious goals into achievable steps, whether I'm building award-winning apps, engineering complex systems, or exploring cutting-edge research. My proactive, outcome-focused approach means I take ownership of projects, driving them forward and delivering impactful results. I take pride in my work, believing that attention to detail separates good from great. Whether tackling complex technical challenges or streamlining everyday experiences, my focus is making a tangible difference in people's lives.",
     "currently": "I'm quite the busy man right now. I'm teaching myself the field of Artifical Intelligence, making this website, training for a half marathon, and working a full time job. Check out the About or Resume pages for more info!",
     "avatarUrl": "https://avatars.githubusercontent.com/u/32938999?v=4",
     "personalWebsiteUrl": "https://jackwindham.com",
@@ -36,7 +37,7 @@
             "start": "February 2024",
             "end": "Present",
             "description": "As an engineer working on Capital One's core platform, I took ownership of critical initiatives within the iOS team, such as improving the architecture and performance of the server-rendered platform. I led the modernization of the iOS codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable iOS feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results.",
-            "tech_stack": ["Swift"]
+            "tech_stack": ["Swift", "Leadership"]
         },
         {
             "company": "Capital One",
@@ -57,7 +58,7 @@
             "link": "https://www.capitalone.com/",
             "start": "June 2021",
             "end": "August 2021",
-            "description": "To improve enterprise-wide safety and security at Capital One, I built a serverless application to analyze cloud infrastructure for non-compliant security configurations. This tool generated detailed reports and risk assessments, automatically upgrading resources to the latest security requirements where possible. Component owners were notified of any resources requiring manual intervention. I was a core contributor to every aspect of this project, from the design, development and implementation. Technologies: AWS Lambda, S3, IAM, EC2, Python, Github, Jenkins, Bogie, Pytest.",
+            "description": "To improve enterprise-wide safety and security at Capital One, I built a serverless application to analyze cloud infrastructure for non-compliant security configurations. This tool generated detailed reports and risk assessments, automatically upgrading resources to the latest security requirements where possible. Component owners were notified of any resources requiring manual intervention. I was a core contributor to every aspect of this project, from the design, development and implementation.",
             "tech_stack": ["Python", "AWS", "Jenkins"]
         },
         {
