@@ -19,9 +19,9 @@ export default function Resume() {
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{Me.name}</h1>
+            <h1 className="text-4xl font-bold">{Me.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground pr-10">
-              {Me.about}
+              {Me.resume_tagline}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
@@ -73,13 +73,13 @@ export default function Resume() {
           </ImageContainer>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-2xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
             {Me.summary}
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="text-2xl font-bold">Work</h2>
           {Me.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -109,8 +109,50 @@ export default function Resume() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">{work.description}</CardContent>
+                <CardContent className="mt-2 flex flex-wrap gap-1">
+                  {
+                    work.tech_stack.map((badge) => (
+                      <Badge className="align-middle text-xs" key={badge}>
+                        {badge}
+                      </Badge>
+                    ))
+                  }
+                </CardContent>
               </Card>
             );
+          })}
+        </Section>
+        <Section className="print-force-new-page scroll-mb-16">
+          <h2 className="text-2xl font-bold">Projects</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+            {Me.projects.map((project) => {
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  description={project.short_description}
+                  tags={project.techStack}
+                  link={'link' in project ? project.link : undefined}
+                />
+              );
+            })}
+          </div>
+        </Section>
+        <Section>
+          <h2 className="text-2xl font-bold">Skills</h2>
+          {Object.entries(Me.skills).map(([category, skills]) => {
+            return (
+              <>
+                <h3 className="font-semibold leading-none text-base text-muted-foreground">{category}</h3>
+                <div className="flex flex-wrap gap-1">
+                  {
+                    skills.map((skill) => {
+                      return <Badge key={skill}>{skill}</Badge>;
+                    })
+                  }
+                </div>
+              </>
+            )
           })}
         </Section>
         <Section>
@@ -129,44 +171,11 @@ export default function Resume() {
                 <div className="text-sm tabular-nums text-muted-foreground md:hidden">
                   {education.start} - {education.end}
                 </div>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2 text-muted-foreground">{education.degree}</CardContent>
+                <CardContent className="mt-2">{education.description}</CardContent>
               </Card>
             );
           })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
-          {Object.entries(Me.skills).map(([category, skills]) => {
-            return (
-              <>
-                <h3 className="font-semibold leading-none text-base text-muted-foreground">{category}</h3>
-                <div className="flex flex-wrap gap-1">
-                  {
-                    skills.map((skill) => { 
-                    return <Badge key={skill}>{skill}</Badge>;
-                  })
-                  }
-                </div>
-              </>
-            )
-          })}
-        </Section>
-
-        <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {Me.projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.short_description}
-                  tags={project.techStack}
-                  link={'link' in project ? project.link : undefined}
-                />
-              );
-            })}
-          </div>
         </Section>
       </section>
     </main>

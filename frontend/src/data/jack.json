@@ -3,8 +3,9 @@
     "initials": "JW",
     "location": "Arlington, Virginia",
     "locationLink": "https://www.google.com/maps/place/Arlington,+VA",
-    "about": "I am fueled by a relentless curiosity. Creating is self-expression, and I create the future I want to see.",
-    "summary": "My name is Jack Thomas Windham, but I often go by Jack Wind when introducing and referring to myself. I’m named after my mothers father, Jack Newell, and my fathers father, Thomas Windham. My greatest strengths are my persistence and curiosity.",
+    "about": "I build award-winning apps, engineer complex systems, and explore cutting-edge research.",
+    "resume_tagline": "I build award-winning apps, engineer complex systems, and explore cutting-edge research.",
+    "summary": "I'm a problem-solver at my core; driven by ambition, relentless curiosity, and an obsession for perfection. I see the big picture and break ambitious goals into achievable steps, whether I'm building award-winning apps, engineering complex systems, or exploring cutting-edge research. My proactive, outcome-focused approach means I take ownership of projects, driving them forward and delivering impactful results. I take pride in my work, believing that attention to detail separates good from great. Whether tackling complex technical challenges or streamlining everyday experiences, my focus is making a tangible difference in people's lives.",
     "currently": "I'm quite the busy man right now. I'm teaching myself the field of Artifical Intelligence, making this website, training for a half marathon, and working a full time job. Check out the About or Resume pages for more info!",
     "avatarUrl": "https://avatars.githubusercontent.com/u/32938999?v=4",
     "personalWebsiteUrl": "https://jackwindham.com",
@@ -21,6 +22,7 @@
         {
             "school": "Virginia Polytechnic Institute and State University",
             "degree": "Bachelor's Degree in Computer Science",
+            "description": "Graduated with a focus on full-stack development. Explored diverse interests: multiple entrepreneurial projects, leadership roles in multiple organizations, and a capstone project on brain modeling. I was also known to tutor peers in math and software development in my free time.",
             "start": "2018",
             "end": "2022"
         }
@@ -31,20 +33,22 @@
             "title": "Senior Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": [],
+            "badges": ["Hybrid"],
             "start": "February 2024",
             "end": "Present",
-            "description": "I took ownership of critical initiatives within Capital One, such as improving the architecture and performance of the iOS server-side platform. I led the modernization of the codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results."
+            "description": "As an engineer working on Capital One's core platform, I took ownership of critical initiatives within the iOS team, such as improving the architecture and performance of the server-rendered platform. I led the modernization of the iOS codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable iOS feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results.",
+            "tech_stack": ["Swift", "Leadership"]
         },
         {
             "company": "Capital One",
             "title": "Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": [],
+            "badges": ["Hybrid"],
             "start": "August 2022",
             "end": "January 2023",
-            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I implemented a robust availability solution, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform."
+            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I built a robust availability architecture, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform.",
+            "tech_stack": ["Go", "Javascript", "AWS", "Jenkins"]
         },
         {
             "company": "Capital One",
@@ -54,7 +58,8 @@
             "link": "https://www.capitalone.com/",
             "start": "June 2021",
             "end": "August 2021",
-            "description": "Developed a serverless application to improve security group compliance. Generated differencing reports & risk assessments for upgrading resources to new security requirements. Developed CI/CD pipelines for our team. Technologies: AWS Lambda, S3, IAM, EC2, Python, Github, Jenkins, Bogie, Pytest."
+            "description": "To improve enterprise-wide safety and security at Capital One, I built a serverless application to analyze cloud infrastructure for non-compliant security configurations. This tool generated detailed reports and risk assessments, automatically upgrading resources to the latest security requirements where possible. Component owners were notified of any resources requiring manual intervention. I was a core contributor to every aspect of this project, from the design, development and implementation.",
+            "tech_stack": ["Python", "AWS", "Jenkins"]
         },
         {
             "company": "Verisign",
@@ -64,7 +69,8 @@
             "badges": ["Remote"],
             "start": "May 2020",
             "end": "August 2020",
-            "description": "Developed an in-house mobile app that allows employees to view the monitoring dashboard. Worked with user sessions, existing REST APIs and frameworks, git tracking. Technologies: Ionic Angular, Cordova, Typescript."
+            "description": "To streamline access to critical operational data across the organization, I built a cross-platform application for viewing internal dashboards and important status information. This work included navigating access policies, integrating with existing infrastructure and data sources, and overseeing all phases of platform development.",
+            "tech_stack": ["Typescript", "Angular", "Restful API"]
         }
     ],
     "projects": [
@@ -99,7 +105,6 @@
             "techStack": [
                 "Side Project",
                 "Swift"
-                
             ]
         },
         {
@@ -109,7 +114,6 @@
             "techStack": [
                 "Side Project",
                 "Swift"
-                
             ]
         },
         {
