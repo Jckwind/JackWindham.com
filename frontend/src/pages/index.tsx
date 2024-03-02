@@ -17,10 +17,10 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-4xl font-bold">{Me.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground pr-10">
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-text pr-10">
               {Me.about}
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-text print:hidden">
               {Me.contact.email ? (
                 <Button className="size-8" variant="outline" size="icon" asChild>
                   <a href={`mailto:${Me.contact.email}`}>
@@ -43,7 +43,7 @@ export default function Home() {
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-text print:flex">
               {Me.contact.email ? (
                 <a href={`mailto:${Me.contact.email}`}>
                   <span className="underline">{Me.contact.email}</span>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
         <Section>
           <h2 className="text-xl font-bold">Currently</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
+          <p className="text-pretty font-mono text-sm text-muted-text">
             {Me.currently}
           </p>
         </Section>

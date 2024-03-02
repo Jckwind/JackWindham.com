@@ -6,7 +6,7 @@ export const Me = {
     initials: data.initials,
     location: data.location,
     locationLink: data.locationLink,
-    about: data.about,
+    about: data.home_tagline,
     summary: data.summary,
     resume_tagline: data.resume_tagline,
     currently: data.currently,

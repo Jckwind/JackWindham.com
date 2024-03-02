@@ -20,7 +20,7 @@ export default function About() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-4xl font-bold">{Me.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground pr-10">
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-text pr-10">
             This is going to be an informal about page.
             If you want to know me in a formal context, check my resume.
             </p>
@@ -30,7 +30,7 @@ export default function About() {
         </div>
         <Section>
           <h2 className="text-2xl font-bold">Coming soon</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
+          <p className="text-pretty font-mono text-sm text-muted-text">
             No, seriously. Like if you&#39;re reading this, it&#39;ll be updated soon.
             Yes, like *soon* soon.  
           </p>

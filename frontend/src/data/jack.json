@@ -1,9 +1,9 @@
 {
     "name": "Jack Wind",
     "initials": "JW",
-    "location": "Washington DC Area",
+    "location": "Washington DC",
     "locationLink": "https://www.google.com/maps/place/Arlington,+VA",
-    "about": "I build award-winning apps, engineer complex systems, and explore cutting-edge research.",
+    "home_tagline": "I build award-winning apps, engineer complex systems, and explore cutting-edge research.",
     "resume_tagline": "Outcome-oriented problem-solver. I like building impactful products, optimizing complex systems, and exceeding expectations.",
     "summary": "I'm a problem-solver at my core; driven by ambition, relentless curiosity, and an obsession for perfection. I see the big picture and break ambitious goals into achievable steps, whether I'm building award-winning apps, engineering complex systems, or exploring cutting-edge research. My proactive, outcome-focused approach means I take ownership of projects, driving them forward and delivering impactful results. I take pride in my work, believing that attention to detail separates good from great. Whether tackling complex technical challenges or streamlining everyday experiences, my focus is making a tangible difference in people's lives.",
     "currently": "I'm quite the busy man right now. I'm teaching myself the field of Artifical Intelligence, making this website, training for a half marathon, and working a full time job. Check out the About or Resume pages for more info!",
@@ -33,18 +33,18 @@
             "title": "Senior Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": ["Hybrid"],
+            "badges": [],
             "start": "February 2024",
             "end": "Present",
             "description": "As an engineer working on Capital One's core platform, I took ownership of critical initiatives within the iOS team, such as improving the architecture and performance of the server-rendered platform. I led the modernization of the iOS codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable iOS feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results.",
-            "tech_stack": ["Swift", "Leadership"]
+            "tech_stack": ["Swift", "Mobile Development", "Leadership"]
         },
         {
             "company": "Capital One",
             "title": "Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": ["Hybrid"],
+            "badges": [],
             "start": "August 2022",
             "end": "January 2023",
             "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I built a robust availability architecture, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform.",
@@ -99,15 +99,6 @@
             ]
         },
         {
-            "title": "Flip Flop",
-            "description": "Flip Flop was a reflex-challenging, infinite scrolling mobile app that I built to teach myself how to code. The game mechanics were simple yet addictive. It was written in Swift, the programming language used to make iOS apps, and the game’s elements were designed using Photoshop and Illustrator. Monetization was achieved through in-app ads and purchases, including character skins and bonus levels. Flip Flop was a significant project for me, blending coding, design, and entrepreneurial skills. The app released in 2017, and received periodic updates to enhance the user experience and showcase my evolving coding skills. However, as I shifted focus to new projects, Flip Flop was gradually retired. This pivotal project laid the foundation for my future work.",
-            "short_description": "Flip Flop was my first project. While simple, this game revealed the power of self-driven learning and sparked my passion for coding and bringing ideas into reality.",
-            "techStack": [
-                "Side Project",
-                "Swift"
-            ]
-        },
-        {
             "title": "Tragedy Relief Index",
             "description": "The Tragedy Relief Index was a small, simple app developed between my Flip Flop and Cordia projects. It featured a simple interface displaying global tragedies and natural disasters, offering users links to assist those impacted. The app, available on the App Store for a few years, was not very popular and was eventually shut down the platform following the closure of its data-providing API.",
             "short_description": "The Tragedy Relief Index was an app focused on connecting users with humanitarian aid resources in response to global disasters. Utilizing a live-updating API, this project highlighted the challenges of external dependency in software solutions. Despite its short lifespan, it reflected my early commitment to using technology for positive impact.",
@@ -129,6 +120,15 @@
             "title": "RememberThem",
             "description": "RememberThem is a heartfelt, simple app created as a personal gift for my mom. It commemorates her parents, who passed away from cancer. The app features a friendly interface displaying photos of my mom with each parent, alongside a play button. This button activates voicemails from her parents, which I had recorded and refined from our home telephone's answering machine. While I never thought much of the technical effort, the emotional value it holds for my mom is significant, as she continues to cherish and frequently use it.",
             "short_description": "A personal and simple app crafted as a gift for my mom, honors her late parents. It features photos of her with each parent and a play button for voicemails from them, preserved from our home answering machine. Technically straightforward but emotionally invaluable, it remains a cherished part of my mom's life.",
+            "techStack": [
+                "Side Project",
+                "Swift"
+            ]
+        },
+        {
+            "title": "Flip Flop",
+            "description": "Flip Flop was a reflex-challenging, infinite scrolling mobile app that I built to teach myself how to code. The game mechanics were simple yet addictive. It was written in Swift, the programming language used to make iOS apps, and the game’s elements were designed using Photoshop and Illustrator. Monetization was achieved through in-app ads and purchases, including character skins and bonus levels. Flip Flop was a significant project for me, blending coding, design, and entrepreneurial skills. The app released in 2017, and received periodic updates to enhance the user experience and showcase my evolving coding skills. However, as I shifted focus to new projects, Flip Flop was gradually retired. This pivotal project laid the foundation for my future work.",
+            "short_description": "Flip Flop was my first project. While simple, this game revealed the power of self-driven learning and sparked my passion for coding and bringing ideas into reality.",
             "techStack": [
                 "Side Project",
                 "Swift"

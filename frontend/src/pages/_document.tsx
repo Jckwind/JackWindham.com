@@ -12,7 +12,7 @@ export default function Document() {
         <meta name="theme-color" content="#EAC696" media="(prefers-color-scheme: light)"/>
         <meta name="theme-color" content="#131318" media="(prefers-color-scheme: dark)"/>
       </Head>
-      <body className="flex h-full flex-col bg-background">
+      <body className="flex min-h-screen flex-col">
         <Main />
         <NextScript />
       </body>

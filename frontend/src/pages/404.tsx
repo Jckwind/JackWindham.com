@@ -12,7 +12,7 @@ export default function NotFound404() {
               <h1 className="text-4xl font-bold tracking-tight text-balance">
                 Page not found
               </h1>
-              <p className="mt-2 text-base text-muted-foreground">
+              <p className="mt-2 text-base text-muted-text">
                 Here&apos;s my favorite picture of you and me :)
               </p>
               <div className="mt-6 flex justify-center">
