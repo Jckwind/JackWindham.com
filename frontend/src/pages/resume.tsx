@@ -20,10 +20,10 @@ export default function Resume() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-4xl font-bold">{Me.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground pr-10">
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-text pr-10">
               {Me.resume_tagline}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-text">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={Me.locationLink}
@@ -33,7 +33,7 @@ export default function Resume() {
                 {Me.location}
               </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-text print:hidden">
               {Me.contact.email ? (
                 <Button className="size-8" variant="outline" size="icon" asChild>
                   <a href={`mailto:${Me.contact.email}`}>
@@ -56,7 +56,7 @@ export default function Resume() {
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-text print:flex">
               {Me.contact.email ? (
                 <a href={`mailto:${Me.contact.email}`}>
                   <span className="underline">{Me.contact.email}</span>
@@ -74,7 +74,7 @@ export default function Resume() {
         </div>
         <Section>
           <h2 className="text-2xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
+          <p className="text-pretty font-mono text-sm text-muted-text">
             {Me.summary}
           </p>
         </Section>
@@ -98,13 +98,13 @@ export default function Resume() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-muted-foreground hidden md:block">
+                    <div className="text-sm tabular-nums text-muted-text hidden md:block">
                       {work.start} - {work.end}
                     </div>
                   </div>
 
                   <h4 className="font-mono text-sm leading-none">{work.title}</h4>
-                  <div className="text-sm tabular-nums text-muted-foreground md:hidden">
+                  <div className="text-sm tabular-nums text-muted-text md:hidden">
                     {work.start} - {work.end}
                   </div>
                 </CardHeader>
@@ -124,7 +124,7 @@ export default function Resume() {
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-2xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-2 print:gap-2 md:grid-cols-2">
             {Me.projects.map((project) => {
               return (
                 <ProjectCard
@@ -143,7 +143,7 @@ export default function Resume() {
           {Object.entries(Me.skills).map(([category, skills]) => {
             return (
               <>
-                <h3 className="font-semibold leading-none text-base text-muted-foreground">{category}</h3>
+                <h3 className="font-semibold leading-none text-base text-muted-text">{category}</h3>
                 <div className="flex flex-wrap gap-1">
                   {
                     skills.map((skill) => {
@@ -163,15 +163,15 @@ export default function Resume() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">{education.school}</h3>
-                    <div className="text-sm tabular-nums text-muted-foreground hidden md:block">
+                    <div className="text-sm tabular-nums text-muted-text hidden md:block">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
-                <div className="text-sm tabular-nums text-muted-foreground md:hidden">
+                <div className="text-sm tabular-nums text-muted-text md:hidden">
                   {education.start} - {education.end}
                 </div>
-                <CardContent className="mt-2 text-muted-foreground">{education.degree}</CardContent>
+                <CardContent className="mt-2 text-muted-text">{education.degree}</CardContent>
                 <CardContent className="mt-2">{education.description}</CardContent>
               </Card>
             );

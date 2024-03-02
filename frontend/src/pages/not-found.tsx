@@ -10,10 +10,10 @@ export default function NotFound() {
                     <div className="py-16">
                         <div className="text-center">
                             <p className="text-base font-semibold text-primary">Uh oh</p>
-                            <h1 className="text-4xl font-bold tracking-tight text-balance">
+                            <h1 className="text-4xl font-bold tracking-tight">
                                 Page not found
                             </h1>
-                            <p className="mt-2 text-base text-muted-foreground">
+                            <p className="mt-2 text-base text-muted-text">
                                 Here&apos;s my favorite picture of you and me :)
                             </p>
                             <div className="mt-6 flex justify-center">

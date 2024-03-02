@@ -1,7 +1,4 @@
 # Tailwind Color Converter Script
-# Hi, I'm Jack. I prefer HEX codes but Tailwind doesn't. This script is my quick fix for that.
-# It turns HEX into Tailwind format so I can keep designing without getting bogged down in color code conversions.
-# Simple, no fuss, and does the job.
 import json
 import re
 

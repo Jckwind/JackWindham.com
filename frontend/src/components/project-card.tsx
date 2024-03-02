@@ -10,7 +10,7 @@ interface Props {
 
 export function ProjectCard({ title, description, tags, link }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-border p-3">
+    <Card className="flex flex-col overflow-hidden bg-card border border-border/10 p-3">
       <CardHeader className="">
         <div className="space-y-1">
           <CardTitle className="text-base">

@@ -1,86 +1,82 @@
 {
     "background": {
-        "light": "#bb9e78",
+        "light": "#f1f0ee",
         "dark": "#1E1E26"
     },
     "secondary-background": {
-        "light": "#EAC696",
+        "light": "#FFFFFF",
         "dark": "#131318"
-    },
-    "foreground": {
-        "light": "#272829",
-        "dark": ""
     },
     "card": {
-        "light": "#EAC696",
+        "light": "#f1f0ee",
         "dark": "#131318"
     },
-    "card-foreground": {
-        "light": "#65451F",
+    "card-text": {
+        "light": "#000000",
         "dark": ""
+    },
+    "text": {
+        "light": "#232323",
+        "dark": ""
+    },
+    "muted-text": {
+        "light": "#131318",
+        "dark": ""
+    },
+    "primary": {
+        "light": "#e53c12",
+        "dark": "#f9fafb"
+    },
+    "primary-text": {
+        "light": "#ebe9e1",
+        "dark": "#000000"
+    },
+    "secondary": {
+        "light": "#e53c12",
+        "dark": "#f3f4f6"
+    },
+    "secondary-text": {
+        "light": "#ebe9e1",
+        "dark": "#000000"
     },
     "popover": {
         "light": "#4A4849",
         "dark": "000000"
     },
-    "popover-foreground": {
-        "light": "#FFF6E0",
+    "popover-text": {
+        "light": "#f1f0ee",
         "dark": "#FFF6E0"
     },
-    "primary": {
-        "light": "#4A4849",
-        "dark": "#f9fafb"
-    },
-    "primary-foreground": {
-        "light": "#FFF6E0",
-        "dark": "#000000"
-    },
-    "secondary": {
-        "light": "#4A4849",
-        "dark": "#f3f4f6"
-    },
-    "secondary-foreground": {
-        "light": "#FFF6E0",
-        "dark": "#000000"
-    },
-    "muted": {
-        "light": "#61677A",
-        "dark": ""
-    },
-    "muted-foreground": {
-        "light": "#765827",
-        "dark": ""
-    },
     "accent": {
-        "light": "#98E4FF",
+        "light": "#fec525",
         "dark": "#98E4FF"
     },
-    "accent-foreground": {
-        "light": "#B6FFFA",
+    "accent-text": {
+        "light": "#fec525",
         "dark": "#B6FFFA"
     },
     "destructive": {
         "light": "#ef4444",
         "dark": ""
     },
-    "destructive-foreground": {
+    "destructive-text": {
         "light": "#f9fafb",
         "dark": ""
-    },
-    "border": {
-        "light": "#765827",
-        "dark": "#1E1E26"
     },
     "input": {
         "light": "#e5e7eb",
         "dark": ""
     },
+    "border": {
+        "light": "#765827",
+        "dark": "#FFFFFF"
+    },
     "ring": {
-        "light": "#98E4FF",
+        "light": "#131318",
         "dark": "#98E4FF"
     },
     "shadow": {
-        "light": "#B6FFFA",
+        "light": "#131318",
         "dark": "#B6FFFA"
     }
 }
