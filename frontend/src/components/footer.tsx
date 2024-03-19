@@ -26,7 +26,7 @@ export const Footer = () => {
                   href="https://jarocki.me/"
                   className="text-sm text-center underline underline-offset-2 text-muted-text/50"
                 >
-                  This site is inspired by Bartosz Jarocki&#39;s work.
+                  This site was inspired by Bartosz Jarocki&#39;s work.
                 </a>
               </div>
             </div>

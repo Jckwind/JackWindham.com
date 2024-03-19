@@ -25,7 +25,7 @@
     },
     "primary": {
         "light": "#e53c12",
-        "dark": "#f9fafb"
+        "dark": "#e53c12"
     },
     "primary-text": {
         "light": "#ebe9e1",
@@ -33,15 +33,15 @@
     },
     "secondary": {
         "light": "#e53c12",
-        "dark": "#f3f4f6"
+        "dark": "#e53c12"
     },
     "secondary-text": {
         "light": "#ebe9e1",
         "dark": "#000000"
     },
     "popover": {
-        "light": "#4A4849",
-        "dark": "000000"
+        "light": "#000000",
+        "dark": "#000000"
     },
     "popover-text": {
         "light": "#f1f0ee",
@@ -49,11 +49,11 @@
     },
     "accent": {
         "light": "#fec525",
-        "dark": "#98E4FF"
+        "dark": "#fec525"
     },
     "accent-text": {
         "light": "#fec525",
-        "dark": "#B6FFFA"
+        "dark": "#fec525"
     },
     "destructive": {
         "light": "#ef4444",

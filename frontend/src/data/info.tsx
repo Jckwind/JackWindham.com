@@ -16,11 +16,11 @@ export const Me = {
         email: data.contact.email,
         tel: data.contact.tel,
         social: [
-            {
-                name: 'GitHub',
-                url: data.contact.socials.github,
-                icon: Github,
-            },
+            // {
+            //     name: 'GitHub',
+            //     url: data.contact.socials.github,
+            //     icon: Github,
+            // },
             {
                 name: 'LinkedIn',
                 url: data.contact.socials.linkedin,
