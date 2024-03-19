@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <div className={rubik.className}>
         <div className="fixed inset-0 flex justify-center sm:px-8">
           <div className="flex w-full max-w-7xl lg:px-8">
-            <div className="w-full bg-background ring-1 ring-border/10" />
+            <div className="w-full bg-background ring-1 ring-border/25" />
           </div>
         </div>
         <div className="relative">

@@ -101,7 +101,7 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
  <tr>
     <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F9FAFB; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #E53C12; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>
@@ -111,7 +111,7 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
     <th>Popover-text</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #F3F4F6; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #E53C12; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: 000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #FFF6E0; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
@@ -123,8 +123,8 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
     <th>Destructive-text</th>
  </tr>
  <tr>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #98E4FF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #B6FFFA; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FEC525; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #FEC525; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #FFFFFF; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>

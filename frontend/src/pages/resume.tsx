@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Me } from '@/data/info';
 import { ProjectCard } from '@/components/project-card';
 import { ImageContainer } from '@/components/ui/image';
+import ReactMarkdown from 'react-markdown';
 
 export const metadata: Metadata = {
   title: `${Me.name} | ${Me.about}`,
@@ -19,10 +20,10 @@ export default function Resume() {
       <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-4xl font-bold">{Me.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-text pr-10">
+            <h1 className="text-4xl font-bold text-primary">{Me.name}</h1>
+            <ReactMarkdown components={{ strong: ({node, ...props}) => <span className='font-black text-primary' {...props} /> }} className="max-w-md text-pretty font-mono text-base text-muted-text pr-10">
               {Me.resume_tagline}
-            </p>
+            </ReactMarkdown> 
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-text">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
@@ -73,13 +74,30 @@ export default function Resume() {
           </ImageContainer>
         </div>
         <Section>
-          <h2 className="text-2xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-text">
+          <h2 className="text-3xl font-bold">About</h2>
+          <ReactMarkdown className="text-pretty font-mono text-sm text-muted-text">
             {Me.summary}
-          </p>
+          </ReactMarkdown> 
         </Section>
         <Section>
-          <h2 className="text-2xl font-bold">Work</h2>
+          <h2 className="text-2xl font-bold">Skills</h2>
+          {Object.entries(Me.skills).map(([category, skills]) => {
+            return (
+              <>
+                <h3 className="font-semibold leading-none text-base text-muted-text">{category}</h3>
+                <div className="flex flex-wrap gap-1">
+                  {
+                    skills.map((skill) => {
+                      return <Badge key={skill}>{skill}</Badge>;
+                    })
+                  }
+                </div>
+              </>
+            )
+          })}
+        </Section>
+        <Section>
+          <h2 className="text-3xl font-bold">Work</h2>
           {Me.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -92,7 +110,7 @@ export default function Resume() {
 
                       <span className="inline-flex gap-x-1 ml-1">
                         {work.badges.map((badge) => (
-                          <Badge variant="secondary" className="align-middle text-xs" key={badge}>
+                          <Badge variant="outline" className="align-middle text-xs" key={badge}>
                             {badge}
                           </Badge>
                         ))}
@@ -137,23 +155,6 @@ export default function Resume() {
               );
             })}
           </div>
-        </Section>
-        <Section>
-          <h2 className="text-2xl font-bold">Skills</h2>
-          {Object.entries(Me.skills).map(([category, skills]) => {
-            return (
-              <>
-                <h3 className="font-semibold leading-none text-base text-muted-text">{category}</h3>
-                <div className="flex flex-wrap gap-1">
-                  {
-                    skills.map((skill) => {
-                      return <Badge key={skill}>{skill}</Badge>;
-                    })
-                  }
-                </div>
-              </>
-            )
-          })}
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Education</h2>

@@ -137,24 +137,13 @@ export const Header = () => {
                             } as unknown as React.CSSProperties
                         }
                     >
-                        <div className="relative flex gap-4">
-                            <div className="flex flex-1">
-                                {!isHomePage && (
-                                    <AvatarContainer>
-                                        <Avatar />
-                                    </AvatarContainer>
-                                )}
-                            </div>
-                            <div className="flex flex-1 justify-end md:justify-center">
-                                <MobileNavigation className="pointer-events-auto md:hidden" />
-                                <DesktopNavigation className="pointer-events-auto hidden md:block" />
-                            </div>
-                            <div className="flex justify-end md:flex-1" />
+                        <div className="flex flex-1 justify-center">
+                            <DesktopNavigation className="pointer-events-auto hidden md:block" />
+                            <MobileNavigation className="pointer-events-auto md:hidden mb-2" />
                         </div>
                     </Container>
                 </div>
             </header>
-            {isHomePage && <div style={{ height: 'var(--content-offset)' }} />}
         </>
     );
 };
