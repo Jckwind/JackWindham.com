@@ -40,8 +40,8 @@
         "dark": "#000000"
     },
     "popover": {
-        "light": "#4A4849",
-        "dark": "000000"
+        "light": "#000000",
+        "dark": "#000000"
     },
     "popover-text": {
         "light": "#f1f0ee",

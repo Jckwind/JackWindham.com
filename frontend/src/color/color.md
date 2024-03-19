@@ -48,7 +48,7 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
  <tr>
     <td style="inline-block; width: 75px; height: 75px; background-color: #E53C12; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #EBE9E1; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: #4A4849; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #F1F0EE; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>
@@ -113,7 +113,7 @@ You can edit color.json, and when you've made a change, run `python3 color.py` o
  <tr>
     <td style="inline-block; width: 75px; height: 75px; background-color: #E53C12; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
-    <td style="inline-block; width: 75px; height: 75px; background-color: 000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
+    <td style="inline-block; width: 75px; height: 75px; background-color: #000000; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
     <td style="inline-block; width: 75px; height: 75px; background-color: #FFF6E0; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);"></td>
  </tr>
  <tr>

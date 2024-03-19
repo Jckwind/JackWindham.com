@@ -31,9 +31,16 @@ export default function Home() {
           <div className="flex-1 space-y-1.5">
             <h1 className="text-4xl font-bold text-primary">{Me.name}</h1>
             <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary' {...props} /> }} className="max-w-md text-pretty font-mono text-base text-muted-text pr-10">
-              This website is my best effort at capturing who I am, professionally and as a person. **Enjoy**
+              This website is my best effort at capturing who I am. **Enjoy**
             </ReactMarkdown> 
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-text print:hidden">
+              {Me.contact.email ? (
+                <Button className="size-8" variant="outline" size="icon" asChild>
+                  <a href={`mailto:${Me.contact.email}`}>
+                    <MailIcon className="size-4" />
+                  </a>
+                </Button>
+              ) : null}
               {Me.contact.social.map((social) => (
                 <Button key={social.name} className="size-8" variant="outline" size="icon" asChild>
                   <a href={social.url}>
@@ -71,13 +78,15 @@ export default function Home() {
                 </ReactMarkdown>
               </Link>
             </li>
-            <li>
-              <Link href="/resume" className="transition hover:text-primary/80  underline underline-offset-4">
-                <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary/80' {...props} /> }} className="text-muted-text/80 pr-10">
-                  **Contact** me
-                </ReactMarkdown>
-              </Link>
-            </li>
+            {Me.contact.email ? (
+              <li>
+                <Link href={`mailto:${Me.contact.email}`} className="transition hover:text-primary/80 underline underline-offset-4">
+                  <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary/80' {...props} /> }} className="text-muted-text/80 pr-10">
+                    **Email** me &rarr;
+                  </ReactMarkdown>
+                </Link>
+              </li>
+            ) : null}
           </ul>
         </Section>
       </section>

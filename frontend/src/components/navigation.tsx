@@ -53,7 +53,7 @@ export const DesktopNavigation = (
 ) => {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-popover/90 px-3 text-sm font-medium shadow-[0_0_3px_3px] shadow-shadow/50">
+      <ul className="flex rounded-full bg-popover/90 px-3 text-sm font-medium shadow-[0_2px_10px_3px] shadow-shadow/20">
         {routes.map((item) => {
           return (
             <NavItem key={item.path} href={item.path}>
@@ -69,7 +69,7 @@ export const DesktopNavigation = (
 export const MobileNavigation = (props: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-popover/90 px-3 text-sm font-medium shadow-[0_0_3px_3px] shadow-shadow/50">
+      <ul className="flex rounded-full bg-popover/90 px-3 text-sm font-medium shadow-[0_2px_10px_3px] shadow-shadow/20">
         {routes.map((item) => {
           return (
             <NavItem key={item.path} href={item.path}>

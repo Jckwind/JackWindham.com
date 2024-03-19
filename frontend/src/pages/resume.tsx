@@ -80,23 +80,6 @@ export default function Resume() {
           </ReactMarkdown> 
         </Section>
         <Section>
-          <h2 className="text-2xl font-bold">Skills</h2>
-          {Object.entries(Me.skills).map(([category, skills]) => {
-            return (
-              <>
-                <h3 className="font-semibold leading-none text-base text-muted-text">{category}</h3>
-                <div className="flex flex-wrap gap-1">
-                  {
-                    skills.map((skill) => {
-                      return <Badge key={skill}>{skill}</Badge>;
-                    })
-                  }
-                </div>
-              </>
-            )
-          })}
-        </Section>
-        <Section>
           <h2 className="text-3xl font-bold">Work</h2>
           {Me.work.map((work) => {
             return (
@@ -179,6 +162,23 @@ export default function Resume() {
           })}
         </Section>
       </section>
+      <Section>
+        <h2 className="text-2xl font-bold">Skills</h2>
+        {Object.entries(Me.skills).map(([category, skills]) => {
+          return (
+            <>
+              <h3 className="font-semibold leading-none text-base text-muted-text">{category}</h3>
+              <div className="flex flex-wrap gap-1">
+                {
+                  skills.map((skill) => {
+                    return <Badge key={skill}>{skill}</Badge>;
+                  })
+                }
+              </div>
+            </>
+          )
+        })}
+      </Section>
     </main>
   );
 }
