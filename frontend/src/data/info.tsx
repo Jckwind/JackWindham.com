@@ -8,19 +8,14 @@ export const Me = {
     locationLink: data.locationLink,
     about: data.home_tagline,
     summary: data.summary,
+    home_tagline: data.home_tagline,
     resume_tagline: data.resume_tagline,
-    currently: data.currently,
     avatarURL: data.avatarUrl,
     personalWebsiteUrl: data.personalWebsiteUrl,
     contact: {
         email: data.contact.email,
         tel: data.contact.tel,
         social: [
-            // {
-            //     name: 'GitHub',
-            //     url: data.contact.socials.github,
-            //     icon: Github,
-            // },
             {
                 name: 'LinkedIn',
                 url: data.contact.socials.linkedin,

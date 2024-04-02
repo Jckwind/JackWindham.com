@@ -31,8 +31,7 @@ export default function About() {
         <Section>
           <h2 className="text-2xl font-bold">Coming soon</h2>
           <p className="text-pretty font-mono text-sm text-muted-text">
-            No, seriously. Like if you&#39;re reading this, it&#39;ll be updated soon.
-            Yes, like *soon* soon.  
+            I have a lot going on, this is on the backburner for now.
           </p>
         </Section>
       </section>

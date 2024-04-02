@@ -11,11 +11,6 @@ export const routes: Route[] = [
     isExternal: false,
   },
   {
-    name: 'About',
-    path: '/about',
-    isExternal: false,
-  },
-  {
     name: 'Resume',
     path: '/resume',
     isExternal: false,
