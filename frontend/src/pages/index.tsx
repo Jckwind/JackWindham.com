@@ -31,7 +31,7 @@ export default function Home() {
           <div className="flex-1 space-y-1.5">
             <h1 className="text-4xl font-bold text-primary">{Me.name}</h1>
             <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary' {...props} /> }} className="max-w-md text-pretty font-mono text-base text-muted-text pr-10">
-              This website is my best effort at capturing who I am. **Enjoy**
+              {Me.home_tagline}
             </ReactMarkdown> 
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-text print:hidden">
               {Me.contact.email ? (
@@ -56,21 +56,21 @@ export default function Home() {
         <Section>
           <h2 className="text-2xl font-bold">Currently I am:</h2>
           <ul className="text-pretty font-mono text-base text-muted-text list-disc list-inside space-y-3">
-            <li>Exploring Artificial Intelligence</li>
-            <li>Working as a Senior Software Engineer</li>
-            <li>Focused on my pursuit of happiness</li>
+            <li>Working as a Engineer</li>
+            <li>Building PROXY</li>
+            <li>Pursuing happiness</li>
           </ul>
         </Section>
         <Section>
           <h2 className="text-2xl font-bold">You can:</h2>
           <ul className="text-pretty font-mono text-base text-muted-text space-y-3">
-            <li>
+            {/* <li>
               <Link href="/about" className="transition hover:text-primary/80 underline underline-offset-4">
                 <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary/80' {...props} /> }} className="text-muted-text/80 pr-10">
                   Learn more **about** me
                 </ReactMarkdown> 
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/resume" className="transition hover:text-primary/80 underline underline-offset-4">
                 <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary/80' {...props} /> }} className="text-muted-text/80 pr-10">
