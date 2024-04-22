@@ -19,7 +19,7 @@
         {
             "school": "Virginia Tech",
             "degree": "Bachelor of Science in Computer Science",
-            "description": "Focused on full-stack development with a passion for diverse projects, including entrepreneurial ventures, leadership roles, and a capstone on brain modeling. I also volunteered to mentor peers in math, computer science, and career development.",
+            "description": "Focused on full-stack development with a passion for diverse projects, including entrepreneurial ventures, leadership roles, and a capstone on brain modeling. I mentored peers in math, computer science, and career development.",
             "start": "2018",
             "end": "2022"
         }
@@ -45,8 +45,7 @@
         },
         {
             "company": "Capital One",
-            "title": "Intern",
-            "role": "Software Engineer",
+            "role": "Software Engineer - Intern",
             "link": "https://www.capitalone.com/",
             "start": "June 2021",
             "end": "August 2021",
@@ -55,8 +54,7 @@
         },
         {
             "company": "Verisign",
-            "title": "Intern",
-            "role": "Software Engineer",
+            "role": "Software Engineer - Intern",
             "link": "https://www.verisign.com/",
             "start": "May 2020",
             "end": "August 2020",
