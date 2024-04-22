@@ -9,7 +9,7 @@ import { ImageContainer } from '@/components/ui/image';
 import ReactMarkdown from 'react-markdown';
 
 export const metadata: Metadata = {
-  title: `${Me.name} | ${Me.about}`,
+  title: `${Me.name}`,
   description: Me.summary,
 };
 
@@ -25,15 +25,22 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-6">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16">
+      <section className="mx-auto w-full max-w-2xl space-y-8">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-4xl font-bold text-primary">{Me.name}</h1>
-            <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary' {...props} /> }} className="max-w-md text-pretty font-mono text-base text-muted-text pr-10">
-              {Me.home_tagline}
-            </ReactMarkdown> 
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-text print:hidden">
+            <h1 className="text-3xl md:text-4xl font-bold text-accent">{Me.name}</h1>
+            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-text">
+              <a
+                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+                href={Me.locationLink}
+                target="_blank"
+              >
+                <GlobeIcon className="size-3" />
+                {Me.location}
+              </a>
+            </p>
+            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-text">
               {Me.contact.email ? (
                 <Button className="size-8" variant="outline" size="icon" asChild>
                   <a href={`mailto:${Me.contact.email}`}>
@@ -54,39 +61,33 @@ export default function Home() {
           </ImageContainer>
         </div>
         <Section>
-          <h2 className="text-2xl font-bold">Currently I am:</h2>
-          <ul className="text-pretty font-mono text-base text-muted-text list-disc list-inside space-y-3">
-            <li>Working as a Engineer</li>
-            <li>Building PROXY</li>
-            <li>Pursuing happiness</li>
+          <h2 className="text-2xl md:text-3xl font-bold">I am:</h2>
+          <ul className="text-pretty text-base list-disc text-muted-text space-y-3 pl-5">
+            <li>
+              creative
+            </li>
+            <li>
+              ambitious
+            </li>
+            <li>
+              building <a href="https://what-is-proxy.com" className="transition hover:text-accent underline underline-offset-4"> Proxy </a>
+            </li>
           </ul>
         </Section>
+
         <Section>
-          <h2 className="text-2xl font-bold">You can:</h2>
-          <ul className="text-pretty font-mono text-base text-muted-text space-y-3">
-            {/* <li>
-              <Link href="/about" className="transition hover:text-primary/80 underline underline-offset-4">
-                <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary/80' {...props} /> }} className="text-muted-text/80 pr-10">
-                  Learn more **about** me
-                </ReactMarkdown> 
-              </Link>
-            </li> */}
+          <h2 className="text-2xl md:text-3xl font-bold">You can:</h2>
+          <ul className="text-pretty text-base list-disc text-muted-text space-y-3 pl-5">
             <li>
-              <Link href="/resume" className="transition hover:text-primary/80 underline underline-offset-4">
-                <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary/80' {...props} /> }} className="text-muted-text/80 pr-10">
-                  Read my **resume**
-                </ReactMarkdown>
+              <Link href="/resume" className="transition hover:text-accent underline underline-offset-4">
+                Read my resume
               </Link>
             </li>
-            {Me.contact.email ? (
-              <li>
-                <Link href={`mailto:${Me.contact.email}`} className="transition hover:text-primary/80 underline underline-offset-4">
-                  <ReactMarkdown components={{ strong: ({ node, ...props }) => <span className='font-black text-primary/80' {...props} /> }} className="text-muted-text/80 pr-10">
-                    **Email** me &rarr;
-                  </ReactMarkdown>
-                </Link>
-              </li>
-            ) : null}
+            <li>
+              <Link href={`mailto:${Me.contact.email}`} className="transition hover:text-accent underline underline-offset-4">
+                Email me
+              </Link>
+            </li>
           </ul>
         </Section>
       </section>

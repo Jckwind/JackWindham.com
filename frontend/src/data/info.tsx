@@ -1,4 +1,4 @@
-import { Github, LinkedIn, X } from '@/components/icons';
+import { LinkedIn, X } from '@/components/icons';
 import { default as data } from '@/data/jack.json';
 
 export const Me = {
@@ -6,10 +6,7 @@ export const Me = {
     initials: data.initials,
     location: data.location,
     locationLink: data.locationLink,
-    about: data.home_tagline,
     summary: data.summary,
-    home_tagline: data.home_tagline,
-    resume_tagline: data.resume_tagline,
     avatarURL: data.avatarUrl,
     personalWebsiteUrl: data.personalWebsiteUrl,
     contact: {

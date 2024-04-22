@@ -8,7 +8,7 @@ export default function NotFound404() {
         <main className="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8">
           <div className="py-16">
             <div className="text-center">
-              <p className="text-base font-semibold text-primary">404</p>
+              <p className="text-base font-semibold text-accent">404</p>
               <h1 className="text-4xl font-bold tracking-tight text-balance">
                 Page not found
               </h1>

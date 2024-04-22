@@ -10,7 +10,7 @@ interface Props {
 
 export function ProjectCard({ title, description, tags, link }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden bg-card border border-border/10 p-3">
+    <Card className="flex flex-col overflow-hidden p-3 bg-card border border-border/25 hover:text-accent hover:border-accent/25">
       <CardHeader className="">
         <div className="space-y-1">
           <CardTitle className="text-base">
@@ -26,20 +26,17 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               title
             )}
           </CardTitle>
-          <div className="hidden font-mono text-xs underline print:visible">
-            {link?.replace('https://', '').replace('www.', '').replace('/', '')}
-          </div>
-          <CardDescription className="font-mono text-xs">{description}</CardDescription>
+          <CardDescription className="font-mono text-xs pl-2">{description}</CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex">
-        <div className="mt-2 flex flex-wrap gap-1">
-          {tags.map((tag) => (
-            <Badge className="px-1 py-0 text-[10px]" variant="secondary" key={tag}>
-              {tag}
+      <CardContent className="mt-2 flex flex-wrap gap-1 bottom-0">
+        {
+          tags.map((badge) => (
+            <Badge className="align-middle text-xs" key={badge}>
+              {badge}
             </Badge>
-          ))}
-        </div>
+          ))
+        }
       </CardContent>
     </Card>
   );

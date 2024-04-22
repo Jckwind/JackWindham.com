@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from '@/components/container';
+import { Container } from '@/components/ui/container';
 import { NavLink } from '@/components/navigation';
 import { routes } from '@/config/routes';
 
@@ -22,12 +22,6 @@ export const Footer = () => {
                 <p className="text-sm text-center text-muted-text">
                   &copy; {new Date().getFullYear()} Jack Windham. All rights reserved.
                 </p>
-                <a
-                  href="https://jarocki.me/"
-                  className="text-sm text-center underline underline-offset-2 text-muted-text/50"
-                >
-                  This site was inspired by Bartosz Jarocki&#39;s work.
-                </a>
               </div>
             </div>
           </Container.Inner>

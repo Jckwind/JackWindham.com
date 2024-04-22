@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
-import { Container } from '@/components/container';
+import { Container } from '@/components/ui/container';
 import { MobileNavigation, DesktopNavigation } from '@/components/navigation';
 
 export const Header = () => {

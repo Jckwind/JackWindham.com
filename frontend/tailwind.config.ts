@@ -29,25 +29,10 @@ const config: Config = {
           secondary: "rgb(var(--secondary-background) / <alpha-value>)"
         },
         text: "rgb(var(--text) / <alpha-value>)",
-        primary: {
-          DEFAULT: "rgb(var(--primary) / <alpha-value>)",
-          text: "rgb(var(--primary-text) / <alpha-value>)",
-        },
-        secondary: {
-          DEFAULT: "rgb(var(--secondary) / <alpha-value>)",
-          text: "rgb(var(--secondary-text) / <alpha-value>)",
-        },
-        destructive: {
-          DEFAULT: "rgb(var(--destructive) / <alpha-value>)",
-          text: "rgb(var(--destructive-text) / <alpha-value>)",
-        },
         muted: {
           text: "rgb(var(--muted-text) / <alpha-value>)"
         },
-        accent: {
-          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
-          text: "rgb(var(--accent-text) / <alpha-value>)",
-        },
+        accent: "rgb(var(--accent) / <alpha-value>)",
         popover: {
           DEFAULT: "rgb(var(--popover) / <alpha-value>)",
           text: "rgb(var(--popover-text) / <alpha-value>)",
