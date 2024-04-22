@@ -1,16 +1,9 @@
-import { Popover, Transition } from '@headlessui/react';
+import { Popover } from '@headlessui/react';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Fragment } from 'react';
 
 import { routes } from '@/config/routes';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-
-// import { ChevronDownIcon } from './icons/ChevronDownIcon';
-// import { CloseIcon } from './icons/CloseIcon';
 
 export const NavLink = ({ href, children }: React.PropsWithChildren<{ href: string }>) => {
   return (

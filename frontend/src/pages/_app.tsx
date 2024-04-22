@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         </div>
         <div className="relative">
           <Header />
-          <main className="min-h-screen">
+          <main className="min-h-[80vh]">
             <Component {...pageProps} />
           </main>
           <Footer />

@@ -8,7 +8,7 @@
         "dark": "#131318"
     },
     "card": {
-        "light": "#f1f0ee",
+        "light": "#FFFFFF",
         "dark": "#131318"
     },
     "card-text": {
@@ -23,22 +23,6 @@
         "light": "#131318",
         "dark": ""
     },
-    "primary": {
-        "light": "#e53c12",
-        "dark": "#e53c12"
-    },
-    "primary-text": {
-        "light": "#ebe9e1",
-        "dark": "#000000"
-    },
-    "secondary": {
-        "light": "#e53c12",
-        "dark": "#e53c12"
-    },
-    "secondary-text": {
-        "light": "#ebe9e1",
-        "dark": "#000000"
-    },
     "popover": {
         "light": "#000000",
         "dark": "#000000"
@@ -48,24 +32,8 @@
         "dark": "#FFF6E0"
     },
     "accent": {
-        "light": "#fec525",
-        "dark": "#fec525"
-    },
-    "accent-text": {
-        "light": "#fec525",
-        "dark": "#fec525"
-    },
-    "destructive": {
-        "light": "#ef4444",
-        "dark": ""
-    },
-    "destructive-text": {
-        "light": "#f9fafb",
-        "dark": ""
-    },
-    "input": {
-        "light": "#e5e7eb",
-        "dark": ""
+        "light": "#CC3300",
+        "dark": "#CC3300"
     },
     "border": {
         "light": "#765827",
@@ -76,7 +44,7 @@
         "dark": "#98E4FF"
     },
     "shadow": {
-        "light": "#131318",
-        "dark": "#B6FFFA"
+        "light": "#CC3300",
+        "dark": "#CC3300"
     }
 }

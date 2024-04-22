@@ -1,11 +1,9 @@
 {
     "name": "Jack Wind",
     "initials": "JW",
-    "location": "Washington DC",
+    "location": "Arlington, VA",
     "locationLink": "https://www.google.com/maps/place/Arlington,+VA",
-    "home_tagline": "This website is my best effort at capturing who I am. **Enjoy**",
-    "resume_tagline": "I like **building** impactful products, **optimizing** wherever possible, and **exceeding** expectations.",
-    "summary": "I'm driven by ambition, relentless **curiosity**, and an obsession for perfection. I see the big picture and break ambitious goals into achievable steps, whether I'm building award-winning apps, engineering complex systems, or exploring cutting-edge research. My proactive, outcome-focused approach means I take ownership of projects, driving them forward and delivering impactful results. I take pride in my work, believing that attention to detail separates good from great. Whether tackling complex technical challenges or streamlining everyday experiences, my focus is making a tangible difference in people's lives.",
+    "summary": "Driven and adaptable, I love exceeding expectations. I approach challenges strategically, turning ambition into action. My focus and resilience ensure I deliver results no matter what.",
     "avatarUrl": "https://avatars.githubusercontent.com/u/32938999?v=4",
     "personalWebsiteUrl": "https://jckwind.com",
     "contact": {
@@ -19,9 +17,9 @@
     },
     "education": [
         {
-            "school": "Virginia Polytechnic Institute and State University",
-            "degree": "Bachelor's Degree in Computer Science",
-            "description": "Graduated with a focus on full-stack development. Explored diverse interests: multiple entrepreneurial projects, leadership roles in multiple organizations, and a capstone project on brain modeling. I was also known to tutor peers in math and software development in my free time.",
+            "school": "Virginia Tech",
+            "degree": "Bachelor of Science in Computer Science",
+            "description": "Focused on full-stack development with a passion for diverse projects, including entrepreneurial ventures, leadership roles, and a capstone on brain modeling. I also volunteered to mentor peers in math, computer science, and career development.",
             "start": "2018",
             "end": "2022"
         }
@@ -29,47 +27,41 @@
     "work": [
         {
             "company": "Capital One",
-            "title": "Senior Associate",
-            "role": "Software Engineer",
+            "role": "Senior Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": [],
             "start": "February 2024",
             "end": "Present",
-            "description": "As an engineer working on Capital One's core platform, I took ownership of critical initiatives within the iOS team, such as improving the architecture and performance of the server-rendered platform. I led the modernization of the iOS codebase by eliminating legacy code, adopting a verbose in-line documentation standard, and prioritizing the end-user experience. My focus on clean, scalable solutions improved both the internal developer experience and platform reliability. My contributions enable iOS feature teams to quickly adopt the server-side platform; driving simple, rapid, and flexible development of the Capital One enterprise. Beyond my technical contributions, I also led a unique onboarding experience that focused on in-office collaboration and networking. During my time, I was recognized for my communication, teamwork, and ability to deliver results.",
+            "description": "While modernizing the iOS codebase and driving platform adoption, I refined my technical skills and embraced leadership opportunities. My contributions to the core platform team enhanced developer experience, improved reliability, and streamlined development processes, ultimately impacting the entire Capital One enterprise. This role fostered both my technical expertise and my ability to lead and collaborate effectively within a team.",
             "tech_stack": ["Swift", "Leadership"]
         },
         {
             "company": "Capital One",
-            "title": "Associate",
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
-            "badges": [],
             "start": "August 2022",
             "end": "January 2023",
-            "description": "As an engineer supporting Capital One's Dining & Entertainment (D&E) platform, I led initiatives to protect the integrity of exclusive offerings, optimize platform resilience, and drive data-informed decision & design. My work safeguarding offerings directly enhanced the user experience and preserved our competitive advantage. To ensure seamless service of the Capital One platform, I built a robust availability architecture, vital for regulatory compliance. Working with internal teams and external partners, I designed and developed a data pipeline that provided granular insight into user behavior, empowering continuous improvement of the D&E platform.",
-            "tech_stack": ["Go", "Javascript", "AWS", "Jenkins"]
+            "description": "I led projects to enhance the security and performance of the Dining & Entertainment platform, with a focus on protecting exclusive offers, ensuring system stability, and building tools to understand user behavior. These efforts directly contributed to Capital One's success and enhanced our competitive edge.",
+            "tech_stack": ["Go", "Javascript", "AWS"]
         },
         {
             "company": "Capital One",
             "title": "Intern",
             "role": "Software Engineer",
-            "badges": ["Remote"],
             "link": "https://www.capitalone.com/",
             "start": "June 2021",
             "end": "August 2021",
-            "description": "To improve enterprise-wide safety and security at Capital One, I built a serverless application to analyze cloud infrastructure for non-compliant security configurations. This tool generated detailed reports and risk assessments, automatically upgrading resources to the latest security requirements where possible. Component owners were notified of any resources requiring manual intervention. I was a core contributor to every aspect of this project, from the design, development and implementation.",
-            "tech_stack": ["Python", "AWS", "Jenkins"]
+            "description": "I developed a serverless application to analyze and enhance cloud security, automating upgrades and generating reports for improved compliance.",
+            "tech_stack": ["Python", "AWS"]
         },
         {
             "company": "Verisign",
             "title": "Intern",
             "role": "Software Engineer",
             "link": "https://www.verisign.com/",
-            "badges": ["Remote"],
             "start": "May 2020",
             "end": "August 2020",
-            "description": "To streamline access to critical operational data across the organization, I built a cross-platform application for viewing internal dashboards and important status information. This work included navigating access policies, integrating with existing infrastructure and data sources, and overseeing all phases of platform development.",
-            "tech_stack": ["Typescript", "Angular", "Restful API"]
+            "description": "I built a cross-platform application to centralize access to operational data and dashboards, streamlining information sharing across the organization.",
+            "tech_stack": ["Typescript", "Angular"]
         }
     ],
     "projects": [
@@ -101,24 +93,6 @@
             "title": "Tragedy Relief Index",
             "description": "The Tragedy Relief Index was a small, simple app developed between my Flip Flop and Cordia projects. It featured a simple interface displaying global tragedies and natural disasters, offering users links to assist those impacted. The app, available on the App Store for a few years, was not very popular and was eventually shut down the platform following the closure of its data-providing API.",
             "short_description": "The Tragedy Relief Index was an app focused on connecting users with humanitarian aid resources in response to global disasters. Utilizing a live-updating API, this project highlighted the challenges of external dependency in software solutions. Despite its short lifespan, it reflected my early commitment to using technology for positive impact.",
-            "techStack": [
-                "Side Project",
-                "Swift"
-            ]
-        },
-        {
-            "title": "Happy Memories",
-            "description": "This was a small, simple app I had made my dad as a gift. Everyday, he would get a notification at a random time, saying that it was time to view his happy memory for the day. Opening the app would show a different picture of the family, along with the description of the family’s happy memory for that day. Simple, but heartwarming. He told me for years after how much he looks forward to seeing his happy memory for the day",
-            "short_description": "Happy Memories was a personalized gift for my father. It is an app designed around viewing cherished family moments, each day revealing a different photo and its story. Its simplicity made it meaningful, and showed the positive impact technology makes possible.",
-            "techStack": [
-                "Side Project",
-                "Swift"
-            ]
-        },
-        {
-            "title": "RememberThem",
-            "description": "RememberThem is a heartfelt, simple app created as a personal gift for my mom. It commemorates her parents, who passed away from cancer. The app features a friendly interface displaying photos of my mom with each parent, alongside a play button. This button activates voicemails from her parents, which I had recorded and refined from our home telephone's answering machine. While I never thought much of the technical effort, the emotional value it holds for my mom is significant, as she continues to cherish and frequently use it.",
-            "short_description": "A personal and simple app crafted as a gift for my mom, honors her late parents. It features photos of her with each parent and a play button for voicemails from them, preserved from our home answering machine. Technically straightforward but emotionally invaluable, it remains a cherished part of my mom's life.",
             "techStack": [
                 "Side Project",
                 "Swift"
