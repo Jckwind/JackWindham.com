@@ -69,12 +69,11 @@
             "short_description": "Cordia began as a passion project sparked by music-sharing with friends. This award-winning social network integrated Spotify and Apple Music for a polished user experience. While building Cordia, I fell in love with the full spectrum of product development; in love with making experiences people enjoy.",
             "link": "https://www.cordia.app",
             "techStack": [
-                "Side Project",
                 "AWS",
                 "Swift",
                 "NodeJS",
                 "SQL",
-                "Google Cloud Platform"
+                "Google Cloud"
             ]
         },
         {
@@ -82,9 +81,11 @@
             "description": "In the summer of 2022, I became obsessed with machine learning. I developed a new personal research project, the Wind Model. Written in Python, the model utilized historical sentiment data and financial data for the binary classification of equity price behavior (predicting whether a stock's price would go up or down). The sentiment data was supplied via the public Twitter API, and the financial data via the public Yahoo Finance API and a private Nasdaq API. The model showed some success, performing exceedingly well in *calm* market conditions but struggling in volatile markets. It was powered by a Hierarchical Navigable Small Worlds (HNSW) algorithm for high-dimensional space analysis and used a genetic optimization algorithm for feature selection. This genetic algorithm was designed to find the optimal feature set for predicting price behavior. The model was retrained nightly, using the previous 30 trading days to optimize the genetic algorithm and identify the current *mood* of the market, or which feature set was most influential in determining price movement. The project was eventually sunsetted due to personal reasons and the high training costs, approximately $600 a month. I have not revisited this project since, not for lack of potential, but rather because my focus is on other projects. I do not plan to open-source the code.",
             "short_description": "The Wind Model tackled the complexities of stock prediction with an adaptive approach, combining technical indicators, real-time market data, and a self-optimizing genetic algorithm for dynamic feature selection.",
             "techStack": [
-                "Side Project",
+                "Python",
                 "AWS",
-                "Python"
+                "Machine Learning",
+                "Artificial Intelligence",
+                "Genetic Optimization"
             ]
         },
         {
@@ -92,8 +93,8 @@
             "description": "The Tragedy Relief Index was a small, simple app developed between my Flip Flop and Cordia projects. It featured a simple interface displaying global tragedies and natural disasters, offering users links to assist those impacted. The app, available on the App Store for a few years, was not very popular and was eventually shut down the platform following the closure of its data-providing API.",
             "short_description": "The Tragedy Relief Index was an app focused on connecting users with humanitarian aid resources in response to global disasters. Utilizing a live-updating API, this project highlighted the challenges of external dependency in software solutions. Despite its short lifespan, it reflected my early commitment to using technology for positive impact.",
             "techStack": [
-                "Side Project",
-                "Swift"
+                "Swift",
+                "Firebase"
             ]
         },
         {
@@ -101,8 +102,8 @@
             "description": "Flip Flop was a reflex-challenging, infinite scrolling mobile app that I built to teach myself how to code. The game mechanics were simple yet addictive. It was written in Swift, the programming language used to make iOS apps, and the game’s elements were designed using Photoshop and Illustrator. Monetization was achieved through in-app ads and purchases, including character skins and bonus levels. Flip Flop was a significant project for me, blending coding, design, and entrepreneurial skills. The app released in 2017, and received periodic updates to enhance the user experience and showcase my evolving coding skills. However, as I shifted focus to new projects, Flip Flop was gradually retired. This pivotal project laid the foundation for my future work.",
             "short_description": "Flip Flop was my first project. While simple, this game revealed the power of self-driven learning and sparked my passion for coding and bringing ideas into reality.",
             "techStack": [
-                "Side Project",
-                "Swift"
+                "Swift",
+                "Google Ads"
             ]
         }
     ],
