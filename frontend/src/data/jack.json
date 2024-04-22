@@ -29,7 +29,7 @@
             "company": "Capital One",
             "role": "Senior Software Engineer",
             "link": "https://www.capitalone.com/",
-            "start": "February 2024",
+            "start": "January 2024",
             "end": "Present",
             "description": "While modernizing the iOS codebase and driving platform adoption, I refined my technical skills and embraced leadership opportunities. My contributions to the core platform team enhanced developer experience, improved reliability, and streamlined development processes, ultimately impacting the entire Capital One enterprise. This role fostered both my technical expertise and my ability to lead and collaborate effectively within a team.",
             "tech_stack": ["Swift", "Leadership"]
@@ -39,7 +39,7 @@
             "role": "Software Engineer",
             "link": "https://www.capitalone.com/",
             "start": "August 2022",
-            "end": "January 2023",
+            "end": "December 2023",
             "description": "I led projects to enhance the security and performance of the Dining & Entertainment platform, with a focus on protecting exclusive offers, ensuring system stability, and building tools to understand user behavior. These efforts directly contributed to Capital One's success and enhanced our competitive edge.",
             "tech_stack": ["Go", "Javascript", "AWS"]
         },
