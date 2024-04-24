@@ -88,7 +88,7 @@ export default function Resume() {
               <ProjectCard
                 key={project.title}
                 title={project.title}
-                description={project.short_description}
+                description={project.description}
                 tags={project.techStack}
                 link={'link' in project ? project.link : undefined}
               />
@@ -111,23 +111,6 @@ export default function Resume() {
             );
           })}
         </Section>
-        {/* <Section>
-          <h2 className="text-2xl md:text-3xl font-bold">Skills</h2>
-          {Object.entries(Me.skills).map(([category, skills]) => {
-            return (
-              <>
-                <h3 className="font-semibold leading-none text-base text-muted-text">{category}</h3>
-                <div className="flex flex-wrap gap-1">
-                  {
-                    skills.map((skill) => {
-                      return <Badge key={skill}>{skill}</Badge>;
-                    })
-                  }
-                </div>
-              </>
-            )
-          })}
-        </Section> */}
       </section>
     </main>
   );
