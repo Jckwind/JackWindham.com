@@ -32,7 +32,10 @@
             "start": "January 2024",
             "end": "Present",
             "description": "While modernizing the iOS codebase and driving platform adoption, I refined my technical skills and embraced leadership opportunities. My contributions to the core platform team enhanced developer experience, improved reliability, and streamlined development processes, ultimately impacting the entire Capital One enterprise. This role fostered both my technical expertise and my ability to lead and collaborate effectively within a team.",
-            "tech_stack": ["Swift", "Leadership"]
+            "tech_stack": [
+                "Swift",
+                "Leadership"
+            ]
         },
         {
             "company": "Capital One",
@@ -41,7 +44,11 @@
             "start": "August 2022",
             "end": "December 2023",
             "description": "I led projects to enhance the security and performance of the Dining & Entertainment platform, with a focus on protecting exclusive offers, ensuring system stability, and building tools to understand user behavior. These efforts directly contributed to Capital One's success and enhanced our competitive edge.",
-            "tech_stack": ["Go", "Javascript", "AWS"]
+            "tech_stack": [
+                "Go",
+                "Javascript",
+                "AWS"
+            ]
         },
         {
             "company": "Capital One",
@@ -50,7 +57,10 @@
             "start": "June 2021",
             "end": "August 2021",
             "description": "I developed a serverless application to analyze and enhance cloud security, automating upgrades and generating reports for improved compliance.",
-            "tech_stack": ["Python", "AWS"]
+            "tech_stack": [
+                "Python",
+                "AWS"
+            ]
         },
         {
             "company": "Verisign",
@@ -59,14 +69,16 @@
             "start": "May 2020",
             "end": "August 2020",
             "description": "I built a cross-platform application to centralize access to operational data and dashboards, streamlining information sharing across the organization.",
-            "tech_stack": ["Typescript", "Angular"]
+            "tech_stack": [
+                "Typescript",
+                "Angular"
+            ]
         }
     ],
     "projects": [
         {
             "title": "Cordia",
-            "description": "In the spring of 2018, I began developing Cordia, a social media platform for music, which was inspired by a music-sharing group chat with friends. This project progressed in part due to my hands-on approach to learning, starting from naming the platform and designing the logo to addressing technical challenges like switching from a NoSQL to a SQL database. As a college student, I optimized costs by using AWS and Google Cloud's free tiers for backend and user management. Released in October 2019, Cordia allowed users to share music recommendations and connect over shared tastes, integrating with Spotify and Apple Music APIs. Soon after its release, Cordia was recognized in an entrepreneurship competition and development continued. Unfortunately, shifting priorities and the Covid pandemic led to the cessation of active development and promotion and in 2022, I discontinued Cordia's operation. In late 2023, I began working on its revival with an expanded vision, but this redesign is slow-going, as I have to balance this endeavor with other commitments.",
-            "short_description": "Cordia began as a passion project sparked by music-sharing with friends. This award-winning social network integrated Spotify and Apple Music for a polished user experience. While building Cordia, I fell in love with the full spectrum of product development; in love with making experiences people enjoy.",
+            "description": "Cordia began as a passion project sparked by music-sharing with friends. This award-winning social network integrated Spotify and Apple Music for a polished user experience. While building Cordia, I fell in love with the full spectrum of product development; in love with making experiences people enjoy.",
             "link": "https://www.cordia.app",
             "techStack": [
                 "AWS",
@@ -78,20 +90,19 @@
         },
         {
             "title": "Wind Model",
-            "description": "In the summer of 2022, I became obsessed with machine learning. I developed a new personal research project, the Wind Model. Written in Python, the model utilized historical sentiment data and financial data for the binary classification of equity price behavior (predicting whether a stock's price would go up or down). The sentiment data was supplied via the public Twitter API, and the financial data via the public Yahoo Finance API and a private Nasdaq API. The model showed some success, performing exceedingly well in *calm* market conditions but struggling in volatile markets. It was powered by a Hierarchical Navigable Small Worlds (HNSW) algorithm for high-dimensional space analysis and used a genetic optimization algorithm for feature selection. This genetic algorithm was designed to find the optimal feature set for predicting price behavior. The model was retrained nightly, using the previous 30 trading days to optimize the genetic algorithm and identify the current *mood* of the market, or which feature set was most influential in determining price movement. The project was eventually sunsetted due to personal reasons and the high training costs, approximately $600 a month. I have not revisited this project since, not for lack of potential, but rather because my focus is on other projects. I do not plan to open-source the code.",
-            "short_description": "The Wind Model tackled the complexities of stock prediction with an adaptive approach, combining technical indicators, real-time market data, and a self-optimizing genetic algorithm for dynamic feature selection.",
+            "description": "With minimal prior knowledge, I dedicated an entire summer to intensive self-directed learning, exploring the cutting edge of AI and financial prediction. This culminated in the Wind Model, a novel approach to stock price prediction using NLP sentiment analysis, high dimension similarity search and a self-optimizing genetic algorithm. I eventually discontinued research due to high costs; but the Wind Model showcased my ability to rapidly learn and apply complex concepts to challenging problems and develop novel, original solutions.",
             "techStack": [
+                "AI/ML Research",
+                "Model Design",
+                "Genetic Optimization",
                 "Python",
-                "AWS",
-                "Machine Learning",
-                "Artificial Intelligence",
-                "Genetic Optimization"
+                "AWS"
             ]
         },
         {
             "title": "Tragedy Relief Index",
-            "description": "The Tragedy Relief Index was a small, simple app developed between my Flip Flop and Cordia projects. It featured a simple interface displaying global tragedies and natural disasters, offering users links to assist those impacted. The app, available on the App Store for a few years, was not very popular and was eventually shut down the platform following the closure of its data-providing API.",
-            "short_description": "The Tragedy Relief Index was an app focused on connecting users with humanitarian aid resources in response to global disasters. Utilizing a live-updating API, this project highlighted the challenges of external dependency in software solutions. Despite its short lifespan, it reflected my early commitment to using technology for positive impact.",
+            "description": "The Tragedy Relief Index was an app focused on connecting users with humanitarian aid resources in response to global disasters. Utilizing a live-updating API, this project highlighted the challenges of external dependency in software solutions. Despite its short lifespan, it reflected my early commitment to using technology for positive impact.",
+            "link": "https://appadvice.com/app/tragedy-relief-index/1314576102",
             "techStack": [
                 "Swift",
                 "Firebase"
@@ -99,8 +110,8 @@
         },
         {
             "title": "Flip Flop",
-            "description": "Flip Flop was a reflex-challenging, infinite scrolling mobile app that I built to teach myself how to code. The game mechanics were simple yet addictive. It was written in Swift, the programming language used to make iOS apps, and the game’s elements were designed using Photoshop and Illustrator. Monetization was achieved through in-app ads and purchases, including character skins and bonus levels. Flip Flop was a significant project for me, blending coding, design, and entrepreneurial skills. The app released in 2017, and received periodic updates to enhance the user experience and showcase my evolving coding skills. However, as I shifted focus to new projects, Flip Flop was gradually retired. This pivotal project laid the foundation for my future work.",
-            "short_description": "Flip Flop was my first project. While simple, this game revealed the power of self-driven learning and sparked my passion for coding and bringing ideas into reality.",
+            "description": "A self-driven project to learn mobile app development. This project combined design, coding, and even a bit of entrepreneurial spirit as I explored monetization strategies. I released it in 2017 and it enjoyed moderate success, but my attention shifted towards other projects and the app was eventually discontinued. It was a significant stepping stone, paving the way for my future endeavors. ",
+            "link": "https://appadvice.com/app/flip-flop/1208356042",
             "techStack": [
                 "Swift",
                 "Google Ads"

@@ -26,7 +26,7 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               title
             )}
           </CardTitle>
-          <CardDescription className="font-mono text-xs pl-2">{description}</CardDescription>
+          <CardDescription className="font-mono text-xs max-w-xl pl-2">{description}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className="mt-2 flex flex-wrap gap-1 bottom-0">
