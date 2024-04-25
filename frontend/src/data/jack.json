@@ -78,7 +78,7 @@
     "projects": [
         {
             "title": "Cordia",
-            "description": "Cordia began as a passion project sparked by music-sharing with friends. This award-winning social network integrated Spotify and Apple Music for a polished user experience. While building Cordia, I fell in love with the full spectrum of product development; in love with making experiences people enjoy.",
+            "description": "Cordia was a social media platform made for music lovers, born from a simple desire to share music with my friends. As a solo founder, this endeavor required me to rapidly learn and grow. Managing a substantial platform, scaling user interactions, and engaging in marketing and community outreach were critical skills I developed through Cordia. I showcased Cordia in an entrepreneurship competition, where it not only won a small amount of funding but was also voted the crowd favorite. While I continued developing Cordia on and off throughout my college years, I ultimately sunset the platform in 2022 due to personal reasons.",
             "link": "https://www.cordia.app",
             "techStack": [
                 "AWS",
