@@ -3,7 +3,7 @@
     "initials": "JW",
     "location": "Arlington, VA",
     "locationLink": "https://www.google.com/maps/place/Arlington,+VA",
-    "summary": "Driven and adaptable, I love exceeding expectations. I approach challenges strategically, turning ambition into action. My resolve and intensity let me do great work.",
+    "summary": "I bring my ideas into reality with problem-solving and leadership. I have a history of resilience, and continuously improve.",
     "avatarUrl": "https://avatars.githubusercontent.com/u/32938999?v=4",
     "personalWebsiteUrl": "https://jckwind.com",
     "contact": {
@@ -77,20 +77,10 @@
     ],
     "projects": [
         {
-            "title": "Cordia",
-            "description": "Cordia was a social media platform made for music lovers, born from a simple desire to share music with my friends. As a solo founder, this endeavor required me to rapidly learn and grow. Managing a substantial platform, scaling user interactions, and engaging in marketing and community outreach were critical skills I developed through Cordia. I showcased Cordia in an entrepreneurship competition, where it not only won a small amount of funding but was also voted the crowd favorite. While I continued developing Cordia on and off throughout my college years, I ultimately sunset the platform in 2022 due to personal reasons.",
-            "link": "https://www.cordia.app",
-            "techStack": [
-                "AWS",
-                "Swift",
-                "NodeJS",
-                "SQL",
-                "Google Cloud"
-            ]
-        },
-        {
             "title": "Wind Model",
             "description": "With minimal prior knowledge, I dedicated an entire summer to intensive self-directed learning, exploring the cutting edge of AI and financial prediction. This culminated in the Wind Model, a novel approach to stock price prediction using NLP sentiment analysis, high dimension similarity search and a self-optimizing genetic algorithm. I eventually discontinued research due to high costs; but the Wind Model showcased my ability to rapidly learn and apply complex concepts to challenging problems and develop novel, original solutions.",
+            "start": "May 2022",
+            "end": "Sept 2022",
             "techStack": [
                 "AI/ML Research",
                 "Model Design",
@@ -100,9 +90,25 @@
             ]
         },
         {
+            "title": "Cordia",
+            "description": "Cordia was a social media platform made for music lovers, born from a simple desire to share music with my friends. As a solo founder, this endeavor required me to rapidly learn and grow. Designing an experience people liked, building and iterating a product, and steering an organization towards success were key skills I developed through Cordia. I showcased Cordia in an entrepreneurship competition, where it won first place, and was also voted the crowd favorite. I continued developing Cordia on and off throughout my college years, but ultimately sunset the platform in 2022 due to shifting priorities.",
+            "link": "https://www.cordia.app",
+            "start": "Aug 2018",
+            "end": "Jun 2022",
+            "techStack": [
+                "AWS",
+                "Swift",
+                "NodeJS",
+                "SQL",
+                "Google Cloud"
+            ]
+        },
+        {
             "title": "Tragedy Relief Index",
             "description": "The Tragedy Relief Index was an app focused on connecting users with humanitarian aid resources in response to global disasters. Utilizing a live-updating API, this project highlighted the challenges of external dependency in software solutions. Despite its short lifespan, it reflected my early commitment to using technology for positive impact.",
             "link": "https://appadvice.com/app/tragedy-relief-index/1314576102",
+            "start": "2017",
+            "end": "2017",
             "techStack": [
                 "Swift",
                 "Firebase"
@@ -112,6 +118,8 @@
             "title": "Flip Flop",
             "description": "A self-driven project to learn mobile app development. This project combined design, coding, and even a bit of entrepreneurial spirit as I explored monetization strategies. I released it in 2017 and it enjoyed moderate success, but my attention shifted towards other projects and the app was eventually discontinued. It was a significant stepping stone, paving the way for my future endeavors. ",
             "link": "https://appadvice.com/app/flip-flop/1208356042",
+            "start": "2017",
+            "end": "2020",
             "techStack": [
                 "Swift",
                 "Google Ads"

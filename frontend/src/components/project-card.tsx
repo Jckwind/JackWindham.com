@@ -4,11 +4,13 @@ import { Badge } from './ui/badge';
 interface Props {
   title: string;
   description: string;
+  start: string;
+  end: string;
   tags: readonly string[];
   link?: string;
 }
 
-export function ProjectCard({ title, description, tags, link }: Props) {
+export function ProjectCard({ title, description, start, end, tags, link }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden p-3 bg-card border border-border/25 hover:text-accent hover:border-accent/25">
       <CardHeader className="">
@@ -26,6 +28,9 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               title
             )}
           </CardTitle>
+          <div className="font-mono text-xs text-muted-text/50">
+            {start} - {end}
+          </div>
           <CardDescription className="font-mono text-xs max-w-xl pl-2">{description}</CardDescription>
         </div>
       </CardHeader>
