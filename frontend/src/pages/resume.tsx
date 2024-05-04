@@ -65,6 +65,22 @@ export default function Resume() {
             {Me.summary}
           </div>
         </Section>
+        <Section className="print-force-new-page scroll-mb-16">
+          <h2 className="text-2xl font-bold">Projects</h2>
+          {Me.projects.map((project) => {
+            return (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                start={project.start}
+                end={project.end}
+                tags={project.techStack}
+                link={'link' in project ? project.link : undefined}
+              />
+            );
+          })}
+        </Section>
         <Section>
           <h2 className="text-2xl md:text-3xl font-bold">Work</h2>
           {Me.work.map((work) => {
@@ -77,20 +93,6 @@ export default function Resume() {
                 end={work.end}
                 description={work.description}
                 tech_stack={work.tech_stack}
-              />
-            );
-          })}
-        </Section>
-        <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-2xl font-bold">Projects</h2>
-          {Me.projects.map((project) => {
-            return (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                tags={project.techStack}
-                link={'link' in project ? project.link : undefined}
               />
             );
           })}
